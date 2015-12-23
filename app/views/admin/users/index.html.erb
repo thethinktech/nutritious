@@ -1,0 +1,8 @@
+<h1>Listing Users</h1>
+<% count = 1 %>
+<% @users.each.with_index do |user, index| %>
+    <br>
+    <br>
+    <h5><%= count %>. Email:  <%= user.email %></h5>
+    <% count = count + 1 %>
+<% end %>
