@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :contacts
   get 'welcome/index'
+  get 'welcome/get_products'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}
