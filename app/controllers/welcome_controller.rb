@@ -32,6 +32,7 @@ class WelcomeController < ApplicationController
       product.image_url = item['LargeImage']['URL']
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
       product.review = item['Reviews']
+      
       @products << product
     end
 
