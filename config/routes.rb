@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   get 'welcome/index'
 
   scope '/admin' do
@@ -12,6 +13,8 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root "users#index"
+    resources :contacts
+
   end
 
 

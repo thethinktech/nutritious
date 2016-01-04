@@ -13,6 +13,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def access_denied_to_visitors
+    redirect_to root_path unless current_user
+  end
+
+  def allow_admin
+    redirect_to root_path unless current_user.admin == true
+  end
+
   protected
   def after_sign_out_path_for(resource)
     admin_root_path
