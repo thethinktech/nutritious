@@ -1,6 +1,7 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Nutritious</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -25,6 +26,7 @@
 
 <%= render 'layouts/middle_nav_bar' %>
 <%= yield %>
-
+<script src="javascript/jquery-1.11.2.min.js"></script>
+<script src="javascript/bootstrap.js"></script>
 </body>
 </html>
