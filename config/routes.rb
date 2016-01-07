@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'welcome/show'
   get '/blog' => 'welcome#blog' 
   get '/blog_detail' => 'welcome#blog_detail'
+  get '/about' => 'welcome#about'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}

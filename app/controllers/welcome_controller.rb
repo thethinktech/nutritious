@@ -48,7 +48,9 @@ class WelcomeController < ApplicationController
 
   end
 
-
+  def about
+    
+  end
 
   def show
     requestd = Vacuum.new
