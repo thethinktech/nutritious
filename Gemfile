@@ -12,6 +12,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'sass-rails', '~> 5.0'
+gem 'font-awesome-rails', '~> 4.5'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -31,8 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 group :assets do
-  gem 'sass-rails', '~> 5.0'
-  gem 'font-awesome-rails', '~> 4.5'
+  # gem 'font-awesome-less'
   # gem 'font-awesome-sass', '~> 4.4.0'
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end

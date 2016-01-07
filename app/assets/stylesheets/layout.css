@@ -402,7 +402,7 @@ p{
 }
 .yummy-recipes-slidBox{
 	height: 250px;
-	background: #000
+	background: #dddddd
 }
 .yummy-read-more-box{
 	margin-top: 50px;
@@ -489,7 +489,7 @@ p{
 	background-position: right bottom;
 }
 
-.blog-post{
+.blog-post-section{
 	background-image: url(../images/dote-line.png);
 	padding-top: 50px;
 	padding-bottom: 77px;
@@ -1395,6 +1395,391 @@ ul.blog_categories_list li{
 .blog_posts > div{
 	margin-bottom: 20px;
 }
+.post_comment_tagName, .blog_comment_list_title{
+	font-family: 'Roboto Slab Regular';
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+.post_comment_inputBox input, .post_comment_inputBox textarea{
+	width: 100%;
+	padding: 10px;
+	border: 0px;
+	font-family: 'Roboto Slab Regular';
+	font-size: 12px;
+	outline: none;
+}
+.post_comment_inputBox textarea{
+	margin-top: 20px;
+	max-width: 825px;
+	width: 100%;
+	max-height: 150px;
+	height: 150px;
+}
+.post_comment_inputBox input[type="submit"]{
+	width: 180px;
+	background: #f36817;
+	text-transform: uppercase;
+	color: #fff;
+	height: 45px;
+	margin-top: 20px;
+}
+.blog_comment_list{
+	margin-top: 50px;
+}
+.comment_user_pic{
+	background: #eeeeee;
+	border: 10px solid #fff;
+	border-radius: 50px;
+	width: 90px;
+	height: 90px;
+}
+.user_comment_box{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px dashed #b0b0b0;
+}
+.comment_user_title{
+	font-family: 'Roboto Slab Regular';
+	font-size: 14px;
+	padding-right: 10px;
+}
+.comment_user_date{
+	font-family: 'Roboto Slab Light';
+	font-size: 12px;
+}
+.comment_user_text{
+	font-family: 'Roboto Slab Light';
+	font-size: 12px;
+	margin-top: 10px;
+}
+.comment_user_reply{
+	margin-top: 30px;
+}
+.comment_user_reply button{
+	font-family: 'Roboto Slab Regular';
+	font-size: 12px;
+	width: 90px;
+	height: 32px;
+	border: 1px solid #f36817;
+	border-bottom: 5px solid #f36817;
+	background: #fff;
+}
+.nextAndprevious_comment_list{
+	text-align: right;
+	margin-top: 50px;
+}
+.comment_move_button{
+	width: 50px;
+	height: 30px;
+	display: inline-block
+}
+.previous_comment_left{
+	background: #f36817;
+	border: 1px solid #e5dcca;
+	border-bottom: 5px solid #e5dcca;
+}
+.next_comment_left{
+	background: #fff;
+	border: 1px solid #f36817;
+	border-bottom: 5px solid #f36817;
+}
+div.yummy-recipes-slidBox{
+	position:relative; 
+}
+div.description{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	top: 0px;
+	right: 0px;
+	display:none;
+	background-color:#3d3d3d;
+	font-family: 'tahoma';
+	font-size:15px;
+	color:white;
+	padding-top: 20%;
+}
+div.description_content{
+	padding:10px;
+}
+.paddingright10{
+	padding-right: 10px;
+}
+.zoomName{
+	border-top: #7da500 solid 5px;
+	padding-top: 25px;
+	width: 200px;
+	margin: auto auto;
+	margin-top: 25px
+}
+
+/***************************** item list *****************************/
+.item_box{
+            background: #fff;
+            margin-bottom: 20px;
+        }
+        .item_image{
+            border-bottom: 1px dashed #c6c6c6;
+            height: 200px;
+        }
+        .item_title{
+            font-family: 'Roboto Slab Regular';
+            font-size: 14px;
+            margin-top: 15px;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .item_subtitle{
+            font-family: 'Roboto Slab Light';
+            font-size: 12px;
+            text-align: center;
+            color: #a2a2a2;
+            margin-bottom: 20px;
+        }
+        .item_add_button{
+            font-family: 'Roboto Slab Regular';
+            font-size: 13px;
+            text-align: center;
+            width: 121px;
+            height: 40px;
+            color: #000;
+            line-height: 35px;
+            cursor: pointer;
+            background-image: url(../images/item_button.png);
+            background-repeat: no-repeat;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            -o-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .item_add_button:hover{
+            background-image: url(../images/item_button_active.png);
+            color: #fff;
+        }
+        .reviewAndprice{
+            max-width: 103px;
+        }
+        .item_price{
+            font-family: 'Roboto Slab Regular';
+            font-size: 20px;
+            color: #000;
+            text-align: right;
+        }
+        .add_card_and_price{
+            margin-bottom: 30px;
+        }
+        .item_sele_box{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        
+        .item_list_change_box{
+            font-family: 'Roboto Slab Light';
+            padding: 20px;
+            background: #fff;
+            font-size: 12px;
+			margin-bottom: 25px;
+        }
+        .sort_by_span{
+            
+        }
+        .sort_by_select{
+            padding-right: 20px;
+            border-right: 1px solid #dddddd;
+        }
+        .show_items_by{
+            padding-left: 20px;
+        }
+       .sort_by_select > select, .show_items_select > select {
+            border: 0 !important;     
+            -webkit-appearance: none;
+            -moz-appearance: none;       
+            background: url('../images/item_lest_down_arrow.png')  no-repeat;
+            background-position:right 8px;
+            outline: none;
+          }
+        .sort_by_select > select{
+            width: 110px; 
+        }
+        .change_section_box{
+            padding-right: 10px;
+        }
+        
+        .show_items_select > select{
+            width: 80px;
+        }
+        .paddingNone{
+            padding: 0px;
+        }
+        .previous_comment_left{
+            background: #f36817;
+            border: 1px solid #e5dcca;
+            border-bottom: 5px solid #e5dcca;
+        }
+        .next_comment_left{
+            background: #e5dcca;
+            border: 1px solid #f36817;
+            border-bottom: 5px solid #f36817;
+        }
+        
+		.ui-slider-horizontal{
+		    height: 5px;
+		}
+        
+        
+        
+        
+    .accordion-container {
+		width: 100%;
+		clear: both;
+	}
+        .accordion-toggle > span{
+            padding-right: 10px;
+        }
+        .accordion-toggle > span > img{
+            vertical-align: bottom;
+        }
+	a.accordion-toggle {
+        font-family: 'Roboto Slab Regular';
+        position: relative;
+        display: block;
+        font-size: 14px;
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px dashed #bbbbbb;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-decoration: none;
+	}
+    .accordion-toggle:hover{
+        text-decoration: none;
+    }
+	.accordion-toggle.open {
+		color: #000;
+/*        border-bottom: 1px dashed #bbbbbb;*/
+	}
+	.accordion-toggle:hover {
+/*		background: #666;*/
+	}
+	.accordion-toggle span.toggle-icon {
+        position: absolute;
+        top: 16px;
+        right: 0px;
+	}
+        .accordion-content ul{
+            padding: 0px;
+            margin-left: 20px;
+            list-style: none;
+            font-family: 'Roboto Slab Light';
+        }
+	.accordion-content {
+		display: none;
+		padding: 20px;
+		overflow: auto;
+	}
+	.accordion-content img {
+		display: block;
+		float: left;
+		margin: 0 15px 10px 0;
+		max-width: 100%;
+		height: auto;
+	}
+	    
+        .ui-widget-content{
+            background: #ccc;
+            border: 0px;
+            border-radius: 0px;
+        }  
+        
+        .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+            background: #f26522;
+            outline: none;
+        }
+        
+        .ui-slider .ui-slider-handle{
+            position: absolute;
+            z-index: 2;
+            width: 11px;
+            height: 18px;
+            cursor: default;
+            border-radius: 0px;
+        }
+        .ui-slider-horizontal .ui-slider-handle{
+            top: -7px;
+        }
+        
+        .ui-widget-header{
+            background: #7da500; 
+        }
+        .submit_range{
+            width: 90px;
+            height: 37px;
+            background-image: url(../images/fliter_price.png);
+            border: 0px;
+            outline: none;
+        }
+	.filter_item_box{
+		margin-top: 40px;
+		margin-bottom: 40px;
+	}
+	.select_item_list{
+		margin-bottom: 50px;
+	}
+	.item_price_value{
+		font-family: 'Roboto Slab Light';
+		font-size: 12px;
+		padding-left: 0px;
+		margin-top: 8px;
+	}
+        .filter_box{margin-top: 20px;}
+	.item_price_left_item{
+		    margin-bottom: 40px;
+    background: #fafafa;
+		padding-bottom: 20px;
+	}
+	.item_left_item{
+		margin-bottom: 40px;
+    background: #fafafa;
+	}
+	.all_item_list{
+		margin-top: 20px;
+	}
+	.item_paging{
+		padding: 0px;
+		list-style: none;
+		text-align: left;
+	}
+	.item_paging ul{
+		list-style: none;
+		
+	}
+	.item_paging ul li.active{
+		width: 50px;
+		height: 37px;
+		background-image: url(../images/item_paging_active.png);
+	}
+	.item_paging ul li{
+		width: 50px;
+		height: 37px;
+		background-image: url(../images/item_paging.png);
+		display: inline-block;
+		text-align: center;
+		line-height: 33px;
+		color: #fff;
+	}
+	.item_paging ul li a{
+		color: #000;
+		text-decoration: none;
+		font-family: 'Roboto Slab Regular';
+		font-size: 14px;
+		
+	}
+	.item_paging ul li.active a{
+		color: #fff;
+	}
+/***************************** End item list *****************************/
 
 
 
@@ -1409,7 +1794,6 @@ ul.blog_categories_list li{
 		margin-right: 0px;
 	}
 }
-
 @media(max-width:992px){
 	.top-email{
 		text-align: center;
@@ -1467,8 +1851,7 @@ ul.blog_categories_list li{
 		padding: 0px;
 	}
 }
-
-@media(min-width: 768px) {
+@media(min-width:768px){
 	.navbar-collapse {
 		padding-top: 0px !important;
 		padding-right: 38px !important;
@@ -1501,8 +1884,7 @@ ul.blog_categories_list li{
 	
 	
 }
-
-@media(max-width: 768px) {
+@media(max-width:768px){
 	
 		.all-rating > div.container > div.col-sm-3{
 			margin-bottom: 50px;
@@ -1527,10 +1909,16 @@ ul.blog_categories_list li{
 		.latest-instagram-list li:nth-child(2n+2) {
 			margin-right: 20px;
 		}
+		.content {
+			width: auto;
+		}
+		.accordion-content {
+			padding: 10px 0;
+			overflow: inherit;
+		}
 	
 	
 }
-
 @media(max-width:668px){
 	.top-email span{
 		display: block;
@@ -1548,7 +1936,6 @@ ul.blog_categories_list li{
 		padding-right: 0px;
 	}
 }
-
 @media(max-width:640px){
 	.header{
 		background-size: 100% 100%;
