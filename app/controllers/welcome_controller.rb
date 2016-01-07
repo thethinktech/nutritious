@@ -14,8 +14,8 @@ class WelcomeController < ApplicationController
 
     response = requestd.item_search(
         query: {
-            'SearchIndex' => 'Books',
-            'Keywords' => 'Harry Potter and the deathly hallows',
+            'SearchIndex' => 'Beauty',
+            'Keywords' => 'Avalon Organics',
             'ResponseGroup' => "ItemAttributes,Images,Reviews"
 
         }
@@ -29,9 +29,9 @@ class WelcomeController < ApplicationController
       product = OpenStruct.new
       product.name = item['ItemAttributes']['Title']
       product.url = item['DetailPageURL']
-      product.image_url = item['LargeImage']['URL']
+      product.image_url = item['LargeImage']['URL'] if item['LargeImage']
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
-      product.review = item['Reviews']
+      product.review = item['Reviews'] if item['Reviews']
 
       @products << product
     end
