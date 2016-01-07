@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   resources :contacts
   get 'welcome/index'
   get 'welcome/get_products'
+  get 'welcome/show'
+  get '/blog' => 'welcome#blog' 
+  get '/blog_detail' => 'welcome#blog_detail'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}
