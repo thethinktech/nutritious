@@ -32,7 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 group :assets do
   gem 'sass-rails', '~> 5.0'
-  gem 'font-awesome-rails', '~> 4.5'
+  # gem 'font-awesome-rails', '~> 4.5'
+  gem 'font-awesome-sass', '~> 4.4.0'
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
 
