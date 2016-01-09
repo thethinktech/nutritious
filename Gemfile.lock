@@ -208,7 +208,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   dotenv-rails
-  font-awesome-rails (~> 4.5)
+  font-awesome-rails (~> 4.5.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg
