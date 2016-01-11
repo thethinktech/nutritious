@@ -85,4 +85,8 @@ class WelcomeController < ApplicationController
       @products << product
     end
   end
+
+  def store
+
+  end
 end
