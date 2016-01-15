@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/get_products'
   get 'welcome/show'
   get '/store' => 'welcome#store'
+  get 'welcome/store_details'
   get '/blog' => 'welcome#blog' 
   get '/blog_detail' => 'welcome#blog_detail'
   get '/about' => 'welcome#about'

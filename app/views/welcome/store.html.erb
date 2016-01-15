@@ -1,3 +1,9 @@
+<style>
+#pt-name a:hover{background-color: white;}
+#pt-name1 a:hover{color: black; background-color:white;}
+
+</style>
+
 <div class="topborder"></div>
 
 <div class="white-social-iconBox">
@@ -273,16 +279,18 @@
 
 
       <!-------------- All item  ------------>
-      <div class="row all_item_list">
+      <div class="row all_item_list" id='pt-name'>
+        <% if @products.any? %>
+        <% @products.each do |product| %>
         <div class="col-md-4 col-sm-6">
           <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
+            <div class="col-sm-12 item_image"><%= link_to image_tag(product.image_url,style:'width: 43%;margin-left: 50px;'), welcome_store_details_path,style:'background-color:none' %></div>
+            <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, welcome_store_details_path(image:product.image_url,name:product.name,url:product.url,feature:product.feature,price:product.price) %></div>
             <div class="col-sm-12 item_subtitle">Demo</div>
             <div class="col-sm-12 paddingNone add_card_and_price">
               <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
               <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
+                <div class="item_price"><%= product.price %></div>
                 <div class="item_review">
                   <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
                 </div>
@@ -290,138 +298,8 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="item_sele_box"><img src="images/item_sele.png" alt=""></div>
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="item_sele_box"><img src="images/item_sele.png" alt=""></div>
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="item_sele_box"><img src="images/item_sele.png" alt=""></div>
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"></div>
-            <div class="col-sm-12 item_title">Demo Name</div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price">$59</div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <% end %>
+        <% end %>
       </div>
       <!-------------- End all item  -------->
 
