@@ -1,6 +1,13 @@
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <style>
 #pt-name a:hover{background-color: white;}
 #pt-name1 a:hover{color: black; background-color:white;}
+.change-you-life1 {
+    background-image: url("../images/orange-back.png");
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 122px;
+}
 
 </style>
 
@@ -26,7 +33,7 @@
 </div>
 
 
-<nav class="navbar-default navbar-background" role="navigation">
+<nav class="navbar-default navbar-background" role="navigation" style="margin-top: -40px;">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -62,12 +69,12 @@
           </form>
         </li>
 
-        <li><%= link_to 'Home' , root_path, :class => 'active' %></li>
-        <li><%= link_to 'About' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , "#" %></li>
-        <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
-        <li><%= link_to 'CONTACT' , "#" %></li>
+        <li><%= link_to 'Home' , root_path,:style => 'color: #337ab7;' %></li>
+        <li><%= link_to 'About' , about_path,:style => 'color: #337ab7;' %></li>
+        <li><%= link_to 'PACKAGES' , package_path,:style => 'color: #337ab7;' %></li>
+        <li><%= link_to 'STORE' , store_path, :class => 'active',:style => 'color: #337ab7;' %></li>
+        <li><%= link_to 'BLOG' , blog_path,:style => 'color: #337ab7;' %></li>
+        <li><%= link_to 'CONTACT' , "#",:style => 'color: #337ab7;' %></li>
 
       </ul>
     </div>

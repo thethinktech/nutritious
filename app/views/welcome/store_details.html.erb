@@ -1,3 +1,12 @@
+<style>
+  
+  .change-you-life1 {
+    background-image: url("../images/orange-back.png");
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 122px;
+}
+</style>
 <!doctype html>
 <html>
 <head>
@@ -18,7 +27,7 @@
   </div>
   <hr class="hr-dot">
 </div>
-<nav class="navbar-default navbar-background" role="navigation">
+<nav class="navbar-default navbar-background" role="navigation" style="margin-top: -40px;">
   <div class="container"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -38,12 +47,12 @@
               </span> </div>
           </form>
         </li>
-        <li class="active"><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">PACKAGES</a></li>
-        <li><a href="#">STORE</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><%= link_to 'Home' , root_path %></li>
+        <li><%= link_to 'About' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , welcome_package_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_path %></li>
+        <li><%= link_to 'CONTACT' , "#" %></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 

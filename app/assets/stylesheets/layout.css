@@ -22,6 +22,8 @@
 	font-weight: normal;
 	src: local('Roboto Slab Bold'), url('../fonts/RobotoSlab-Bold.woff') format('woff');
 }
+
+
 .topborder{
 	height: 5px;
 	background: #7da500;
@@ -135,7 +137,9 @@
 	.navbar-nav>li>a {
 		padding-top: 21px;
 		padding-bottom: 21px;
-		font-family: 'Roboto Slab Regular';
+		    font-family: 'lobster' , cursive;
+    color: #337ab7;
+    font-size: 15px;
 	}
 	.navbar-nav>li>a {
 		padding-top: 12px;

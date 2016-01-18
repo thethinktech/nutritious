@@ -132,7 +132,10 @@ class WelcomeController < ApplicationController
     @price = params['price']
     @feature = params['link']
     @name = params['name']
+  end
 
+
+  def package
     
   end
 

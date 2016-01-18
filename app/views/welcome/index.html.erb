@@ -1,3 +1,26 @@
+
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<style>
+.store-info{
+  /*background-image: url("../images/green-back.png") !important;*/
+}
+
+@font-face {
+    font-family: mtcorsva;
+    src: url(MTCORSVA.woff);
+}
+
+.change-you-life1 {
+    background-image: url("../images/orange-back.png");
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 122px;
+}
+
+.link-second-click{
+    font-family: 'lobster' , cursive;
+}
+</style>
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
@@ -17,7 +40,7 @@
   </div>
   <hr class="hr-dot">
 </div>
-<nav class="navbar navbar-background" role="navigation">
+<nav class="navbar navbar-background" role="navigation" style="margin-top: -40px;">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -33,13 +56,13 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'Home' , root_path, :class => 'active' %></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'About' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , "#" %></li>
+        <li><%= link_to 'PACKAGES' , package_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
         <li><%= link_to 'BLOG' , blog_path %></li>
         <li><%= link_to 'CONTACT' , "#" %></li>
-        <li><input type="text" name="search" class="input-search"></li>
+        <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
       </ul>
     </div>
   </div><!-- /.container-fluid -->
@@ -120,8 +143,9 @@ We worry no more more, our nutritionists will help you craft a plan that will en
     <div class="col-md-4"> <img src="images/change-the-way-banner.png" class="img-responsive" alt=""> </div>
   </div>
 </div>
-<div class="change-you-life">
-  <div class="container">
+<div class="change-you-life1">
+
+  <!--div class="container">
     <div class="col-md-6">
       <div class="life-change-title">Change Your Life, One Step At A Time!</div>
       <div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>
@@ -132,7 +156,9 @@ We worry no more more, our nutritionists will help you craft a plan that will en
         <span class="our-packages-subtitle">And Live The Life You Want!</span>
       </div>
     </div>
-  </div>
+  </div-->
+
+
 </div>
 <div class="change-your-border"></div>
 <div class="discover-everythink">
