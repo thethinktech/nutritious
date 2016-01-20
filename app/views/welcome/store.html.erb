@@ -12,75 +12,47 @@
 </style>
 
 <div class="topborder"></div>
-
-<div class="white-social-iconBox">
+<div class="social-iconBox">
   <div class="container">
-    <div class="col-md-8 white-top-email">
+    <div class="col-md-9 top-email">
       <span>Bethany Gettis - Holistic Nutritionist</span>
       <span>+1 403 612 7767 </span>
       <span>nutrition4yoursoul@gmail.com</span>
-    </div>
-    <div class="col-md-4 white-social-icons">
+</div>
+    <div class="col-md-3 social-icons">
       <span><i class="fa fa-facebook"></i></span>
       <span><i class="fa fa-twitter"></i></span>
-      <span><i class="fa fa-pinterest-p"></i></span>
-      <span><i class="fa fa-youtube-play"></i></span>
       <span><i class="fa fa-instagram"></i></span>
-      <span><i class="fa fa-google-plus"></i></span>
-    </div>
+</div>
   </div>
   <hr class="hr-dot">
 </div>
-
-
-<nav class="navbar-default navbar-background" role="navigation" style="margin-top: -40px;">
+<nav class="navbar navbar-background" role="navigation" style="margin-top: -40px;">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <button type="button" class="navbar-toggle menu_space" data-toggle="collapse" data-target="#navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="company-sublogo" href="#"><img src="images/sub-logo.png" alt=""></a>
+      <a class="company-logo" href="#"><img src="images/logo.png" alt=""></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <form class="navbar-form" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control pull-right" style="font-size:14px;width: 250px; background-color: #fff;" placeholder="Search...">
-								<span class="input-group-btn">
-									<button type="reset" class="btn btn-default">
-										<span class="glyphicon glyphicon-remove">
-											<span class="sr-only">Close</span>
-										</span>
-                                    </button>
-									<button type="submit" class="btn btn-default search-button">
-										<span class="glyphicon glyphicon-search">
-											<span class="sr-only">Search</span>
-										</span>
-                                    </button>
-								</span>
-            </div>
-          </form>
-        </li>
-
-        <li><%= link_to 'Home' , root_path,:style => 'color: #337ab7;' %></li>
-        <li><%= link_to 'About' , about_path,:style => 'color: #337ab7;' %></li>
-        <li><%= link_to 'PACKAGES' , package_path,:style => 'color: #337ab7;' %></li>
-        <li><%= link_to 'STORE' , store_path, :class => 'active',:style => 'color: #337ab7;' %></li>
-        <li><%= link_to 'BLOG' , blog_path,:style => 'color: #337ab7;' %></li>
-        <li><%= link_to 'CONTACT' , "#",:style => 'color: #337ab7;' %></li>
-
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'About' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , package_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_path %></li>
+        <li><%= link_to 'CONTACT' , "#" %></li>
+        <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 <header class="sub_header sub_header_contact_bg">
