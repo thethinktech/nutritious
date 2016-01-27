@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/blog' => 'welcome#blog' 
   get '/blog_detail' => 'welcome#blog_detail'
   get '/about' => 'welcome#about'
+  get '/contact' => 'welcome#contact'
   get '/package' => 'welcome#package'
 
   scope '/admin' do
