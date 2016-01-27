@@ -55,6 +55,10 @@ class WelcomeController < ApplicationController
     
   end
 
+  def contact
+
+  end
+
   def show
     requestd = Vacuum.new
 
