@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :contacts
+  # resources :blogs
   get 'welcome/index'
   get 'welcome/get_products'
   get 'welcome/show'
@@ -22,7 +23,8 @@ Rails.application.routes.draw do
   namespace :admin do
     root "users#index"
     resources :contacts
-
+    resources :blogs
+    resources :categories
   end
 
 
