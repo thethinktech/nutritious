@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   resources :contacts
-  # resources :blogs
+  resources :blogs
   get 'welcome/index'
   get 'welcome/get_products'
   get 'welcome/show'
   get '/store' => 'welcome#store'
   get 'welcome/store_details'
-  get '/blog' => 'welcome#blog' 
-  get '/blog_detail' => 'welcome#blog_detail'
+  get '/blog_list' => 'welcome#blog' 
+  #get '/blog_detail' => 'welcome#blog_detail'
+  get 'welcome/blog_details'
   get '/about' => 'welcome#about'
   get '/contact' => 'welcome#contact'
   get '/package' => 'welcome#package'
+  post 'welcome/add_comment'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}
