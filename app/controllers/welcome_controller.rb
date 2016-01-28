@@ -89,6 +89,10 @@ class WelcomeController < ApplicationController
     @newsletter = Newsletter.new
   end
 
+  def package
+
+  end
+
   def show
     requestd = Vacuum.new
 

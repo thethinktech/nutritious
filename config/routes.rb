@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :contacts
+  resources :packages
   resources :blogs
+
   get 'welcome/index'
   get 'welcome/get_products'
   get 'welcome/show'
@@ -30,6 +32,7 @@ Rails.application.routes.draw do
     resources :contacts
     resources :blogs
     resources :categories
+    resources :packages
   end
 
 
