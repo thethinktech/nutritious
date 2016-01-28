@@ -1,0 +1,420 @@
+<style>
+
+    .change-you-life1 {
+        background-image: url("../images/orange-back.png");
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 122px;
+    }
+</style>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Prodects</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body>
+<div class="topborder"></div>
+<div class="white-social-iconBox">
+  <div class="container">
+    <div class="col-md-8 white-top-email"> <span>Bethany Gettis - Holistic Nutritionist</span> <span>+1 403 612 7767 </span> <span>nutrition4yoursoul@gmail.com</span> </div>
+    <div class="col-md-4 white-social-icons"> <span><i class="fa fa-facebook"></i></span> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-instagram"></i></span> </div>
+  </div>
+  <hr class="hr-dot">
+</div>
+<nav class="navbar-default navbar-background" role="navigation" style="margin-top: -40px;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="company-sublogo" href="#"><img src="images/sub-logo.png" alt=""></a> </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <form class="navbar-form" role="search">
+            <div class="input-group">
+              <input type="text" class="form-control pull-right" style="font-size:14px;width: 250px; background-color: #fff;" placeholder="Search...">
+              <span class="input-group-btn">
+              <button type="reset" class="btn btn-default"> <span class="glyphicon glyphicon-remove"> <span class="sr-only">Close</span> </span> </button>
+              <button type="submit" class="btn btn-default search-button"> <span class="glyphicon glyphicon-search"> <span class="sr-only">Search</span> </span> </button>
+              </span> </div>
+          </form>
+        </li>
+        <li><%= link_to 'Home' , root_path %></li>
+        <li><%= link_to 'About' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , package_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_path %></li>
+        <li><%= link_to 'CONTACT' , "#" %></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<header class="sub_header sub_header_contact_bg">
+  <div class="container">
+    <div class="sub_header_title">Blog</div>
+    <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
+  </div>
+</header>
+<div class="sub_header_flower"> <img src="images/header-flower.png" alt=""> </div>
+<div class="sub_breadcrumb">
+  <div class="white_dashed"></div>
+  <div class="container">
+    <div class="sub_top_menu">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Lawn Movers</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="green_dot_border"></div>
+<div class="blog_container">
+  <div class="container">
+    <div class="col-md-3">
+      <div class="col-sm-12 item_left_item">
+        <div class="row">
+          <div class="blog_categories">Categories</div>
+          <!------------ product list-------------->
+          <div class="item_price_left_item col-sm-12">
+            <div class="accordion-container"> <a href="#" class="accordion-toggle open"> <span class="item_list_flower"><img src="images/active_list_flower.png" alt=""></span> Garden Mechinary <span class="toggle-icon"><img src="images/item_list_minus.png" alt=""></span> </a>
+              <div class="accordion-content" style="display:block">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+              <!--/.accordion-content-->
+            </div>
+            <!--/.accordion-container-->
+            <div class="accordion-container"> <a href="#" class="accordion-toggle"> <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Florence <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span> </a>
+              <div class="accordion-content">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+              <!--/.accordion-content-->
+            </div>
+            <!--/.accordion-container-->
+            <div class="accordion-container"> <a href="#" class="accordion-toggle"> <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Venice <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span> </a>
+              <div class="accordion-content">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+              <!--/.accordion-content-->
+            </div>
+            <!--/.accordion-container-->
+            <div class="accordion-container"> <a href="#" class="accordion-toggle"> <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Cinque Terre <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span> </a>
+              <div class="accordion-content">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+              <!--/.accordion-content-->
+            </div>
+            <!--/.accordion-container-->
+            <div class="accordion-container"> <a href="#" class="accordion-toggle"> <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Pompeii <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span> </a>
+              <div class="accordion-content">
+                <ul>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                </ul>
+              </div>
+              <!--/.accordion-content-->
+            </div>
+          </div>
+
+          <!------------ product list-------------->
+        </div>
+      </div>
+      <div class="col-sm-12 item_price_left_item">
+        <div class="row">
+          <div class="blog_categories">Recent Post</div>
+          <div class="col-sm-12 filter_item_box">
+            <div id="slider-range"></div>
+          </div>
+          <form method="post" action="get_items.php">
+            <input type="hidden" id="amount1">
+            <input type="hidden" id="amount2">
+            <div class="filter_box">
+              <div class="col-sm-6">
+                <input type="submit" name="submit_range" class="submit_range" value="Submit">
+              </div>
+              <div class="col-sm-6 item_price_value">Price : <span id="amount"></span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-sm-12 blog_left_item">
+        <div class="row">
+          <div class="blog_categories">Recent Post</div>
+          <div class="col-sm-12 recent_post_box">
+            <div class="recent_post_cate_name">I myself have realized over the</div>
+            <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 paddingNone blog_left_item">
+        <div class="offer_limit">
+          <div class="offer_limit_title1">Limited Time</div>
+          <div class="offer_limit_title2"><span>offer</span></div>
+          <div class="offer_limit_text">
+            <div class="offer_limit_price">20% OFF</div>
+            <div class="offer_limit_price_detail">Save 20% For 2 or More Packahes Within The Same Family</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="item_detail_title"><%= params[:name] %></div>
+      <div class="item_detail_subtitle"><%= params[:name] %></div>
+      <div class="item_detail_review"> <span class="item_rating"> <img src="images/active_star.png" alt=""> <img src="images/active_star.png" alt=""> <img src="images/active_star.png" alt=""> <img src="images/active_star.png" alt=""> <img src="images/active_star.png" alt=""> </span> <span class="item_rating_number">5 Reviews</span> <span class="item_rating_words">Add A Review</span> </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-md-6 item_img"><%= image_tag(params[:image]) %></div>
+          <div class="col-md-6">
+            <div class="item_product_description_title">Product Description</div>
+            <div class="item_product_description"><%#= params[:feature] %></div>
+            <div class="item_price_boxtab"> <span class="normal_price"><%= params[:price] %></span> <span class="offer_price"><%= params[:price] %></span> </div>
+            <div class="col-sm-12 paddingNone">
+              <div class="add_to_card_box col-sm-5">
+                <div class="inc button add_to_card_input"></div>
+                <div class="add_to_card_input">
+                  <input type="text" name="french-hens" value="1">
+                </div>
+                <div class="dec button add_to_card_input" data-type="plus"></div>
+              </div>
+              <div class="col-sm-6">
+                <div class="input_add_card">Add To Card</div>
+              </div>
+            </div>
+            <div class="item_category col-sm-12 paddingNone">Category:  Garden Tools. Lawn movers, Best Sellers</div>
+            <div class="socail_share_icon col-sm-12 paddingNone">
+              <div class="socail_share_icon_title">Share</div>
+              <div class="socail_share_icon_detail"> <span><a href=""><i class="fa fa-facebook"></i></a></span> <span><a href=""><i class="fa fa-twitter"></i></a></span> <span><a href=""><i class="fa fa-pinterest-p"></i></a></span> <span><a href=""><i class="fa fa-youtube-play"></i></a></span> <span><a href=""><i class="fa fa-instagram"></i></a></span> <span><a href=""><i class="fa fa-google-plus"></i></a></span> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="row">
+          <ul class="nav-tabs item_tab_title">
+            <li class="item_detail_info_title active"><a href="#tab1primary" data-toggle="tab">Description</a></li>
+            <li class="item_detail_info_title"><a href="#tab2primary" data-toggle="tab">Reviews</a></li>
+            <li class="item_detail_info_title"><a href="#tab3primary" data-toggle="tab">Delivery Information</a></li>
+          </ul>
+          <div class="panel-body col-sm-12">
+            <div class="tab-content">
+              <div class="item_detail_info tab-pane fade in active" id="tab1primary"> Nam lobortis fringilla felis. Fusce vol utpat mi at urna. Cras ut nec quam vitae turpis sed ipsum convallis. Duis libero. Suspendisse potenti. Suspndisse ipsu porta ligula non elementum ultricies. Justo urna egestas metusl ut ornare leo augue pharetra risus. Morbid tinclunt  massa ac vestibulum rutrum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. <br>
+                <br>
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </div>
+              <div class="item_detail_info tab-pane fade" id="tab2primary">Primary 2</div>
+              <div class="item_detail_info tab-pane fade" id="tab3primary">Primary 3</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 paddingNone">
+        <div class="row">
+          <div class="col-sm-12 related_products">Related Products</div>
+          <div class="item_box_responsive">
+            <div class="col-sm-12 item_box">
+              <div class="col-sm-12 item_image"></div>
+              <div class="col-sm-12 item_title">Demo Name</div>
+              <div class="col-sm-12 item_subtitle">Demo</div>
+              <div class="col-sm-12 paddingNone add_card_and_price">
+                <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
+                <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                  <div class="item_price">$59</div>
+                  <div class="item_review"> <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item_box_responsive">
+            <div class="col-sm-12 item_box">
+              <div class="item_sele_box"><img src="images/item_sele.png" alt=""></div>
+              <div class="col-sm-12 item_image"></div>
+              <div class="col-sm-12 item_title">Demo Name</div>
+              <div class="col-sm-12 item_subtitle">Demo</div>
+              <div class="col-sm-12 paddingNone add_card_and_price">
+                <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
+                <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                  <div class="item_price">$59</div>
+                  <div class="item_review"> <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item_box_responsive">
+            <div class="col-sm-12 item_box">
+              <div class="col-sm-12 item_image"></div>
+              <div class="col-sm-12 item_title">Demo Name</div>
+              <div class="col-sm-12 item_subtitle">Demo</div>
+              <div class="col-sm-12 paddingNone add_card_and_price">
+                <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
+                <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                  <div class="item_price">$59</div>
+                  <div class="item_review"> <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="our_brands_list">
+  <div class="our_brands_list_border"></div>
+  <div class="container our_brands_list_container">
+    <div class="our_brands_list_title">Our Brands</div>
+    <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae</div>
+    <div class="our_brands_list_name">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="return_shipping_detail_border"></div>
+<div class="return_shipping_detail">
+  <div class="container">
+    <div class="col-md-4 return_exchange">
+      <div><img src="images/return_policy.png" class="vertical-align" alt=""></div>
+      <div> <span>Return &amp; Exchange in 5 working days</span> <span class="return_exchange_subtitle">Lorem ipsum dolor sit amet consectetur</span> </div>
+    </div>
+    <div class="col-md-4">
+      <div class="col-sm-12">
+        <div class="col-sm-12 saveoffericonBox">Limited Time offer</div>
+      </div>
+      <div class="col-sm-12 saveoffer">Get Our Services &amp; Get 25% Off </div>
+    </div>
+    <div class="col-md-4 return_exchange">
+      <div><img src="images/walit.png" class="vertical-align" alt=""></div>
+      <div> <span>Return &amp; Exchange in 5 working days</span> <span class="return_exchange_subtitle">Lorem ipsum dolor sit amet consectetur</span> </div>
+    </div>
+  </div>
+</div>
+<footer class="col-sm-12">
+  <div class="row">
+    <div class="container">
+      <div class="col-md-3">
+        <div><img src="images/footer-logo.png"  class="img-responsive" alt=""></div>
+        <div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
+        <div class="footer-about-readMore">Read More</div>
+        <div class="subscribe-newsletter">Subscribe Newsletter</div>
+        <div>
+          <input type="text" name="name" class="footer-subscribe-input">
+          <button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="latest-tweets-title">Latest Tweets</div>
+        <ul class="latest-tweets-list">
+          <li>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-time">1 minute ago</div>
+          </li>
+          <li>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-time">1 minute ago</div>
+          </li>
+          <li>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-time">1 minute ago</div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="latest-tweets-title">Instagram Feed</div>
+        <ul class="latest-instagram-list">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-12">
+          <div class="latest-tweets-title">Contact Info</div>
+          <div class="row contact-fild">
+            <div class="col-md-5 contact-title">Address:</div>
+            <div class="col-md-7 contact-name">151 West Srpints Road SWCalgary, AB T3H 4P6</div>
+          </div>
+          <div class="row contact-fild">
+            <div class="col-md-5 contact-title">CA Office:</div>
+            <div class="col-md-7 contact-name">+ 1 403 612 7767</div>
+          </div>
+          <div class="row contact-fild">
+            <div class="col-lg-5 contact-title">Email:</div>
+            <div class="col-lg-7 contact-name">demo@gmail.com</div>
+          </div>
+          <div class="row contact-fild">
+            <div class="send-message-box">Send Message</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-border col-sm-12"></div>
+<div class="copyright-Box col-sm-12">
+  <div class="container">
+    <div class="col-md-6 copyright-text"> Copyrights Nutritious &amp; Delicious 2015 </div>
+    <div class="col-md-6">
+      <ul class="footer-menu-list">
+        <li><a class="active" href="">HOME</a></li>
+        <li><a href="">ABOUT</a></li>
+        <li><a href="">PACKAGES</a></li>
+        <li><a href="">STORE</a></li>
+        <li><a href="">BLOG</a></li>
+        <li><a href="">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

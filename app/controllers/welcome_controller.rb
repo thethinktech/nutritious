@@ -59,7 +59,10 @@ class WelcomeController < ApplicationController
 
   end
 
-  def show
+  def item_lookup
+
+
+
     requestd = Vacuum.new
 
     requestd.configure(
@@ -70,8 +73,9 @@ class WelcomeController < ApplicationController
 
     response = requestd.item_lookup(
         query: {
-            'SearchIndex' => 'Beauty',
-            'Keywords' => 'Avalon Organics',
+            'SearchIndex' => params[:s_i],
+            'Keywords' => params[:key],
+            'ASIN' => params[:asin],
             'ResponseGroup' => "ItemAttributes,Images,Reviews"
 
         }
@@ -79,24 +83,33 @@ class WelcomeController < ApplicationController
 
     hashed_products = response.to_h
 
-    @products = []
+   # @products = []
 
-    hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
-      product = OpenStruct.new
-      product.name = item['ItemAttributes']['Title']
-      product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
-      product.url = item['DetailPageURL']
-      product.image_url = item['LargeImage']['URL'] if item['LargeImage']
-      product.link = item['ItemLinks']['ItemLink'][5]['URL']
-      product.review = item['Reviews'] if item['Reviews']
+      #hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
+      #product = OpenStruct.new
+      #product.name = item['ItemAttributes']['Title']
+      #product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
+      #product.url = item['DetailPageURL']
+      #product.image_url = item['LargeImage']['URL'] if item['LargeImage']
+      #product.link = item['ItemLinks']['ItemLink'][5]['URL']
+      #product.review = item['Reviews'] if item['Reviews']
 
-      @products << product
-    end
+      #@products << product
+    #end
+
+    # binding.pry
+
   end
 
   def store
 
-  requestd = Vacuum.new
+    @categories = Category.all
+
+    @category = Category.first
+
+    @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
+
+    requestd = Vacuum.new
 
     requestd.configure(
         aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
@@ -106,9 +119,9 @@ class WelcomeController < ApplicationController
 
     response = requestd.item_search(
         query: {
-            'SearchIndex' => 'Beauty',
-            'Keywords' => 'Avalon Organics',
-            'ResponseGroup' => "ItemAttributes,Images,Reviews"
+            'SearchIndex' => @category.search_index,
+            'Keywords' => @category.keyword,
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds"
         }
     )
 
@@ -119,15 +132,18 @@ class WelcomeController < ApplicationController
     hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
       product = OpenStruct.new
       product.name = item['ItemAttributes']['Title']
-      product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
+      product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
       product.url = item['DetailPageURL']
       product.feature = item['ItemAttributes']['Feature']
       product.image_url = item['LargeImage']['URL'] if item['LargeImage']
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
       product.review = item['Reviews'] if item['Reviews']
-
+      product.id = item['ASIN']
+     # binding.pry
       @products << product
     end
+
+
   end
 
   def store_details

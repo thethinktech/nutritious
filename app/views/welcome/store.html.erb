@@ -1,13 +1,20 @@
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <style>
-#pt-name a:hover{background-color: white;}
-#pt-name1 a:hover{color: black; background-color:white;}
-.change-you-life1 {
-    background-image: url("../images/orange-back.png");
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 122px;
-}
+    #pt-name a:hover {
+        background-color: white;
+    }
+
+    #pt-name1 a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    .change-you-life1 {
+        background-image: url("../images/orange-back.png");
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 122px;
+    }
 
 </style>
 
@@ -18,12 +25,12 @@
       <span>Bethany Gettis - Holistic Nutritionist</span>
       <span>+1 403 612 7767 </span>
       <span>nutrition4yoursoul@gmail.com</span>
-</div>
+    </div>
     <div class="col-md-3 social-icons">
       <span><i class="fa fa-facebook"></i></span>
       <span><i class="fa fa-twitter"></i></span>
       <span><i class="fa fa-instagram"></i></span>
-</div>
+    </div>
   </div>
   <hr class="hr-dot">
 </div>
@@ -43,16 +50,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
-        <li><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , package_path %></li>
-        <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
-        <li><%= link_to 'CONTACT' , "#" %></li>
-        <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home', root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'ABOUT', about_path %></li>
+        <li><%= link_to 'PACKAGES', package_path %></li>
+        <li><%= link_to 'STORE', store_path %></li>
+        <li><%= link_to 'BLOG', blog_path %></li>
+        <li><%= link_to 'CONTACT', "#" %></li>
+        <li>
+          <input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;">
+        </li>
       </ul>
     </div>
-  </div><!-- /.container-fluid -->
+  </div>
+  <!-- /.container-fluid -->
 </nav>
 
 <header class="sub_header sub_header_contact_bg">
@@ -87,96 +97,27 @@
           <div class="blog_categories">Categories</div>
           <!------------ product list-------------->
           <div class="item_price_left_item col-sm-12">
-            <div class="accordion-container">
-              <a href="#" class="accordion-toggle open">
-                <span class="item_list_flower"><img src="images/active_list_flower.png" alt=""></span> Garden Mechinary
-                <span class="toggle-icon"><img src="images/item_list_minus.png" alt=""></span>
-              </a>
+            <% @categories.each do |category| %>
+                <div class="accordion-container">
+                  <a href="#" class="accordion-toggle">
+                    <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span>
+                      <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :class=> "pull-right"  %>
+                    <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></span>
+                  </a>
 
-              <div class="accordion-content" style="display:block">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
+                  <div class="accordion-content">
+                    <ul>
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                    </ul>
 
-              </div>
-              <!--/.accordion-content-->
-            </div>
-            <!--/.accordion-container-->
-            <div class="accordion-container">
-              <a href="#" class="accordion-toggle">
-                <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Florence
-                <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span>
-              </a>
-
-              <div class="accordion-content">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-              </div>
-              <!--/.accordion-content-->
-            </div>
-            <!--/.accordion-container-->
-            <div class="accordion-container">
-              <a href="#" class="accordion-toggle">
-                <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Venice
-                <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span>
-              </a>
-
-              <div class="accordion-content">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-              </div>
-              <!--/.accordion-content-->
-            </div>
-            <!--/.accordion-container-->
-            <div class="accordion-container">
-              <a href="#" class="accordion-toggle">
-                <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Cinque Terre
-                <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span>
-              </a>
-
-              <div class="accordion-content">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-              </div>
-              <!--/.accordion-content-->
-            </div>
-            <!--/.accordion-container-->
-            <div class="accordion-container">
-              <a href="#" class="accordion-toggle">
-                <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span> Pompeii
-                <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></i></span>
-              </a>
-
-              <div class="accordion-content">
-                <ul>
-                  <li>1</li>
-                  <li>2</li>
-                  <li>3</li>
-                  <li>4</li>
-                  <li>5</li>
-                </ul>
-              </div>
-              <!--/.accordion-content-->
-            </div>
+                  </div>
+                  <!--/.accordion-content-->
+                </div>
+            <% end %>
           </div>
 
 
@@ -185,43 +126,44 @@
       </div>
 
 
-      <div class="col-sm-12 item_price_left_item">
-        <div class="row">
-          <div class="blog_categories">Recent Post</div>
-          <div class="col-sm-12 filter_item_box">
+      <div class="col-sm-12 item_price_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 filter_item_box ">
             <div id="slider-range"></div>
           </div>
-          <form method="post" action="get_items.php">
-            <input type="hidden" id="amount1">
-            <input type="hidden" id="amount2">
+          <form method="post " action="get_items.php ">
+            <input type="hidden " id="amount1 ">
+            <input type="hidden " id="amount2 ">
 
-            <div class="filter_box">
-              <div class="col-sm-6"><input type="submit" name="submit_range" class="submit_range" value="Submit"></div>
-              <div class="col-sm-6 item_price_value">Price : <span id="amount"></span></div>
+            <div class="filter_box ">
+              <div class="col-sm-6"><input type="submit " name="submit_range " class="submit_range " value="Submit ">
+              </div>
+              <div class="col-sm-6 item_price_value ">Price : <span id="amount "></span></div>
             </div>
           </form>
         </div>
       </div>
 
-      <div class="col-sm-12 blog_left_item">
-        <div class="row">
-          <div class="blog_categories">Recent Post</div>
-          <div class="col-sm-12 recent_post_box">
-            <div class="recent_post_cate_name">I myself have realized over the</div>
-            <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp>
+      <div class="col-sm-12 blog_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 recent_post_box ">
+            <div class="recent_post_cate_name ">I myself have realized over the</div>
+            <div class="recent_post_cate_date "><img src="images/time_icon.png" alt=" "><samp>October 30, 2015</samp>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-12 paddingNone blog_left_item">
+      <div class="col-sm-12 paddingNone blog_left_item ">
 
-        <div class="offer_limit">
-          <div class="offer_limit_title1">Limited Time</div>
-          <div class="offer_limit_title2"><span>offer</span></div>
-          <div class="offer_limit_text">
-            <div class="offer_limit_price">20% OFF</div>
-            <div class="offer_limit_price_detail">Save 20% For 2 or More Packahes Within The Same Family</div>
+        <div class="offer_limit ">
+          <div class="offer_limit_title1 ">Limited Time</div>
+          <div class="offer_limit_title2 "><span>offer</span></div>
+          <div class="offer_limit_text ">
+            <div class="offer_limit_price ">20% OFF</div>
+            <div class="offer_limit_price_detail ">Save 20% For 2 or More Packahes Within The Same Family</div>
           </div>
         </div>
 
@@ -231,26 +173,26 @@
     </div>
     <div class="col-md-9">
       <!---------------- show top list ------->
-      <div class="col-sm-12 item_list_change_box">
-        <div class="row">
+      <div class="col-sm-12 item_list_change_box ">
+        <div class="row ">
           <div class="col-sm-8">
-            <span class="sort_by_span">Sort By: </span>
-					   <span class="sort_by_select">
+            <span class="sort_by_span ">Sort By: </span>
+					   <span class="sort_by_select ">
 						   <select>
                              <option>Default Sorting</option>
                            </select>
 					   </span>
 
-            <span class="show_items_by">Show Items: </span>
-					   <span class="show_items_select">
+            <span class="show_items_by ">Show Items: </span>
+					   <span class="show_items_select ">
 						   <select>
                              <option>9 Per Page</option>
                            </select>
 					   </span>
           </div>
           <div class="col-sm-4 text-right">
-            <span class="change_section_box"><img src="images/change_section_box_active.png" alt=""></span>
-            <span class="change_section_list"><img src="images/change_section_list.png" alt=""></span>
+            <span class="change_section_box "><img src="images/change_section_box_active.png" alt=" "></span>
+            <span class="change_section_list "><img src="images/change_section_list.png" alt=" "></span>
           </div>
         </div>
       </div>
@@ -258,26 +200,26 @@
 
 
       <!-------------- All item  ------------>
-      <div class="row all_item_list" id='pt-name'>
+      <div class="row all_item_list " id='pt-name'>
         <% if @products.any? %>
-        <% @products.each do |product| %>
-        <div class="col-md-4 col-sm-6">
-          <div class="col-sm-12 item_box">
-            <div class="col-sm-12 item_image"><%= link_to image_tag(product.image_url,style:'width: 43%;margin-left: 50px;'), welcome_store_details_path,style:'background-color:none' %></div>
-            <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, welcome_store_details_path(image:product.image_url,name:product.name,url:product.url,feature:product.feature,price:product.price) %></div>
-            <div class="col-sm-12 item_subtitle">Demo</div>
-            <div class="col-sm-12 paddingNone add_card_and_price">
-              <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
-              <div class="col-sm-5 paddingNone text-right reviewAndprice">
-                <div class="item_price"><%= product.price %></div>
-                <div class="item_review">
-                  <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
+            <% @products.each do |product| %>
+                <div class="col-md-4 col-sm-6">
+                  <div class="col-sm-12 item_box">
+                    <div class="col-sm-12 item_image"><%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %></div>
+                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id) %></div>
+                    <div class="col-sm-12 item_subtitle">Demo</div>
+                    <div class="col-sm-12 paddingNone add_card_and_price">
+                      <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
+                      <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                        <div class="item_price"><%= product.price %></div>
+                        <div class="item_review">
+                          <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
+            <% end %>
         <% end %>
       </div>
       <!-------------- End all item  -------->
@@ -299,7 +241,8 @@
   <div class="our_brands_list_border"></div>
   <div class="container our_brands_list_container">
     <div class="our_brands_list_title">Our Brands</div>
-    <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae</div>
+    <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae
+    </div>
     <div class="our_brands_list_name">
       <ul>
         <li></li>
@@ -359,15 +302,18 @@
         <div class="latest-tweets-title">Latest Tweets</div>
         <ul class="latest-tweets-list">
           <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd
+            </div>
             <div class="latest-tweets-time">1 minute ago</div>
           </li>
           <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd
+            </div>
             <div class="latest-tweets-time">1 minute ago</div>
           </li>
           <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
+            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd
+            </div>
             <div class="latest-tweets-time">1 minute ago</div>
           </li>
         </ul>
@@ -419,12 +365,12 @@
     </div>
     <div class="col-md-6">
       <ul class="footer-menu-list">
-        <li><%= link_to 'HOME' , root_path, :class => 'active' %></li>
-        <li><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , "#" %></li>
-        <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
-        <li><%= link_to 'CONTACT' , "#" %></li>
+        <li><%= link_to 'HOME', root_path, :class => 'active' %></li>
+        <li><%= link_to 'ABOUT', about_path %></li>
+        <li><%= link_to 'PACKAGES', "#" %></li>
+        <li><%= link_to 'STORE', store_path %></li>
+        <li><%= link_to 'BLOG', blog_path %></li>
+        <li><%= link_to 'CONTACT', "#" %></li>
       </ul>
     </div>
   </div>
