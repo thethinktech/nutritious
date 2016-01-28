@@ -5,6 +5,15 @@
 .store-info{
   /*background-image: url("../images/green-back.png") !important;*/
 }
+.footer-subscribe-input1 {
+    /*background: #333 none repeat scroll 0% 0%;*/
+    border: 0px none;
+    border-radius: 5px 0px 0px 5px;
+    height: 42px;
+    display: inline-block;
+    width: 78%;
+    outline: medium none;
+}
 
 @font-face {
     font-family: Tahoma;
@@ -535,10 +544,20 @@ We worry no more more, our nutritionists will help you craft a plan that will en
       <div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
       <div class="footer-about-readMore">Read More</div>
       <div class="subscribe-newsletter">Subscribe Newsletter</div>
+      
       <div>
-        <input type="text" name="name" class="footer-subscribe-input">
-        <button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
       </div>
+
+
     </div>
     <div class="col-md-3">
       <div class="latest-tweets-title">Latest Tweets</div>

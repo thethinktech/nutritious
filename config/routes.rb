@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/contact' => 'welcome#contact'
   get '/package' => 'welcome#package'
   post 'welcome/add_comment'
+  post 'welcome/add_newsletter'
+  post 'contact/add_newsletter'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}

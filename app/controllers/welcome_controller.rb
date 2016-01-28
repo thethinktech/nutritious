@@ -1,7 +1,19 @@
 class WelcomeController < ApplicationController
   def index
+    @newsletter = Newsletter.new
+  end  
 
-  end
+  def add_newsletter
+    @newsletter = Newsletter.new()
+    @newsletter.email = params[:newsletter][:email]
+    @newsletter.status = params[:status]
+      if @newsletter.save
+        redirect_to :back, notice: "Newsletter subscribe successfully!"
+      else
+        flash[:alert] = "#{@newsletter.errors.count} error prevented the newsletter from saving:"
+        #render 'new'
+      end
+  end 
 
   def get_products
     requestd = Vacuum.new
@@ -44,10 +56,14 @@ class WelcomeController < ApplicationController
   end
 
   def blog
+    @newsletter = Newsletter.new
     @blogs = Blog.all
+    #@blogs = Blog.paginate(:page => params[:page])
+    @@blogs = Blog.paginate(:page => params[:page], :per_page => 2).order('created_at DESC')
   end
 
   def blog_details
+    @newsletter = Newsletter.new
     @blog = Blog.find(params[:id])
     @comment = Comment.new
     @total_comment = Comment.where(:blog_id => params[:id])
@@ -66,11 +82,11 @@ class WelcomeController < ApplicationController
   end
 
   def about
-    
+    @newsletter = Newsletter.new
   end
 
   def contact
-
+    @newsletter = Newsletter.new
   end
 
   def show
@@ -154,7 +170,7 @@ class WelcomeController < ApplicationController
 
 
   def package
-    
+    @newsletter = Newsletter.new
   end
 
   def comment_params

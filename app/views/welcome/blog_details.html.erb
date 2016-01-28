@@ -1,4 +1,15 @@
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<style>
+.footer-subscribe-input1 {
+    /*background: #333 none repeat scroll 0% 0%;*/
+    border: 0px none;
+    border-radius: 5px 0px 0px 5px;
+    height: 42px;
+    display: inline-block;
+    width: 78%;
+    outline: medium none;
+}
+</style>
 <div class="topborder"></div>
 
   <div class="white-social-iconBox">
@@ -165,19 +176,19 @@
                       
                       
                       
-                      <p>this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class</p>
-          <p>this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class</p>
+                      <p></p>
+          <p></p>
                      
                      <div class="row">
-                         <div class="col-sm-6">this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class</div>
+                         <div class="col-sm-6"></div>
                          <div class="col-sm-6"><img src="images/post_image.png"  class="img-responsive"  alt=""></div>
                      </div>
                      
                      
                      <div class="row tagsAndShare">
                          <div class="col-sm-12">
-                             <div class="col-sm-1 tag_title">Tag</div>
-                             <div class="col-sm-11 tag_subtitle">Tag1, Tag2, Tag3, Tag4, Tag5</div>
+                             <div class="col-sm-1 tag_title"></div>
+                             <div class="col-sm-11 tag_subtitle"></div>
                          </div>
                          <div class="col-sm-12"></div>
                      </div>
@@ -231,24 +242,26 @@
                     
                      <div class="col-sm-12 blog_comment_list_title">Comment</div>
                      
+                     <% @total_comment.each do |comment| %>
                      <div class="col-sm-12 user_comment_box">
                          <div class="col-sm-2">
                              <div class="comment_user_pic"></div>
                          </div>
                          <div class="col-sm-8">
                              <div class="comment_user_info">
-                                 <span class="comment_user_title">Paul Gettis</span>
-                                 <span class="comment_user_date">Posted : October 30, 2015 at 04PM</span>
+                                 <span class="comment_user_title"><%= comment.name %></span>
+                                 <span class="comment_user_date">Posted : <%= comment.created_at.strftime('%B') %>&nbsp;<%= comment.created_at.strftime('%d') %>, <%= comment.created_at.strftime('%Y') %> at <%= comment.created_at.strftime('%H') %><%= comment.created_at.strftime('%p') %></span>
                              </div>
                              <div class="comment_user_text">
-                                 this is demo
+                                 <%= comment.message %>
                              </div>
                              
                              <div class="comment_user_reply"><button>Reply</button></div>
                          </div>
                      </div>
+                      
                      
-                     <div class="col-sm-10 user_comment_box col-sm-offset-2">
+                     <!--div class="col-sm-10 user_comment_box col-sm-offset-2">
                          <div class="col-sm-2">
                              <div class="comment_user_pic"></div>
                          </div>
@@ -263,9 +276,9 @@
                              
                              <div class="comment_user_reply"><button>Reply</button></div>
                          </div>
-                     </div>
+                     </div-->
                      
-                     <div class="col-sm-8 user_comment_box col-sm-offset-4">
+                     <!--div class="col-sm-8 user_comment_box col-sm-offset-4">
                          <div class="col-sm-2">
                              <div class="comment_user_pic"></div>
                          </div>
@@ -280,9 +293,9 @@
                              
                              <div class="comment_user_reply"><button>Reply</button></div>
                          </div>
-                     </div>
-                     
-                     <div class="col-sm-12 user_comment_box">
+                     </div-->
+                     <% end %>
+                     <!--div class="col-sm-12 user_comment_box">
                          <div class="col-sm-2">
                              <div class="comment_user_pic"></div>
                          </div>
@@ -297,15 +310,15 @@
                              
                              <div class="comment_user_reply"><button>Reply</button></div>
                          </div>
-                     </div>
+                     </div-->
                      
                  </div>
              </div>
              
-             <div class="nextAndprevious_comment_list">
+             <!--div class="nextAndprevious_comment_list">
                  <div class="comment_move_button previous_comment_left"></div>
                  <div class="comment_move_button next_comment_left"></div>
-             </div>
+             </div-->
               
           </div>
   	</div>
@@ -319,10 +332,19 @@
   			<div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
   			<div class="footer-about-readMore">Read More</div>
   			<div class="subscribe-newsletter">Subscribe Newsletter</div>
+
   			<div>
-  				<input type="text" name="name" class="footer-subscribe-input">
-  				<button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
-  			</div>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
+      </div>
+
   		</div>
   		<div class="col-md-3">
   			<div class="latest-tweets-title">Latest Tweets</div>

@@ -7,6 +7,15 @@
     padding-top: 60px;
     padding-bottom: 122px;
 }
+.footer-subscribe-input1 {
+    /*background: #333 none repeat scroll 0% 0%;*/
+    border: 0px none;
+    border-radius: 5px 0px 0px 5px;
+    height: 42px;
+    display: inline-block;
+    width: 78%;
+    outline: medium none;
+}
 </style>
 <div class="topborder"></div>
 <div class="social-iconBox">
@@ -156,15 +165,13 @@
             
             </div>
             <% end %>
-            
-            
-            <div class="post_paging">
+            <%#= will_paginate @blogs, renderer: BootstrapPagination::Rails %>
+            <%#= will_paginate @blogs %>
+            <!--div class="post_paging">
             	<ul>
-            		<li class="active"><a href="">1</a></li>
-            		<li><a href="">2</a></li>
-            		<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>
+            		<li class="active"><%#= will_paginate @blogs %></li>
             	</ul>
-            </div>
+            </div-->
             
         </div>
 	</div>
@@ -178,10 +185,19 @@
 			<div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
 			<div class="footer-about-readMore">Read More</div>
 			<div class="subscribe-newsletter">Subscribe Newsletter</div>
+
 			<div>
-				<input type="text" name="name" class="footer-subscribe-input">
-				<button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
-			</div>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
+      </div>
+
 		</div>
 		<div class="col-md-3">
 			<div class="latest-tweets-title">Latest Tweets</div>
@@ -225,6 +241,8 @@
 					<div class="col-md-5 contact-title">CA Office:</div>
 					<div class="col-md-7 contact-name">+ 1 403 612 7767</div>
 				</div>
+
+
 				<div class="row contact-fild">
 					<div class="col-lg-5 contact-title">Email:</div>
 					<div class="col-lg-7 contact-name">nutrition4yoursoul@gmail.com</div>
