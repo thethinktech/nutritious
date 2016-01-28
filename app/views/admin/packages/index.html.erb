@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Packages</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @packages.each do |package| %>
+      <tr>
+        <td><%= package.title %></td>
+        <td><%= package.description %></td>
+        <td><%= link_to 'Show', [:admin, package] %></td>
+        <td><%#= link_to 'Edit', edit_contact_path(contact) %></td>
+        <td><%#= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Package', new_admin_package_path %>

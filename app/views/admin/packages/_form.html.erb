@@ -1,0 +1,31 @@
+<%= form_for [:admin, @package] do |f| %>
+  <% if @package.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this package from being saved:</h2>
+
+      <ul>
+      <% @package.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %>
+    <%= f.text_field :title, class:'input-class' %><br>
+    <%= f.label :Start_Date %>
+    <%= f.date_select :start_date %><br>
+    <%= f.label :Cost %>
+    <%= f.text_field :cost, class:'input-class' %><br>
+    <%= f.label :Description %>
+    <%= f.text_area :description, class:'input-class' %>
+    <%= hidden_field_tag(:user_id,value=current_user.id)%>
+    </div>
+<br>
+  <div class="actions">
+    <%= f.submit 'Create Package',class:'submit-class' %>
+  </div>
+<% end %>
+
+

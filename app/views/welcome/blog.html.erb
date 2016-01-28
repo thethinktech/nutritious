@@ -7,6 +7,15 @@
     padding-top: 60px;
     padding-bottom: 122px;
 }
+.footer-subscribe-input1 {
+    /*background: #333 none repeat scroll 0% 0%;*/
+    border: 0px none;
+    border-radius: 5px 0px 0px 5px;
+    height: 42px;
+    display: inline-block;
+    width: 78%;
+    outline: medium none;
+}
 </style>
 <div class="topborder"></div>
 <div class="social-iconBox">
@@ -45,8 +54,8 @@
         <li><%= link_to 'ABOUT' , about_path %></li>
         <li><%= link_to 'PACKAGES' , package_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
-        <li><%= link_to 'CONTACT' , "#" %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
+        <li><%= link_to 'CONTACT' , new_contact_path %></li>
         <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
       </ul>
     </div>
@@ -83,12 +92,10 @@
                <div class="row">
                 <div class="blog_categories">Categories</div>
                 <ul class="blog_categories_list">
-                    <li>Categories 1</li>
-                    <li>Categories 2</li>
-                    <li>Categories 3</li>
-                    <li>Categories 4</li>
-                    <li>Categories 5</li>
-                    <li>Categories 6</li>
+                    <% @cats = Category.all %>
+                      <% @cats.each do |cat| %>
+                      <li><%= cat.name %></li>
+                    <% end %>
                 </ul>
                 </div>
             </div>
@@ -96,25 +103,13 @@
            <div class="col-sm-12 blog_left_item">
                <div class="row">
                 <div class="blog_categories">Recent Post</div>
-                    <div class="col-sm-12 recent_post_box">
-                        <div class="recent_post_cate_name">I myself have realized over the</div>
-                        <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                    </div>
-                    
-                    <div class="col-sm-12 recent_post_box">
-                        <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                        <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                    </div>
-                    
-                    <div class="col-sm-12 recent_post_box">
-                        <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                        <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                    </div>
-                    
-                    <div class="col-sm-12 recent_post_box">
-                        <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                        <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                    </div>
+                    <% @blogs = Blog.all.order(:created_at).limit(5) %>
+                      <% @blogs.each do |blog| %>
+                      <div class="col-sm-12 recent_post_box">
+                          <div class="recent_post_cate_name"><%= blog.title %></div>
+                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp><%= blog.created_at.strftime('%B') %>&nbsp;<%= blog.created_at.strftime('%d') %>, <%= blog.created_at.strftime('%Y') %></samp></div>
+                      </div>
+                      <% end %>
                     
                 </div>
             </div>
@@ -136,130 +131,47 @@
                
         </div>
         <div class="col-md-9">
-           
+            <% @blogs.each do |blog| %>
+           <% @users = User.where(:id => blog.user_id) %>
+           <% @cateories = Category.where(:id => blog.catgory_id) 
+           @total_comment = Comment.where(:blog_id => blog.id)
+           %>
+
             <div class="col-sm-12 blog-post">
                 <div class="row blog_head_box">
-                    <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
+                    <div class="blog_head_img">
+                        <%= image_tag(blog.image) if blog.image? %></div>
                     <div class="blog_head_date">
-                        <div class="blog_head_date_day">30</div>
-                        <div class="blog_head_date_month">oct</div>
+                        <div class="blog_head_date_day">
+                            <%= blog.created_at.strftime('%d') %></div>
+                        <div class="blog_head_date_month"><%= blog.created_at.strftime('%b') %></div>
                     </div>
                 </div>
                 <div class="row">
                     <ul class="blog-user-info">
-                        <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                        <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                        <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
+                        <% @users.each do |user| %>
+                        <li><i class="fa fa-user"></i><span>By <%= user.email %></span></li>
+                        <% end %>
+                        <% @cateories.each do |cat| %>
+                        <li><i class="fa fa-folder-open"></i><span><%= cat.name %></span></li>
+                        <% end %>
+                        <li><i class="fa fa-comment"></i><span><%=  @total_comment.count %> Comment</span></li>
                     </ul>
                 </div>
                 
-                <div class="row blog-title">Why Diets Can Make Keeping Weight Off Worse</div>
-                <div class="row blog-detail">I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous diets to find that your weight always comes back? Maybe even more than you were to begin with?
-</div>
-                <div class="row blog_read_more">Read More</div>
-                
+                <div class="row blog-title"><%= blog.title %></div>
+                <div class="row blog-detail"><%= blog.decsription %></div>
+                <div class="row blog_read_more"><%= link_to "Read More", welcome_blog_details_path(id:blog.id) %></div>
+            
             </div>
-            
-            <div class="col-sm-12 blog-post">
-                <div class="row blog_head_box">
-                    <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
-                    <div class="blog_head_date">
-                        <div class="blog_head_date_day">30</div>
-                        <div class="blog_head_date_month">oct</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="blog-user-info">
-                        <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                        <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                        <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
-                    </ul>
-                </div>
-                
-                <div class="row blog-title">Why Diets Can Make Keeping Weight Off Worse</div>
-                <div class="row blog-detail">I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous diets to find that your weight always comes back? Maybe even more than you were to begin with?
-</div>
-                <div class="row blog_read_more">Read More</div>
-                
-            </div>
-            
-            <div class="col-sm-12 blog-post">
-                <div class="row blog_head_box">
-                    <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
-                    <div class="blog_head_date">
-                        <div class="blog_head_date_day">30</div>
-                        <div class="blog_head_date_month">oct</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="blog-user-info">
-                        <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                        <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                        <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
-                    </ul>
-                </div>
-                
-                <div class="row blog-title">Why Diets Can Make Keeping Weight Off Worse</div>
-                <div class="row blog-detail">I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous diets to find that your weight always comes back? Maybe even more than you were to begin with?
-</div>
-                <div class="row blog_read_more">Read More</div>
-                
-            </div>
-            
-            <div class="col-sm-12 blog-post">
-                <div class="row blog_head_box">
-                    <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
-                    <div class="blog_head_date">
-                        <div class="blog_head_date_day">30</div>
-                        <div class="blog_head_date_month">oct</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="blog-user-info">
-                        <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                        <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                        <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
-                    </ul>
-                </div>
-                
-                <div class="row blog-title">Why Diets Can Make Keeping Weight Off Worse</div>
-                <div class="row blog-detail">I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous diets to find that your weight always comes back? Maybe even more than you were to begin with?
-</div>
-                <div class="row blog_read_more">Read More</div>
-                
-            </div>
-            
-            <div class="col-sm-12 blog-post">
-                <div class="row blog_head_box">
-                    <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
-                    <div class="blog_head_date">
-                        <div class="blog_head_date_day">30</div>
-                        <div class="blog_head_date_month">oct</div>
-                    </div>
-                </div>
-                <div class="row">
-                    <ul class="blog-user-info">
-                        <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                        <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                        <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
-                    </ul>
-                </div>
-                
-                <div class="row blog-title">Why Diets Can Make Keeping Weight Off Worse</div>
-                <div class="row blog-detail"> I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous diets to find that your weight always comes back? Maybe even more than you were to begin with?
-</div>
-                <div class="row blog_read_more">Read More</div>
-                
-            </div>
-            
-            
-            <div class="post_paging">
+            <% end %>
+            <%#= will_paginate @blogs, renderer: BootstrapPagination::Rails %>
+            <%#= will_paginate @blogs %>
+            <!--div class="post_paging">
             	<ul>
-            		<li class="active"><a href="">1</a></li>
-            		<li><a href="">2</a></li>
-            		<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>
+            		<li class="active"><%#= will_paginate @blogs %></li>
             	</ul>
-            </div>
+            </div-->
             
         </div>
 	</div>
@@ -273,10 +185,19 @@
 			<div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
 			<div class="footer-about-readMore">Read More</div>
 			<div class="subscribe-newsletter">Subscribe Newsletter</div>
+
 			<div>
-				<input type="text" name="name" class="footer-subscribe-input">
-				<button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
-			</div>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
+      </div>
+
 		</div>
 		<div class="col-md-3">
 			<div class="latest-tweets-title">Latest Tweets</div>
@@ -320,6 +241,8 @@
 					<div class="col-md-5 contact-title">CA Office:</div>
 					<div class="col-md-7 contact-name">+ 1 403 612 7767</div>
 				</div>
+
+
 				<div class="row contact-fild">
 					<div class="col-lg-5 contact-title">Email:</div>
 					<div class="col-lg-7 contact-name">nutrition4yoursoul@gmail.com</div>
@@ -346,7 +269,7 @@
 		        <li><%= link_to 'ABOUT' , about_path %></li>
 		        <li><%= link_to 'PACKAGES' , "#" %></li>
 		        <li><%= link_to 'STORE' , "#" %></li>
-		        <li><%= link_to 'BLOG' , blog_path %></li>
+		        <li><%= link_to 'BLOG' , blog_list_path %></li>
 		        <li><%= link_to 'CONTACT' , "#" %></li>
 			</ul>
 		</div>

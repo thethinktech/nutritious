@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :contacts
-  # resources :blogs
+  resources :packages
+  resources :blogs
+
   get 'welcome/index'
   get 'welcome/get_products'
   get 'welcome/show'
@@ -9,9 +11,16 @@ Rails.application.routes.draw do
   get '/item_lookup' => 'welcome#item_lookup'
   get '/blog' => 'welcome#blog' 
   get '/blog_detail' => 'welcome#blog_detail'
+  get 'welcome/store_details'
+  get '/blog_list' => 'welcome#blog' 
+  #get '/blog_detail' => 'welcome#blog_detail'
+  get 'welcome/blog_details'
   get '/about' => 'welcome#about'
   get '/contact' => 'welcome#contact'
   get '/package' => 'welcome#package'
+  post 'welcome/add_comment'
+  post 'welcome/add_newsletter'
+  post 'contact/add_newsletter'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}
@@ -27,6 +36,7 @@ Rails.application.routes.draw do
     resources :contacts
     resources :blogs
     resources :categories
+    resources :packages
   end
 
 

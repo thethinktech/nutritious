@@ -4,6 +4,18 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/layout.css">
+<style></style>
+<style>
+.footer-subscribe-input1 {
+    /*background: #333 none repeat scroll 0% 0%;*/
+    border: 0px none;
+    border-radius: 5px 0px 0px 5px;
+    height: 42px;
+    display: inline-block;
+    width: 78%;
+    outline: medium none;
+}
+</style>
 </head>
 
 <body>
@@ -37,9 +49,9 @@
         </li>
         <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , package_path %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
         <li><%= link_to 'CONTACT' , new_contact_path %></li>
       </ul>
     </div>
@@ -156,8 +168,8 @@
         <div class="footer-about-readMore">Read More</div>
         <div class="subscribe-newsletter">Subscribe Newsletter</div>
         <div>
-          <input type="text" name="name" class="footer-subscribe-input">
-          <button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
+          <input type="text" name="name" class="footer-subscribe-input1">
+          <button class="footer-subscribe-button">Send</button>
         </div>
       </div>
       <div class="col-md-3">
@@ -222,9 +234,9 @@
       <ul class="footer-menu-list">
         <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , package_path %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
         <li><%= link_to 'CONTACT' , new_contact_path %></li>
       </ul>
     </div>
