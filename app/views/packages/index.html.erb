@@ -35,12 +35,12 @@
               </span> </div>
           </form>
         </li>
-        <li class="active"><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">PACKAGES</a></li>
-        <li><a href="#">STORE</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'ABOUT' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
+        <li><%= link_to 'CONTACT' , new_contact_path %></li>
       </ul>
     </div>
     <!-- /.navbar-collapse --> 
@@ -49,7 +49,7 @@
 </nav>
 <header class="sub_header sub_header_contact_bg">
   <div class="container">
-    <div class="sub_header_title">Blog</div>
+    <div class="sub_header_title">Packages</div>
     <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   </div>
 </header>
@@ -59,8 +59,8 @@
   <div class="container">
     <div class="sub_top_menu">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Packages</a></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
       </ul>
     </div>
   </div>
@@ -300,12 +300,12 @@
     <div class="col-md-6 copyright-text"> Copyrights Nutritious &amp; Delicious 2015 </div>
     <div class="col-md-6">
       <ul class="footer-menu-list">
-        <li><a class="active" href="">HOME</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">PACKAGES</a></li>
-        <li><a href="">STORE</a></li>
-        <li><a href="">BLOG</a></li>
-        <li><a href="">CONTACT</a></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'ABOUT' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
+        <li><%= link_to 'CONTACT' , new_contact_path %></li>
       </ul>
     </div>
   </div>
