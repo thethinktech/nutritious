@@ -55,12 +55,12 @@
   						</form>
   					</li>
 
-  					<li class="active"><a class="active" href="#">Home</a></li>
-  					<li><a href="#">About</a></li>
-  					<li><a href="#">PACKAGES</a></li>
-  					<li><a href="#">STORE</a></li>
-  					<li><a href="#">BLOG</a></li>
-  					<li><a href="#">CONTACT</a></li>
+  					<li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+            <li><%= link_to 'ABOUT' , about_path %></li>
+            <li><%= link_to 'PACKAGES' , package_path %></li>
+            <li><%= link_to 'STORE' , store_path %></li>
+            <li><%= link_to 'BLOG' , blog_list_path %></li>
+            <li><%= link_to 'CONTACT' , new_contact_path %></li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
 
   				</ul>
   			</div><!-- /.navbar-collapse -->
@@ -96,12 +96,10 @@
                  <div class="row">
                   <div class="blog_categories">Categories</div>
                   <ul class="blog_categories_list">
-                      <li>Categories 1</li>
-                      <li>Categories 2</li>
-                      <li>Categories 3</li>
-                      <li>Categories 4</li>
-                      <li>Categories 5</li>
-                      <li>Categories 6</li>
+                      <% @cats = Category.all %>
+                      <% @cats.each do |cat| %>
+                      <li><%= cat.name %></li>
+                      <% end %>
                   </ul>
                   </div>
               </div>
@@ -109,24 +107,14 @@
              <div class="col-sm-12 blog_left_item">
                  <div class="row">
                   <div class="blog_categories">Recent Post</div>
+                      <% @blogs = Blog.all.order(:created_at).limit(5) %>
+                      <% @blogs.each do |blog| %>
                       <div class="col-sm-12 recent_post_box">
-                          <div class="recent_post_cate_name">I myself have realized over the</div>
-                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
+                          <div class="recent_post_cate_name"><%= blog.title %></div>
+                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp><%= blog.created_at.strftime('%B') %>&nbsp;<%= blog.created_at.strftime('%d') %>, <%= blog.created_at.strftime('%Y') %></samp></div>
                       </div>
-                      
-                      <div class="col-sm-12 recent_post_box">
-                          <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                      </div>
-                      
-                      <div class="col-sm-12 recent_post_box">
-                          <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                      </div>
-                      <div class="col-sm-12 recent_post_box">
-                          <div class="recent_post_cate_name_light">I myself have realized over the</div>
-                          <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp></div>
-                      </div>
+                      <% end %>
+                
                   </div>
               </div>
               
@@ -143,27 +131,31 @@
           </div>
           <div class="col-md-9">          
               <!-------------------------------------- post detail ---------------------------------->
-              
+              <% @users = User.where(:id => @blog.user_id) %>
+           <% @cateories = Category.where(:id => @blog.catgory_id) %>
               <div class="col-sm-12 blog-post">
                   <div class="row">
                       <ul class="blog-user-info">
-                          <li><i class="fa fa-user"></i><span>By Admin</span></li>
-                          <li><i class="fa fa-folder-open"></i><span>Category</span></li>
-                          <li><i class="fa fa-comment"></i><span>3 Comment</span></li>
+                          <% @users.each do |user| %>
+                        <li><i class="fa fa-user"></i><span>By <%= user.email %></span></li>
+                        <% end %>
+                          <% @cateories.each do |cat| %>
+                        <li><i class="fa fa-folder-open"></i><span><%= cat.name %></span></li>
+                        <% end %>
+                          <li><i class="fa fa-comment"></i><span><%=  @total_comment.count %> Comment</span></li>
                       </ul>
                   </div>
                   
-                  <div class="row blog_post_title">whay</div>
+                  <div class="row blog_post_title"><%= @blog.title %></div>
                   <div class="row blog_head_box">
                      <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
                       <div class="blog_head_date">
-                          <div class="blog_head_date_day">30</div>
-                          <div class="blog_head_date_month">oct</div>
+                          <div class="blog_head_date_day"><%= @blog.created_at.strftime('%d') %></div>
+                          <div class="blog_head_date_month"><%= @blog.created_at.strftime('%b') %></div>
                       </div>
                   </div>
                   <div class="row blog-detail">
-                      <p>this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class</p>
-          <p>this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class this is demo class</p>
+                      <p><%= @blog.decsription %></p>
                       
                       <div class="post_alert_message">
                          <div class="post_alert_message_title"> this is demo class this is demo class this is demo class this is demo class this is </div>
@@ -194,13 +186,43 @@
               
               <div class="blog_comment_section">
                   <div class="row">
-                      <div class="col-sm-12 post_comment_tagName">Post Comment</div>
+                    <div class="col-sm-12 post_comment_tagName">Post Comment</div>
+                      <%= form_for @comment, :url => {:action => "add_comment"}, :class => "" do |f| %>
+                      <%= hidden_field_tag(:blog_id,value=params[:id])%>
                       <div class="post_comment_inputBox">
-                          <div class="col-sm-6"><input type="text" name="name" placeholder="Full Name"></div>
+                      <% if notice %>
+                        <p class="alert alert-success"><%= notice %></p>
+                      <% end %>
+                          <div class="col-sm-6">
+                              <%= f.text_field :name, autofocus: true, required: true, :placeholder => "Full Name" %>
+                          </div>
+                          <div class="col-md-4">
+                              <%= f.email_field :email, required: true, :placeholder => "Email Address"%>
+                          </div>
+                          <div class="col-sm-12">
+                            <%= f.text_area :message, required: true, :placeholder => "Your Message" %>
+                          </div>
+                            <div class="col-md-12">
+                              <%= f.submit "POST COMMENT", :class => "contact-submit" %>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+
+
+
+
+
+
+
+                      <!--div class="post_comment_inputBox">
+                          <div class="col-sm-6">
+                          <input type="text" name="name" placeholder="Full Name"></div>
                           <div class="col-sm-6"><input type="text" name="name" placeholder="Email Address"></div>
                           <div class="col-sm-12"><textarea placeholder="Your Comment..."></textarea></div>
                           <div class="col-sm-12"><input type="submit" value="Post Comment"></div>
-                      </div>
+                      </div-->
                   </div>
               </div>
               

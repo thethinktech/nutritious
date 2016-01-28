@@ -44,11 +44,25 @@ class WelcomeController < ApplicationController
   end
 
   def blog
-
+    @blogs = Blog.all
   end
 
-  def blog_detail
+  def blog_details
+    @blog = Blog.find(params[:id])
+    @comment = Comment.new
+    @total_comment = Comment.where(:blog_id => params[:id])
+  end
 
+  def add_comment
+    @comment = Comment.new(comment_params)
+    @comment.blog_id = params[:blog_id]
+    #@comment.parent_id = params[:blog][:catgory_id]
+    if @comment.save
+      redirect_to welcome_blog_details_path(:id => params[:blog_id]), notice: "Comment added successfully!"
+    else
+      flash[:alert] = "#{@comment.errors.count} error prevented the comment from saving:"
+      #render 'new'
+    end
   end
 
   def about
@@ -145,6 +159,10 @@ class WelcomeController < ApplicationController
 
   def package
     
+  end
+
+  def comment_params
+      params.require(:comment).permit(:name, :email, :message, :blog_id, :parent_id)
   end
 
 
