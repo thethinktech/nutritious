@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 #gem 'will_paginate-bootstrap', '~> 1.0'
-#gem 'will_paginate', '~> 3.0'
-gem 'will_paginate-bootstrap'
+gem 'will_paginate', '~> 3.0'
+#gem 'will_paginate-bootstrap'
 #gem 'rmagick', '~> 2.15.4'
 gem 'carrierwave'
 #gem 'rmagick', '~> 2.15.4'
