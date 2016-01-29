@@ -202,8 +202,6 @@ GEM
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
     will_paginate (3.0.7)
-    will_paginate-bootstrap (1.0.1)
-      will_paginate (>= 3.0.3)
 
 PLATFORMS
   ruby
@@ -233,7 +231,6 @@ DEPENDENCIES
   vacuum
   web-console (~> 2.0)
   will_paginate (~> 3.0)
-  will_paginate-bootstrap
 
 BUNDLED WITH
    1.11.2
