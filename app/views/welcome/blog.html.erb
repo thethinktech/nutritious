@@ -16,6 +16,28 @@
     width: 78%;
     outline: medium none;
 }
+
+.my-hover-2 img{
+  width: 850px;
+  height: 450px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.my-hover-2 img:hover{
+  width: 820px;
+  height: 400px;
+  background-color: black;
+  
+
+}
+
+.blog_head_date_day{
+  padding-top: 15px;
+}
 </style>
 <div class="topborder"></div>
 <div class="social-iconBox">
@@ -64,7 +86,7 @@
 	
 <header class="sub_header sub_header_contact_bg">
 	<div class="container">
-		<div class="sub_header_title">Blog</div>
+		<div class="sub_header_title">Blog</div><br>
 		<div class="sub_header_detail">Have a question or comment? Get in touch!</div>
 	</div>
 </header>
@@ -139,12 +161,12 @@
 
             <div class="col-sm-12 blog-post">
                 <div class="row blog_head_box">
-                    <div class="blog_head_img">
-                        <%= image_tag(blog.image) if blog.image? %></div>
+                    <div class="blog_head_img my-hover-2">
+                        <%= image_tag(blog.image, :class => "img-responsive") if blog.image? %></div>
                     <div class="blog_head_date">
                         <div class="blog_head_date_day">
                             <%= blog.created_at.strftime('%d') %></div>
-                        <div class="blog_head_date_month"><%= blog.created_at.strftime('%b') %></div>
+                        <div class="blog_head_date_month"><br><%= blog.created_at.strftime('%b') %></div>
                     </div>
                 </div>
                 <div class="row">

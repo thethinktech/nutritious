@@ -9,6 +9,23 @@
     width: 78%;
     outline: medium none;
 }
+
+.my-hover img{
+  width: 512px;
+  height: 352px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.my-hover img:hover{
+  width:612px;
+  height: 380px;
+
+
+}
 </style>
 <div class="topborder"></div>
 
@@ -80,7 +97,7 @@
   	
   <header class="sub_header sub_header_contact_bg">
   	<div class="container">
-  		<div class="sub_header_title">Blog</div>
+  		<div class="sub_header_title">Blog</div><br><br>
   		<div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   	</div>
   </header>
@@ -159,7 +176,7 @@
                   
                   <div class="row blog_post_title"><%= @blog.title %></div>
                   <div class="row blog_head_box">
-                     <div class="blog_head_img"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
+                     <div class="blog_head_img my-hover"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
                       <div class="blog_head_date">
                           <div class="blog_head_date_day"><%= @blog.created_at.strftime('%d') %></div>
                           <div class="blog_head_date_month"><%= @blog.created_at.strftime('%b') %></div>

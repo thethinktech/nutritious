@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :contacts
   resources :packages
   resources :blogs
+  resources :newsletters
 
   get 'welcome/index'
   get 'welcome/get_products'
@@ -37,6 +38,7 @@ Rails.application.routes.draw do
     resources :blogs
     resources :categories
     resources :packages
+    resources :newsletters
   end
 
 
