@@ -84,7 +84,7 @@ class WelcomeController < ApplicationController
   def add_comment
     @comment = Comment.new(comment_params)
     @comment.blog_id = params[:blog_id]
-    #@comment.parent_id = params[:blog][:catgory_id]
+    #@comment.parent_id = params[:blog][:category_id]
     if @comment.save
       redirect_to welcome_blog_details_path(:id => params[:blog_id]), notice: "Comment added successfully!"
     else
