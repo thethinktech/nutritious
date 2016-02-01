@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'social-share-button', '~> 0.1.6'
+gem 'twitter'
+gem 'instagram'
 #gem 'will_paginate-bootstrap', '~> 1.0'
 gem 'will_paginate', '~> 3.0'
 #gem 'will_paginate-bootstrap'

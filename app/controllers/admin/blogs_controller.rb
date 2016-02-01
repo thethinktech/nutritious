@@ -6,8 +6,8 @@ class Admin::BlogsController < Admin::AdminController
   	end
 
 	def show
-
-    end
+    @blog = Blog.find(params[:id])
+  end
 
     def new
     	@blog = Blog.new

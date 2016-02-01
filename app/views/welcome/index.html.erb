@@ -9,7 +9,7 @@
     /*background: #333 none repeat scroll 0% 0%;*/
     border: 0px none;
     border-radius: 5px 0px 0px 5px;
-    height: 42px;
+    height: 41px;
     display: inline-block;
     width: 78%;
     outline: medium none;
@@ -47,6 +47,12 @@
 .link-second-click{
     font-family: 'lobster' , cursive;
 }
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/facebook.png") no-repeat;
+}
 </style>
 <div class="topborder"></div>
 <div class="social-iconBox">
@@ -81,7 +87,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
@@ -92,6 +98,9 @@
     </div>
   </div><!-- /.container-fluid -->
 </nav>
+<br><br>
+
+<%#= social_share_button_tag("My Home Page", :url => "http://nutritiousapp.herokuapp.com/blog_list") %>
 <div class="header">
   <div class="container">
     <div class="header-content"> 
@@ -579,32 +588,20 @@ We worry no more more, our nutritionists will help you craft a plan that will en
     <div class="col-md-3">
       <div class="latest-tweets-title">Latest Tweets</div>
       <ul class="latest-tweets-list">
+      <%= @tweet_news.each do |f| %>
         <li>
-          <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-          <div class="latest-tweets-time">1 minute ago</div>
+          <div class="latest-tweets-name"><%= f.text%></div>
+          <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
         </li>
-        <li>
-          <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-          <div class="latest-tweets-time">1 minute ago</div>
-        </li>
-        <li>
-          <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-          <div class="latest-tweets-time">1 minute ago</div>
-        </li>
+        <% end %>
       </ul>
     </div>
     <div class="col-md-3">
       <div class="latest-tweets-title">Instagram Feed</div>
       <ul class="latest-instagram-list">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <% @instagram.each do |instagram| %>     
+        <li><%= image_tag instagram.images.standard_resolution.url , :style => 'width:79px'%></li>
+    <% end %>
       </ul>
     </div>
     <div class="col-md-3">

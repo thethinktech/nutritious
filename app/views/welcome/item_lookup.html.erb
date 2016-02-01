@@ -47,7 +47,7 @@
               </span> </div>
           </form>
         </li>
-        <li><%= link_to 'Home' , root_path %></li>
+        <li><%= link_to 'HOME' , root_path %></li>
         <li><%= link_to 'About' , about_path %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
@@ -302,32 +302,20 @@
       <div class="col-md-3">
         <div class="latest-tweets-title">Latest Tweets</div>
         <ul class="latest-tweets-list">
+          <%= @tweet_news.each do |f| %>
           <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
+            <div class="latest-tweets-name"><%= f.text%></div>
+            <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
           </li>
-          <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
-          </li>
-          <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
-          </li>
+        <% end %>
         </ul>
       </div>
       <div class="col-md-3">
         <div class="latest-tweets-title">Instagram Feed</div>
         <ul class="latest-instagram-list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <% @instagram.each do |instagram| %>     
+          <li><%= image_tag instagram.images.standard_resolution.url , :style => 'width:79px'%></li>
+          <% end %>
         </ul>
       </div>
       <div class="col-md-3">

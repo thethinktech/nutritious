@@ -1,6 +1,14 @@
 class WelcomeController < ApplicationController
+  
+  def $client.get_all_tweets(user)
+    options = {:count => 3, :include_rts => true}
+    user_timeline(user, options)
+  end
+
   def index
     @newsletter = Newsletter.new
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")
   end  
 
   def add_newsletter
@@ -56,6 +64,8 @@ class WelcomeController < ApplicationController
   end
 
   def blog
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")
     @newsletter = Newsletter.new
     @blogs = Blog.all
     #@blogs = Blog.paginate(:page => params[:page])
@@ -63,6 +73,8 @@ class WelcomeController < ApplicationController
   end
 
   def blog_details
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")
     @newsletter = Newsletter.new
     @blog = Blog.find(params[:id])
     @comment = Comment.new
@@ -83,6 +95,8 @@ class WelcomeController < ApplicationController
 
   def about
     @newsletter = Newsletter.new
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")
   end
 
   def contact
@@ -90,11 +104,13 @@ class WelcomeController < ApplicationController
   end
 
   def package
-
+    
   end
 
   def item_lookup
 
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")  
     @categories = Category.all
 
     @category = Category.first
@@ -146,6 +162,8 @@ class WelcomeController < ApplicationController
   end
 
   def store
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @tweet_news = $client.get_all_tweets("NutritiousDe")
 
     @categories = Category.all
 

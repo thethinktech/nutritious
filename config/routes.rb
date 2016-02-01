@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  #get 'homes/show'
+
   resources :contacts
   resources :packages
   resources :blogs
   resources :newsletters
 
+  get "homes/show"
   get 'welcome/index'
   get 'welcome/get_products'
   get 'welcome/show'
@@ -21,7 +24,8 @@ Rails.application.routes.draw do
   get '/package' => 'welcome#package'
   post 'welcome/add_comment'
   post 'welcome/add_newsletter'
-  post 'contact/add_newsletter'
+  post 'contacts/add_newsletter'
+  post 'packages/add_newsletter'
 
   scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions"}

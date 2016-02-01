@@ -2,7 +2,14 @@
 
 <h3>Showing Blogs</h3>
 
+<p>
+  Title: <%= @blog.title %>
+</p>
+
+<p>
+  Description: <%= @blog.decsription %>
+</p>
 
 <%#= link_to 'Edit', edit_contact_path(@contact) %>
-<%= link_to 'Add New Blog', admin_blogs_path %> | 
-<%= link_to 'Back', admin_blog_add_path %>
+<%= link_to 'New Blog', new_admin_blog_path %> | 
+<%#= link_to 'Back', admin_blog_add_path %>

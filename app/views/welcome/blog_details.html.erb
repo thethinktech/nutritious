@@ -83,7 +83,7 @@
   						</form>
   					</li>
 
-  					<li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+  					<li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
             <li><%= link_to 'ABOUT' , about_path %></li>
             <li><%= link_to 'PACKAGES' , packages_path %></li>
             <li><%= link_to 'STORE' , store_path %></li>
@@ -160,7 +160,7 @@
           <div class="col-md-9">          
               <!-------------------------------------- post detail ---------------------------------->
               <% @users = User.where(:id => @blog.user_id) %>
-           <% @cateories = Category.where(:id => @blog.category_id) %>
+           <% @cateories = Category.where(:id => @blog.catgory_id) %>
               <div class="col-sm-12 blog-post">
                   <div class="row">
                       <ul class="blog-user-info">
@@ -238,12 +238,6 @@
                     </div>
                   <% end %>
 
-
-
-
-
-
-
                       <!--div class="post_comment_inputBox">
                           <div class="col-sm-6">
                           <input type="text" name="name" placeholder="Full Name"></div>
@@ -256,7 +250,7 @@
               
               <div class="blog_comment_list">
                  <div class="row">
-                    
+                    <div class="container">
                      <div class="col-sm-12 blog_comment_list_title">Comment</div>
                      
                      <% @total_comment.each do |comment| %>
@@ -330,6 +324,7 @@
                      </div-->
                      
                  </div>
+               </div>
              </div>
              
              <!--div class="nextAndprevious_comment_list">
@@ -366,32 +361,20 @@
   		<div class="col-md-3">
   			<div class="latest-tweets-title">Latest Tweets</div>
   			<ul class="latest-tweets-list">
-  				<li>
-  					<div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-  					<div class="latest-tweets-time">1 minute ago</div>
-  				</li>
-  				<li>
-  					<div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-  					<div class="latest-tweets-time">1 minute ago</div>
-  				</li>
-  				<li>
-  					<div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-  					<div class="latest-tweets-time">1 minute ago</div>
-  				</li>
+  				<%= @tweet_news.each do |f| %>
+          <li>
+            <div class="latest-tweets-name"><%= f.text%></div>
+            <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
+          </li>
+          <% end %>
   			</ul>
   		</div>
   		<div class="col-md-3">
   			<div class="latest-tweets-title">Instagram Feed</div>
   			<ul class="latest-instagram-list">
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
-  				<li></li>
+  				<% @instagram.each do |instagram| %>     
+          <li><%= image_tag instagram.images.standard_resolution.url , :style => 'width:79px'%></li>
+        <% end %>
   			</ul>
   		</div>
   		<div class="col-md-3">

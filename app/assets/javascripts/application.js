@@ -19,3 +19,5 @@
 //= require bootstrap.js
 //= require bootstrap.min.js
 //= require_tree .
+
+//= require social-share-button

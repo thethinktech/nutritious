@@ -25,4 +25,16 @@ class ApplicationController < ActionController::Base
   def after_sign_out_path_for(resource)
     admin_root_path
   end
+
+
+$client = Twitter::REST::Client.new do |config|
+  config.consumer_key = 'F7Bs3Y3teUeYkMWRTV6LzU4g9'
+  config.consumer_secret = 'WvnVNRPFdpsVfLpDlfvhGubbnRDoZJRUZQX3vOZ2Zi1n9OEIgB'
+  config.access_token = '4859074155-HSphHp1y3Q2MEWKCpn2CKaLNEMxiblqZgvHSgM6'
+  config.access_token_secret = 'pBDJ8GcAcuvU9L0uEqlMsA2t8OpLbfDwIz3DfqXf9bSCw'
+end
+
+
+
+
 end

@@ -1,64 +1,107 @@
-<head>
-<meta charset="utf-8">
-<title>Contact Us</title>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="css/layout.css">
-<style></style>
+
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 <style>
+.store-info{
+  /*background-image: url("../images/green-back.png") !important;*/
+}
 .footer-subscribe-input1 {
     /*background: #333 none repeat scroll 0% 0%;*/
     border: 0px none;
     border-radius: 5px 0px 0px 5px;
-    height: 42px;
+    height: 41px;
     display: inline-block;
     width: 78%;
     outline: medium none;
 }
-</style>
-</head>
 
-<body>
+.my-hover img{
+  width: 512px;
+  height: 352px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.my-hover img:hover{
+  width:612px;
+  height: 380px;
+
+
+}
+
+@font-face {
+    font-family: Tahoma;
+    src: url(Tahoma.ttf);
+}
+
+/*.change-you-life1 {
+    background-image: url("../images/orange-back.png");
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 122px;
+}*/
+
+.link-second-click{
+    font-family: 'lobster' , cursive;
+}
+.social-share-button-facebook {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/facebook.png") no-repeat;
+}
+</style>
 <div class="topborder"></div>
-<div class="white-social-iconBox">
+<div class="social-iconBox">
   <div class="container">
-    <div class="col-md-8 white-top-email"> <span>Bethany Gettis - Holistic Nutritionist</span> <span>+1 403 612 7767 </span> <span>nutrition4yoursoul@gmail.com</span> </div>
-    <div class="col-md-4 white-social-icons"> <span><i class="fa fa-facebook"></i></span> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-pinterest-p"></i></span> <span><i class="fa fa-youtube-play"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-google-plus"></i></span> </div>
+    <div class="col-md-9 top-email">
+      <span>Bethany Gettis - Holistic Nutritionist</span>
+      <span>+1 403 612 7767 </span>
+      <span>nutrition4yoursoul@gmail.com</span>
+</div>
+    <div class="col-md-3 social-icons">
+      <span><i class="fa fa-facebook"></i></span>
+      <span><i class="fa fa-twitter"></i></span>
+      <span><i class="fa fa-instagram"></i></span>
+    
+</div>
   </div>
   <hr class="hr-dot">
 </div>
-<nav class="navbar-default navbar-background" role="navigation">
-  <div class="container"> 
+<nav class="navbar navbar-background" role="navigation" style="margin-top: -40px;">
+  <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="company-sublogo" href="#"><img src="images/sub-logo.png" alt=""></a> </div>
-    
+      <button type="button" class="navbar-toggle menu_space" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
+    </div>
+
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <form class="navbar-form" role="search">
-            <div class="input-group">
-              <input type="text" class="form-control pull-right" style="font-size:14px;width: 250px; background-color: #fff;" placeholder="Search...">
-              <span class="input-group-btn">
-              <button type="reset" class="btn btn-default"> <span class="glyphicon glyphicon-remove"> <span class="sr-only">Close</span> </span> </button>
-              <button type="submit" class="btn btn-default search-button"> <span class="glyphicon glyphicon-search"> <span class="sr-only">Search</span> </span> </button>
-              </span> </div>
-          </form>
-        </li>
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
         <li><%= link_to 'BLOG' , blog_list_path %></li>
         <li><%= link_to 'CONTACT' , new_contact_path %></li>
+        <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
-  </div>
-  <!-- /.container-fluid --> 
+  </div><!-- /.container-fluid -->
 </nav>
+<br><br>
+
+
+
 <header class="sub_header sub_header_contact_bg">
   <div class="container">
     <div class="sub_header_title">Contact Us</div>
@@ -81,25 +124,25 @@
 <div class="contact_infomation">
   <div class="container">
     <div class="col-sm-3 text-center">
-      <div><img src="images/location-icon.png" alt=""></div>
+      <div><img src="../images/location-icon.png" alt=""></div>
       <div class="contact_info_title">Our Location</div>
       <div class="contact_info_subtitle">151 West Sprints Road SW Calgary,<br>
         AB T3H 4P6</div>
     </div>
     <div class="col-sm-3 text-center">
-      <div><img src="images/call-icon.png" alt=""></div>
+      <div><img src="../images/call-icon.png" alt=""></div>
       <div class="contact_info_title">Give Us A Call</div>
       <div class="contact_info_subtitle">Phone:  +1 403 612 7767</div>
     </div>
     <div class="col-sm-3 text-center">
-      <div><img src="images/email-icon.png" alt=""></div>
+      <div><img src="../images/email-icon.png" alt=""></div>
       <div class="contact_info_title">Email Us</div>
       <div class="contact_info_subtitle">nutrition4yoursoul@gmail.com</div>
     </div>
     <div class="col-sm-3 text-center">
-      <div><img src="images/website-icon.png" alt=""></div>
+      <div><img src="../images/website-icon.png" alt=""></div>
       <div class="contact_info_title">We Are Social</div>
-      <div class="white-social-icons"> <span><i class="fa fa-facebook"></i></span> <span><i class="fa fa-twitter"></i></span> <span><i class="fa fa-pinterest-p"></i></span> <span><i class="fa fa-youtube-play"></i></span> <span><i class="fa fa-instagram"></i></span> <span><i class="fa fa-google-plus"></i></span> </div>
+      <div class="white-social-icons"> <span><i class="fa fa-facebook"></i></span> <span><i class="fa fa-twitter"></i></span> </span> <span><i class="fa fa-instagram"></i></span>  </div>
     </div>
   </div>
 </div>
@@ -154,9 +197,9 @@
 </div>
 <% end %>
 <div class="contact-footer-images-list">
-  <div><img src="images/contact-footer-images-1.png" alt=""></div>
-  <div><img src="images/contact-footer-images-2.png" alt=""></div>
-  <div><img src="images/contact-footer-images-3.png" alt=""></div>
+  <div><img src="../images/contact-footer-images-1.png" alt=""></div>
+  <div><img src="../images/contact-footer-images-2.png" alt=""></div>
+  <div><img src="../images/contact-footer-images-3.png" alt=""></div>
 </div>
 <div class="clear"></div>
 <footer class="col-sm-12">
@@ -168,39 +211,34 @@
         <div class="footer-about-readMore">Read More</div>
         <div class="subscribe-newsletter">Subscribe Newsletter</div>
         <div>
-          <input type="text" name="name" class="footer-subscribe-input1">
-          <button class="footer-subscribe-button">Send</button>
+          <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
         </div>
       </div>
       <div class="col-md-3">
         <div class="latest-tweets-title">Latest Tweets</div>
         <ul class="latest-tweets-list">
+          <%= @tweet_news.each do |f| %>
           <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
+            <div class="latest-tweets-name"><%= f.text%></div>
+            <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
           </li>
-          <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
-          </li>
-          <li>
-            <div class="latest-tweets-name">Cras augues ipsum mpharetra inter Integ anterl nunc http://t.co/JGwd</div>
-            <div class="latest-tweets-time">1 minute ago</div>
-          </li>
+        <% end %>
         </ul>
       </div>
       <div class="col-md-3">
         <div class="latest-tweets-title">Instagram Feed</div>
         <ul class="latest-instagram-list">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          <% @instagram.each do |instagram| %>     
+          <li><%= image_tag instagram.images.standard_resolution.url , :style => 'width:79px'%></li>
+          <% end %>
         </ul>
       </div>
       <div class="col-md-3">
