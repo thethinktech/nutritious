@@ -67,7 +67,7 @@
 
 <header class="sub_header sub_header_contact_bg">
   <div class="container">
-    <div class="sub_header_title">Blog</div>
+    <div class="sub_header_title">Store</div>
     <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   </div>
 </header>
@@ -79,8 +79,8 @@
   <div class="container">
     <div class="sub_top_menu">
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Shop</a></li>
+        <li><%= link_to 'Home', root_path, :class => '' %></li>
+        <li><%= link_to 'Shop', store_path %></li>
         <li><a href="">Lawn Movers</a></li>
       </ul>
     </div>
@@ -205,8 +205,10 @@
             <% @products.each do |product| %>
                 <div class="col-md-4 col-sm-6">
                   <div class="col-sm-12 item_box">
-                    <div class="col-sm-12 item_image"><%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %></div>
-                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id) %></div>
+                    <div class="col-sm-12 item_image"><%#= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %>
+                    <%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:image => product.image_url, :url => product.url, :name => product.name, :feature => product.feature, :price => product.price), style: 'background-color:none' %>
+                    </div>
+                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, item_lookup_path(:image => product.image_url, :url => product.url, :name => product.name, :feature => product.feature, :price => product.price) %></div>
                     <div class="col-sm-12 item_subtitle">Demo</div>
                     <div class="col-sm-12 paddingNone add_card_and_price">
                       <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>

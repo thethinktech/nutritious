@@ -95,7 +95,17 @@ class WelcomeController < ApplicationController
 
   def item_lookup
 
+    @categories = Category.all
 
+    @category = Category.first
+
+    @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
+
+   @image = params['image']
+    @url = params['url']
+    @price = params['price']
+    @feature = params['link']
+    @name = params['name']
 
     requestd = Vacuum.new
 
@@ -181,6 +191,12 @@ class WelcomeController < ApplicationController
   end
 
   def store_details
+    @categories = Category.all
+
+    @category = Category.first
+
+    @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
+
     @image = params['image']
     @url = params['url']
     @price = params['price']
