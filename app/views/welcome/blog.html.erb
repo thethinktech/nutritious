@@ -155,7 +155,7 @@
         <div class="col-md-9">
             <% @blogs.each do |blog| %>
            <% @users = User.where(:id => blog.user_id) %>
-           <% @cateories = Category.where(:id => blog.catgory_id) 
+           <% @cateories = Category.where(:id => blog.category_id)
            @total_comment = Comment.where(:blog_id => blog.id)
            %>
 
