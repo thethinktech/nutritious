@@ -17,7 +17,7 @@ class Admin::BlogsController < Admin::AdminController
   	def create
 	    @blog = Blog.new(blog_params)
       @blog.user_id = params[:user_id]
-      @blog.catgory_id = params[:blog][:catgory_id]
+      @blog.category_id = params[:blog][:category_id]
       @blog.image = params[:file]
 	    if @blog.save
 	      redirect_to admin_blogs_path, notice: "Blog added successfully!"
