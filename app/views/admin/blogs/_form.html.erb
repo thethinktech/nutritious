@@ -21,7 +21,7 @@
     <%= hidden_field_tag(:user_id,value=current_user.id)%>
     <br>
     <%= f.label :Categories %><br>
-    <%= f.collection_select :catgory_id, @categories, :id, :name, include_blank: false %>
+    <%= f.collection_select :category_id, @categories, :id, :name, include_blank: false %>
     <%#= hidden_field_tag(:category_id,value=params[:e_id])%>
   </div>
 <br>
