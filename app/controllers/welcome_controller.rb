@@ -32,9 +32,6 @@ class WelcomeController < ApplicationController
         associate_tag: ENV['ASSOCIATE_TAG']
     )
 
-    #@key_index = ['Books','Beauty']
-    #@key = ['Harry Potter','Avalon Organics']
-
     response = requestd.item_search(
         query: {
             'SearchIndex' => 'Beauty',
@@ -60,7 +57,6 @@ class WelcomeController < ApplicationController
       @products << product
     end
 
-    # binding.pry
   end
 
   def blog
@@ -117,12 +113,6 @@ class WelcomeController < ApplicationController
 
     @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
 
-   @image = params['image']
-    @url = params['url']
-    @price = params['price']
-    @feature = params['link']
-    @name = params['name']
-
     requestd = Vacuum.new
 
     requestd.configure(
@@ -133,31 +123,21 @@ class WelcomeController < ApplicationController
 
     response = requestd.item_lookup(
         query: {
-            'SearchIndex' => params[:s_i],
-            'Keywords' => params[:key],
-            'ASIN' => params[:asin],
-            'ResponseGroup' => "ItemAttributes,Images,Reviews"
-
+            'ItemId' => params[:id],
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,Offers"
         }
     )
 
     hashed_products = response.to_h
 
-   # @products = []
-
-      #hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
-      #product = OpenStruct.new
-      #product.name = item['ItemAttributes']['Title']
-      #product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
-      #product.url = item['DetailPageURL']
-      #product.image_url = item['LargeImage']['URL'] if item['LargeImage']
-      #product.link = item['ItemLinks']['ItemLink'][5]['URL']
-      #product.review = item['Reviews'] if item['Reviews']
-
-      #@products << product
-    #end
-
-    # binding.pry
+    @product = OpenStruct.new
+    @product.name = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['Title']
+    @product.price = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['ListPrice']['FormattedPrice'] if hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['ListPrice']
+    @product.url = hashed_products['ItemLookupResponse']['Items']['Item']['DetailPageURL']
+    @product.feature = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['Feature']
+    @product.image_url = hashed_products['ItemLookupResponse']['Items']['Item']['LargeImage']['URL'] if hashed_products['ItemLookupResponse']['Items']['Item']['LargeImage']
+    @product.link = hashed_products['ItemLookupResponse']['Items']['Item']['ItemLinks']['ItemLink'][5]['URL']
+    @product.review = hashed_products['ItemLookupResponse']['Items']['Item']['CustomerReviews']['IFrameURL']
 
   end
 
@@ -201,7 +181,6 @@ class WelcomeController < ApplicationController
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
       product.review = item['Reviews'] if item['Reviews']
       product.id = item['ASIN']
-     # binding.pry
       @products << product
     end
 
