@@ -91,7 +91,7 @@
 	</div>
 </header>
 
-<div class="sub_header_flower"> <img src="images/header-flower.png" alt=""> </div>
+<div class="sub_header_flower"> <img src="../images/header-flower.png" alt=""> </div>
 
 <div class="sub_breadcrumb">
 	<div class="white_dashed"></div>
@@ -139,7 +139,7 @@
             <div class="col-sm-12 paddingNone blog_left_item">
                
                 <div class="offer_limit">
-                    <div class="offer_limit_title1">Limited Time</div>
+                    <div class="offer_limit_title1">Limited Time</div><br>
                     <div class="offer_limit_title2"><span>offer</span></div>
                     <div class="offer_limit_text">
                         <div class="offer_limit_price">20% OFF</div>
@@ -155,7 +155,7 @@
         <div class="col-md-9">
             <% @blogs.each do |blog| %>
            <% @users = User.where(:id => blog.user_id) %>
-           <% @cateories = Category.where(:id => blog.catgory_id)
+           <% @cateories = Category.where(:id => blog.category_id)
            @total_comment = Comment.where(:blog_id => blog.id)
            %>
 
@@ -215,7 +215,7 @@
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;margin-top: -6px;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
       </div>
@@ -275,7 +275,7 @@
 		</div>
 		<div class="col-md-6">
 			<ul class="footer-menu-list">
-		        <li><%= link_to 'HOME' , root_path, :class => 'active' %></li>
+		        <li><%= link_to 'HOME' , root_path, :class => '' %></li>
 		        <li><%= link_to 'ABOUT' , about_path %></li>
 		        <li><%= link_to 'PACKAGES' , packages_path %></li>
 		        <li><%= link_to 'STORE' , "#" %></li>

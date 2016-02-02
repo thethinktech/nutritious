@@ -1,5 +1,12 @@
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <style>
+  
+  .change-you-life1 {
+    background-image: url("../images/orange-back.png");
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 122px;
+}
 .footer-subscribe-input1 {
     /*background: #333 none repeat scroll 0% 0%;*/
     border: 0px none;
@@ -10,9 +17,9 @@
     outline: medium none;
 }
 
-.my-hover img{
-  width: 512px;
-  height: 352px;
+.my-hover-2 img{
+  width: 850px;
+  height: 450px;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -20,89 +27,71 @@
   transition: all 1s ease;
 }
 
-.my-hover img:hover{
-  width:612px;
-  height: 380px;
+.my-hover-2 img:hover{
+  width: 820px;
+  height: 400px;
+  background-color: black;
+  
 
+}
 
+.blog_head_date_day{
+  padding-top: 15px;
 }
 </style>
 <div class="topborder"></div>
-
-  <div class="white-social-iconBox">
-  	<div class="container">
-  		<div class="col-md-8 white-top-email">
-  			<span>Bethany Gettis - Holistic Nutritionist</span>
-  			<span>+1 403 612 7767 </span>
-  			<span>nutrition4yoursoul@gmail.com</span>
-  		</div>
-  		<div class="col-md-4 white-social-icons">
-  			<span><i class="fa fa-facebook"></i></span>
-  			<span><i class="fa fa-twitter"></i></span>
-  			<span><i class="fa fa-instagram"></i></span>
-  			
-  		</div>
-  	</div>
-  	<hr class="hr-dot">
+<div class="social-iconBox">
+  <div class="container">
+    <div class="col-md-9 top-email">
+      <span>Bethany Gettis - Holistic Nutritionist</span>
+      <span>+1 403 612 7767 </span>
+      <span>nutrition4yoursoul@gmail.com</span>
+</div>
+    <div class="col-md-3 social-icons">
+      <span><i class="fa fa-facebook"></i></span>
+      <span><i class="fa fa-twitter"></i></span>
+      <span><i class="fa fa-instagram"></i></span>
+      
+</div>
   </div>
+  <hr class="hr-dot">
+</div>
+<nav class="navbar navbar-background" role="navigation" style="margin-top: -40px;">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle menu_space" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
+    </div>
 
-
-  <nav class="navbar-default navbar-background" role="navigation">
-  		<div class="container">
-  			<!-- Brand and toggle get grouped for better mobile display -->
-  			<div class="navbar-header">
-  				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-  					<span class="sr-only">Toggle navigation</span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  					<span class="icon-bar"></span>
-  				</button>
-  				<a class="company-sublogo" href="#"><img src="images/sub-logo.png" alt=""></a>
-  			</div>
-
-  			<!-- Collect the nav links, forms, and other content for toggling -->
-  			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-  				<ul class="nav navbar-nav navbar-right">
-  					<li>
-  						<form class="navbar-form" role="search">
-  							<div class="input-group">
-  								<input type="text" class="form-control pull-right" style="font-size:14px;width: 250px; background-color: #fff;" placeholder="Search...">
-  								<span class="input-group-btn">
-  									<button type="reset" class="btn btn-default">
-  										<span class="glyphicon glyphicon-remove">
-  											<span class="sr-only">Close</span>
-  										</span>
-  									</button>
-  									<button type="submit" class="btn btn-default search-button">
-  										<span class="glyphicon glyphicon-search">
-  											<span class="sr-only">Search</span>
-  										</span>
-  									</button>
-  								</span>
-  							</div>
-  						</form>
-  					</li>
-
-  					<li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
-            <li><%= link_to 'ABOUT' , about_path %></li>
-            <li><%= link_to 'PACKAGES' , packages_path %></li>
-            <li><%= link_to 'STORE' , store_path %></li>
-            <li><%= link_to 'BLOG' , blog_list_path %></li>
-            <li><%= link_to 'CONTACT' , new_contact_path %></li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
-
-  				</ul>
-  			</div><!-- /.navbar-collapse -->
-  		</div><!-- /.container-fluid -->
-  	</nav>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'ABOUT' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , packages_path %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
+        <li><%= link_to 'CONTACT' , new_contact_path %></li>
+        <li><input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;"></li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
   	
   <header class="sub_header sub_header_contact_bg">
   	<div class="container">
-  		<div class="sub_header_title">Blog</div><br><br>
+  		<div class="sub_header_title">Blog</div><br>
   		<div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   	</div>
   </header>
 
-  <div class="sub_header_flower"> <img src="images/header-flower.png" alt=""> </div>
+  <div class="sub_header_flower"> <img src="../images/header-flower.png" alt=""> </div>
 
   <div class="sub_breadcrumb">
   	<div class="white_dashed"></div>
@@ -148,7 +137,7 @@
               
               <div class="col-sm-12 paddingNone blog_left_item">
                   <div class="offer_limit">
-                      <div class="offer_limit_title1">Limited Time</div>
+                      <div class="offer_limit_title1">Limited Time</div><br>
                       <div class="offer_limit_title2"><span>offer</span></div>
                       <div class="offer_limit_text">
                           <div class="offer_limit_price">20% OFF</div>
@@ -178,8 +167,8 @@
                   <div class="row blog_head_box">
                      <div class="blog_head_img my-hover"><img src="images/blog-img.jpg" class="img-responsive" alt=""></div>
                       <div class="blog_head_date">
-                          <div class="blog_head_date_day"><%= @blog.created_at.strftime('%d') %></div>
-                          <div class="blog_head_date_month"><%= @blog.created_at.strftime('%b') %></div>
+                          <div class="blog_head_date_day" style="padding-top:15px;"><%= @blog.created_at.strftime('%d') %></div>
+                          <div class="blog_head_date_month" style="padding-top:15px;"><%= @blog.created_at.strftime('%b') %></div>
                       </div>
                   </div>
                   <div class="row blog-detail">
@@ -251,10 +240,11 @@
               <div class="blog_comment_list">
                  <div class="row">
                     <div class="container">
-                     <div class="col-sm-12 blog_comment_list_title">Comment</div>
+                     <div class="col-sm-12 blog_comment_list_title"><div class="com-box" style="position: relative;
+left: 26%;">Comment</div></div>
                      
                      <% @total_comment.each do |comment| %>
-                     <div class="col-sm-12 user_comment_box">
+                     <div class="col-md-9 pull-right user_comment_box">
                          <div class="col-sm-2">
                              <div class="comment_user_pic"></div>
                          </div>
@@ -352,7 +342,7 @@
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;margin-top: -6px;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
       </div>
@@ -410,7 +400,7 @@
   		</div>
   		<div class="col-md-6">
   			<ul class="footer-menu-list">
-  				<li><a class="active" href="">HOME</a></li>
+  				<li><a class="" href="">HOME</a></li>
   				<li><a href="">ABOUT</a></li>
   				<li><a href="">PACKAGES</a></li>
   				<li><a href="">STORE</a></li>
