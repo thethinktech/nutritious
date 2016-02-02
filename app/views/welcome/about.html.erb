@@ -66,20 +66,20 @@
 	
 <header class="sub_header sub_header_images">
 	<div class="container">
-		<div class="sub_header_title">About Us</div>
+		<div class="sub_header_title">About Us</div><br>
 		<div class="sub_header_detail">Learn more about Nutritious &amp; Delicious and our goals for you.</div>
 	</div>
 </header>
 
-<div class="sub_header_flower"> <img src="images/header-flower.png" alt=""> </div>
+<div class="sub_header_flower"> <img src="../images/header-flower.png" alt=""> </div>
 
 <div class="sub_breadcrumb">
 	<div class="white_dashed"></div>
 	<div class="container">
 		<div class="sub_top_menu">
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">About Us</a></li>
+				<li><%= link_to 'HOME' , root_path, :class => '' %></li>
+        <li><%= link_to 'ABOUT' , about_path %></li>
 			</ul>
 		</div>
 	</div>
@@ -104,7 +104,7 @@
 	<div class="container">
 	
 		<div class="meet-our-holistic-padding">	
-			<div class="meet_our_holistic_border">Meet Our Holistic Nutritionist</div>
+			<div class="meet_our_holistic_border">Meet Our Holistic Nutritionist</div><br>
 			<div>Get to know the founder of Nutritious &amp; Delicious.</div>
 		</div>
 		<div class="col-sm-12 meet-our-info paddingNone">
@@ -261,7 +261,7 @@
 		        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
 		        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
 		        <%= hidden_field_tag(:status,value='1')%>
-		        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+		        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%; margin-top: -6px;' %>
 		        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
 		        <% end %>
 		      </div>
@@ -320,7 +320,7 @@
 		</div>
 		<div class="col-sm-6">
 			<ul class="footer-menu-list">
-		        <li><%= link_to 'HOME' , root_path, :class => 'active' %></li>
+		        <li><%= link_to 'HOME' , root_path, :class => '' %></li>
 		        <li><%= link_to 'ABOUT' , about_path %></li>
 		        <li><%= link_to 'PACKAGES' , packages_path %></li>
 		        <li><%= link_to 'STORE' , store_path %></li>

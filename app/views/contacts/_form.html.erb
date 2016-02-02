@@ -104,18 +104,18 @@
 
 <header class="sub_header sub_header_contact_bg">
   <div class="container">
-    <div class="sub_header_title">Contact Us</div>
+    <div class="sub_header_title">Contact Us</div><br>
     <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   </div>
 </header>
-<div class="sub_header_flower"> <img src="images/header-flower.png" alt=""> </div>
+<div class="sub_header_flower"> <img src="../images/header-flower.png" alt=""> </div>
 <div class="sub_breadcrumb">
   <div class="white_dashed"></div>
   <div class="container">
     <div class="sub_top_menu">
       <ul>
-       <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
-        <li><%= link_to 'ABOUT' , about_path %></li>
+       <li><%= link_to 'Home' , root_path, :class => '' %></li>
+        <li><%= link_to 'About' , about_path %></li>
       </ul>
     </div>
   </div>
@@ -217,7 +217,7 @@
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%; margin-top: -6px; height: 42px !important;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
         </div>
@@ -270,7 +270,7 @@
     <div class="col-md-6 copyright-text"> Copyrights Nutritious &amp; Delicious 2015 </div>
     <div class="col-md-6">
       <ul class="footer-menu-list">
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li style=""><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>

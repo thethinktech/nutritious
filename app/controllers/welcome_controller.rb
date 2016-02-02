@@ -108,7 +108,7 @@ class WelcomeController < ApplicationController
   end
 
   def item_lookup
-
+    @newsletter = Newsletter.new
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")  
     @categories = Category.all
@@ -162,6 +162,7 @@ class WelcomeController < ApplicationController
   end
 
   def store
+    @newsletter = Newsletter.new
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")
 

@@ -237,9 +237,9 @@ col-md-6 img{
 
 
 .change-you-life{
-	background: #f26522;
+	
 	padding-top: 60px;
-	padding-bottom: 60px;
+	padding-bottom: 50px;
 }
 .life-change-title{
 	font-family: 'Tahoma';
@@ -268,10 +268,7 @@ col-md-6 img{
 	font-family: 'Tahoma';
 	font-size: 12px;
 }
-.change-your-border{
-	background-image: url(../images/red-dot.png);
-	height: 10px;
-}
+
 .change-the-way{
 	background-image: url(../images/dote-line.png);
 	padding-top: 50px;

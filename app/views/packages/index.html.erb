@@ -36,12 +36,7 @@
     src: url(Tahoma.ttf);
 }
 
-/*.change-you-life1 {
-    background-image: url("../images/orange-back.png");
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 122px;
-}*/
+
 
 .link-second-click{
     font-family: 'lobster' , cursive;
@@ -51,6 +46,29 @@
   width: 16px;
   height: 16px;
   background: url("../images/facebook.png") no-repeat;
+}
+
+.what_our_packages_list_img {
+    width: 94px;
+    float: left;
+}
+
+.what_our_packages_name_title {
+    font-family: "Roboto Slab Bold";
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.what_our_packages_name_detail {
+    font-family: "Roboto Slab Light";
+    font-size: 12px;
+    color: #858585;
+}
+.what_packages_item {
+    margin-bottom: 50px;
+}
+.what_our_packages_list_detail {
+    width: 70%;
+    float: left;
 }
 .my-hover img{
   width:350px;
@@ -63,7 +81,9 @@
 }
 
 .my-hover img:hover{
-  margin-left: -100px;
+  margin-left: width:380px;
+
+height: 230px;
 }
 
 #what_our_packages {
@@ -135,6 +155,12 @@
     text-align: center;
     margin-bottom: 40px;
 }
+
+.change-you-life {
+    background: #F26522 none repeat scroll 0% 0%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
 .all_packages_list {
     padding: 0px;
     list-style: outside none none;
@@ -192,6 +218,11 @@
     border-bottom: 1px dashed #BBB;
     margin: 0px 0px 80px;
     height: 5px;
+}
+.what_our_packages_name_title {
+    font-family: "Roboto Slab Bold";
+    font-size: 14px;
+    margin-bottom: 15px;
 }
 </style>
 <div class="topborder"></div>
@@ -254,7 +285,7 @@
   <div class="container">
     <div class="sub_top_menu">
       <ul>
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+        <li><%= link_to 'HOME' , root_path, :class => '' %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
       </ul>
     </div>
@@ -264,8 +295,8 @@
 <section id="our_approach">
   <div class="container">
     <br>
-    <div class="our_approach_title"><h2 align="center">Our Approach</h2></div><br>
-    <div class="our_approach_subtitle"><p align="center">Learn about our approach to helping you acheieve your health goals.</p></div><br><br>
+    <div class="our_approach_title"><h2>Our Approach</h2></div><br>
+    <div class="our_approach_subtitle"><p>Learn about our approach to helping you acheieve your health goals.</p></div><br><br>
     <div class="">
       <div class="col-lg-4 col-md-6 col-sm-6">
         <div class="our_approach_box">
@@ -306,8 +337,8 @@
 <br>
 <section id="what_our_packages">
   <div class="container">
-    <div class="our_approach_title"><h2 align="center">What Our Packages Include</h2></div>
-    <div class="our_approach_subtitle"><p align="center">Learn more about our process to create a package unique to your nutrition needs.</p></div>
+    <div class="our_approach_title"><h2>What Our Packages Include</h2></div>
+    <div class="our_approach_subtitle"><p>Learn more about our process to create a package unique to your nutrition needs.</p></div>
     <div class="col-md-4"><div class="my-hover-1"><img src="images/what_our_packages_img.png" class="img-responsive" alt=""></div></div>
     <div class="col-md-8"> 
       <!----- what our packages item ------>
@@ -436,7 +467,7 @@
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%; margin-top: -6px;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
         </div>
@@ -490,7 +521,7 @@
     <div class="col-md-6 copyright-text"> Copyrights Nutritious &amp; Delicious 2015 </div>
     <div class="col-md-6">
       <ul class="footer-menu-list">
-       <li style="font-family:'lobster' , cursive;"><%= link_to 'Home' , root_path, :class => 'link-second-click' %></li>
+       <li style=""><%= link_to 'HOME' , root_path, :class => '' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
         <li><%= link_to 'PACKAGES' , packages_path %></li>
         <li><%= link_to 'STORE' , store_path %></li>
