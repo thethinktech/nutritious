@@ -18,7 +18,7 @@
         <td><%= package.description %></td>
         <td><%= link_to 'Show', [:admin, package] %></td>
         <td><%#= link_to 'Edit', edit_contact_path(contact) %></td>
-        <td><%#= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Destroy', [:admin, package] , method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
   </tbody>

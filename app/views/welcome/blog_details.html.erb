@@ -141,7 +141,7 @@
                       <div class="offer_limit_title2"><span>offer</span></div>
                       <div class="offer_limit_text">
                           <div class="offer_limit_price">20% OFF</div>
-                          <div class="offer_limit_price_detail">Save 20% For 2 or More Packahes Within The Same Family</div>
+                          <div class="offer_limit_price_detail">Save 20% For 2 or More Packages Within The Same Family</div>
                       </div>
                   </div>
               </div>  
@@ -149,7 +149,7 @@
           <div class="col-md-9">          
               <!-------------------------------------- post detail ---------------------------------->
               <% @users = User.where(:id => @blog.user_id) %>
-           <% @cateories = Category.where(:id => @blog.category_id) %>
+           <% @cateories = Category.where(:id => @blog.catgeory_id) %>
               <div class="col-sm-12 blog-post">
                   <div class="row">
                       <ul class="blog-user-info">
@@ -337,7 +337,7 @@ left: 26%;">Comment</div></div>
 
   			<div>
         <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
+          
         <% end %>
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>

@@ -115,7 +115,7 @@
     <div class="sub_top_menu">
       <ul>
        <li><%= link_to 'Home' , root_path, :class => '' %></li>
-        <li><%= link_to 'About' , about_path %></li>
+        <li><%= link_to 'CONTACT' , new_contact_path %></li>
       </ul>
     </div>
   </div>
@@ -206,7 +206,7 @@
   <div class="row">
     <div class="container">
       <div class="col-md-3">
-        <div><img src="images/footer-logo.png"  class="img-responsive" alt=""></div>
+        <div><img src="../images/footer-logo.png"  class="img-responsive" alt=""></div>
         <div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
         <div class="footer-about-readMore">Read More</div>
         <div class="subscribe-newsletter">Subscribe Newsletter</div>
@@ -217,7 +217,7 @@
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%; margin-top: -6px; height: 42px !important;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button",:style => 'width: 25%; margin-top: -6px;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
         </div>

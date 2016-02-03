@@ -168,7 +168,7 @@
       <div class="row">
         <div class="col-sm-4">
           <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-stacked change-the-tab">
-            <li class="active"><a href="#vtab1" data-toggle="tab">Vegetarian / Vegan</a></li>
+            <li style="margin-left: 0px;" class="active"><a href="#vtab1" data-toggle="tab">Vegetarian / Vegan</a></li>
             <li><a href="#vtab2" data-toggle="tab">Detox </a></li>
             <li><a href="#vtab3" data-toggle="tab">Weight Loss</a></li>
             <li><a href="#vtab4" data-toggle="tab">Gluten Free</a></li>
@@ -604,7 +604,7 @@ left: 4%;">
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
-        <%= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px; height:42px !important;' %>
+        <%= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px;' %>
         <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
         <% end %>
       </div>
