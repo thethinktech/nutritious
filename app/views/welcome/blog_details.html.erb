@@ -149,7 +149,7 @@
           <div class="col-md-9">          
               <!-------------------------------------- post detail ---------------------------------->
               <% @users = User.where(:id => @blog.user_id) %>
-           <% @cateories = Category.where(:id => @blog.catgeory_id) %>
+           <% @cateories = Category.where(:id => @blog.category_id) %>
               <div class="col-sm-12 blog-post">
                   <div class="row">
                       <ul class="blog-user-info">
