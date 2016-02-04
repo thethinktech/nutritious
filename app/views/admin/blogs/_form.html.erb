@@ -13,9 +13,9 @@
 
   <div class="field">
     <%= f.label :Title %><br>
-    <%= f.text_field :title, class:'input-class', required: true %><br>
+    <%= f.text_field :title, required: true, :placeholder => "Blog Title", class:'input-class', required: true %><br>
     <%= f.label :Description %><br>
-    <%= f.text_area(:decsription, size: '35x5', required: true) %><br>
+    <%= f.text_area(:decsription, size: '35x5', required: true, :placeholder => "Description",) %><br>
     <%= f.label :Image %><br>
     <%= f.file_field :image %>
     <%= hidden_field_tag(:user_id,value=current_user.id)%>
