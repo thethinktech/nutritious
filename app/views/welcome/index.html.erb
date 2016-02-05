@@ -212,11 +212,11 @@ Our plans are based on weight maintenance + rich nutrients in the form of health
 Get our tasty recipes to add to your growing meal plan. Being vegan or vegetarian doesn’t have to be hard—customized recipes allow you to enjoy a varied and delicious diet.
 </p>
                 
-<ul class="vegetarian-list">
+<!--<ul class="vegetarian-list">
                   <li>Keep protein levels balanced</li>
                   <li>Creative and tasty alternatives</li>
                   <li>Learn where to quickly find the foods you need.</li>
-                </ul>
+                </ul>-->
          
                 <div class="free-quote">Request Free Quote</div>
          
@@ -905,18 +905,22 @@ attention to detail. She designed very thorough history forms for all of her cli
     <div class="col-md-3">
       <div class="latest-tweets-title">Latest Tweets</div>
       <ul class="latest-tweets-list">
-      
+      <%= @tweet_news.each do |f| %>
         <li>
-          <div class="latest-tweets-name"></div>
-          <div class="latest-tweets-time"></div>
+          <div class="latest-tweets-name"><%= f.text %></div>
+          <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
         </li>
-        
+        <% end %>
       </ul>
     </div>
     <div class="col-md-3">
       <div class="latest-tweets-title">Instagram Feed</div>
       <ul class="latest-instagram-list">
-        
+        <% @instagram.each do |instagram| %>
+
+              <li><%= image_tag instagram.images.standard_resolution.url, :style => 'width:79px' %></li>
+
+          <% end %>
       </ul>
     </div>
     <div class="col-md-3">
