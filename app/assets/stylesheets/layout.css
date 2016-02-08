@@ -55,7 +55,8 @@ col-md-6 img{
 }
 .social-iconBox{
 	background: #f26522;
-	padding-top: 15px;
+	padding-bottom: 36px;
+	height: 100px;
 }
 .social-icons{
 	text-align: right;
