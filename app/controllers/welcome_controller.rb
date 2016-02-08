@@ -65,7 +65,7 @@ class WelcomeController < ApplicationController
     @newsletter = Newsletter.new
     @blogs = Blog.all
     #@blogs = Blog.paginate(:page => params[:page])
-    @@blogs = Blog.paginate(:page => params[:page], :per_page => 2).order('created_at DESC')
+    @@blogs = Blog.paginate(:page => params[:page], :per_page => 2).order('created_at desc')
   end
 
   def blog_details
