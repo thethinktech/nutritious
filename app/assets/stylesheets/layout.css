@@ -127,9 +127,10 @@ col-md-6 img{
 }
 .header{
 	background-image: url(../images/header.png);
-	background-size: 100% 100%;
+	background-size: cover;
 	border-bottom: 5px solid #f26522;
-
+	
+    
 }
 .header-content{
 	width: 450px;
@@ -142,14 +143,17 @@ col-md-6 img{
 }
 .header-title{
 	font-family: 'Tahoma';
-	font-size: 25px;
+	font-size: 40px;
 	color: #fff;
+	position:relative;
+	top:-25px;
 }
 .header-subtitle{
+	position: relative;
 	font-family: 'Tahoma';
-	font-size: 15px;
+	font-size: 24px;
 	color: #fff;
-	margin-top: 20px;
+	margin-top: 15px;
 }
 .header-arrow{
 	margin-left: 50px;
