@@ -1,0 +1,105 @@
+<footer>
+  <div class="container">
+    <div class="col-md-3">
+      <div><img src="images/footer-logo.png" alt=""></div>
+      <div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
+      <div class="footer-about-readMore">Read More</div>
+      <div class="subscribe-newsletter">Subscribe Newsletter</div>
+      
+      <div>
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= hidden_field_tag(:status,value='1')%>
+        <%= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px;' %>
+        <!--button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button-->
+        <% end %>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <div class="latest-tweets-title">Latest Tweets</div>
+      <ul class="latest-tweets-list">
+      <%= @tweet_news.each do |f| %>
+        <li>
+          <div class="latest-tweets-name"><%= f.text %></div>
+          <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <div class="latest-tweets-title">Instagram Feed</div>
+      <ul class="latest-instagram-list">
+        <% @instagram.each do |instagram| %>
+
+              <li><%= image_tag instagram.images.standard_resolution.url, :style => 'width:79px' %></li>
+
+          <% end %>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <div class="col-md-12">
+        <div class="latest-tweets-title">Contact Info</div>
+        <div class="row contact-fild">
+          <div class="col-md-5 contact-title">Address:</div>
+          <div class="col-md-7 contact-name">151 West Srpints Road SW <br>Calgary, AB <br>T3H 4P6</div>
+        </div>
+        <div class="row contact-fild">
+          <div class="col-md-5 contact-title">CA Office:</div>
+          <div class="col-md-7 contact-name">+ 1 403 612 7767</div>
+        </div>
+        <div class="row contact-fild">
+          <div class="col-md-5 contact-title">Email:</div>
+          <div class="col-md-7 contact-name">nutrition4yoursoul@gmail.com</div>
+        </div>
+        
+        <div class="row contact-fild">
+          <div class="send-message-box">Send Message</div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="footer-border"></div>
+<div class="copyright-Box">
+  <div class="container">
+    <div class="col-sm-6 copyright-text">
+      Copyrights Nutritious &amp; Delicious 2015
+    </div>
+    <div class="col-sm-6">
+      <ul class="footer-menu-list">
+        <li><%= link_to 'HOME' , root_path, :class => '' %></li>
+        <li><%= link_to 'ABOUT' , about_path %></li>
+        <li><%= link_to 'PACKAGES' , "#" %></li>
+        <li><%= link_to 'STORE' , store_path %></li>
+        <li><%= link_to 'BLOG' , blog_list_path %></li>
+        <li><%= link_to 'CONTACT' , "#" %></li>
+      </ul>
+    </div>
+  </div>  
+</div>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var maxLength = 450;
+  $(".show-read-more").each(function(){
+    var myStr = $(this).text();
+    if($.trim(myStr).length > maxLength){
+      var newStr = myStr.substring(0, maxLength);
+      var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+      $(this).empty().html(newStr);
+      $(this).append(' <a href="javascript:void(0);" class="read-more"><br><i>read more >>></i></a>');
+      $(this).append('<span class="more-text">' + removedStr + '</span>');
+    }
+  });
+  $(".read-more").click(function(){
+    $(this).siblings(".more-text").contents().unwrap();
+    $(this).remove();
+  });
+});
+</script>
