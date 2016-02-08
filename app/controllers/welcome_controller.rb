@@ -107,6 +107,7 @@ class WelcomeController < ApplicationController
     @newsletter = Newsletter.new
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")  
+
     @categories = Category.all
 
     @category = Category.first
@@ -124,7 +125,8 @@ class WelcomeController < ApplicationController
     response = requestd.item_lookup(
         query: {
             'ItemId' => params[:id],
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,Offers"
+            'RelationshipType' => 'NewerVersion',
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,RelatedItems"
         }
     )
 
@@ -143,7 +145,7 @@ class WelcomeController < ApplicationController
 
   def store
     @newsletter = Newsletter.new
-    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
+    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9})
     @tweet_news = $client.get_all_tweets("NutritiousDe")
 
     @categories = Category.all
@@ -152,6 +154,8 @@ class WelcomeController < ApplicationController
 
     @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
 
+    @page = 1
+    @page = params[:page] if params[:page]
     requestd = Vacuum.new
 
     requestd.configure(
@@ -164,12 +168,16 @@ class WelcomeController < ApplicationController
         query: {
             'SearchIndex' => @category.search_index,
             'Keywords' => @category.keyword,
+            'ItemPage' => @page,
             'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds"
         }
     )
 
     hashed_products = response.to_h
 
+    @total_pages = hashed_products['ItemSearchResponse']['Items']['TotalPages']
+
+    # binding.pry
     @products = []
 
     hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
