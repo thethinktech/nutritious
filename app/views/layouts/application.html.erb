@@ -3,12 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Nutritious</title>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
 
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <script src="/assets/javacripts/jquery-1.11.2.min.js"></script>
-  <script src="/assets/javacripts/bootstrap.js"></script>
-  <script src="/assets/javacripts/jquery-ui.js"></script>
-  <script src="/assets/javacripts/script.js"></script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -29,13 +31,13 @@
 
 <script src="javascript/jquery-1.11.2.min.js"></script>
 <script src="javascript/bootstrap.js"></script>
-</body>
-</html>
+
 
 <%= render "layouts/header" %>
 <%= yield %>
 <%= render "layouts/footer" %>
 
-
+</body>
+</html>
 
 
