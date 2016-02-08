@@ -3362,7 +3362,12 @@
 .change-you-life {
     padding-top: 60px;
     padding-bottom: 50px;
-   background-image: url("../images/new-back.png") !important;
+   background: url("../images/new-back.png") 50% 0 no-repeat fixed !important;
+   position: relative;
+   background-size: cover;
+   background-position: fixed;
+  min-height: 200px;
+  height: auto;
 }
 
 .life-change-title {
@@ -3438,7 +3443,7 @@
   background: url("../images/facebook.png") no-repeat;
 }
 </style>
-
+<div id="top">
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
@@ -4311,7 +4316,7 @@ attention to detail. She designed very thorough history forms for all of her cli
     </div>
   </div>  
 </div>
-
+</div>
 
 <script type="text/javascript">
 $(document).ready(function(){
