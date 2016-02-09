@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   post 'packages/add_newsletter'
 
   scope '/admin' do
-    devise_for :users, :controllers => {:sessions => "sessions"}
+    devise_for :users, :controllers => {:sessions => "sessions", :registrations => "registrations"}
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
