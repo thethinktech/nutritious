@@ -735,14 +735,15 @@ footer{
 	display: inline-block;
 	background: #7da500;
 	border: 0px;
-	height: 43px;
-	
+	height: 47px;
 	border-radius: 0px 5px 5px 0px;
-	margin-left: -17px;
+	margin-left: -16px;
 	font-size: 17px;
 	font-weight: bold;
 	color: #fff;
 	outline: none;
+	width: 50px;
+	padding-bottom: 1px;
 }
 .latest-tweets-list{
 	list-style: url(../images/twitter-icon.png);

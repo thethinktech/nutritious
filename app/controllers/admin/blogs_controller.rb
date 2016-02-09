@@ -2,7 +2,7 @@ class Admin::BlogsController < Admin::AdminController
   	layout 'admin'
 
   	def index
-    	@blogs = Blog.order(id: :asc)
+    	@blogs = Blog.order('created_at desc')
   	end
 
 	def show
@@ -35,6 +35,10 @@ class Admin::BlogsController < Admin::AdminController
       format.json { head :no_content }
     end
     end
+
+    def edit
+      @blog = Blog.new
+  end
 
       def update
        if @blog.update(blog_params)

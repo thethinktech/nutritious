@@ -40,7 +40,6 @@
            <div class="col-sm-12 blog_left_item">
                <div class="row">
                 <div class="blog_categories">Recent Post</div>
-                    <% @blogs = Blog.all.order(:created_at).limit(5) %>
                       <% @blogs.each do |blog| %>
                       <div class="col-sm-12 recent_post_box">
                           <div class="recent_post_cate_name"><%= blog.title %></div>
@@ -104,12 +103,55 @@
             <% end %>
             <%#= will_paginate @blogs, renderer: BootstrapPagination::Rails %>
             <%#= will_paginate @blogs %>
-            <!--div class="post_paging">
-            	<ul>
-            		<li class="active"><%#= will_paginate @blogs %></li>
-            	</ul>
-            </div-->
+            <div class="post_paging">
+            	<%= will_paginate @blogs %>
+            </div>
             
         </div>
 	</div>
 </div>
+
+<style>
+  .pagination{float: right;}
+  .disabled {
+    width: 50px;
+    height: 34px;
+    background: #ffffff !important;
+    border: 1px solid #f26522;
+    border-bottom: 5px solid #f26522;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Roboto Slab Regular';
+    font-size: 14px;
+    color: #000 !important;
+  }
+  .disabled {
+    width: 50px;
+    height: 34px;
+    background: #ffffff !important;;
+    border: 1px solid #f26522;
+    border-bottom: 5px solid #f26522;
+    text-align: center;
+    line-height: 30px;
+    font-family: 'Roboto Slab Regular';
+    font-size: 14px;
+    color: #000 !important;
+  }
+  .next_page{
+    background: #f26522;
+    border: 1px solid #dddddd;
+    border-bottom: 5px solid #dddddd;
+    color: #fff;
+    padding: 10px !important
+  }
+  .previous_page{
+    background: #f26522;
+    border: 1px solid #dddddd;
+    border-bottom: 5px solid #dddddd;
+    color: #fff;
+    padding: 10px !important
+  }
+  .pagination a:first-child {
+    display:none;
+  }
+</style>>

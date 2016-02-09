@@ -63,9 +63,9 @@ class WelcomeController < ApplicationController
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")
     @newsletter = Newsletter.new
-    @blogs = Blog.all
+    #@blogs = Blog.order('created_at desc')
     #@blogs = Blog.paginate(:page => params[:page])
-    @@blogs = Blog.paginate(:page => params[:page], :per_page => 2).order('created_at desc')
+    @blogs = Blog.paginate(:page => params[:page], :per_page => 10).order('created_at desc')
   end
 
   def blog_details
