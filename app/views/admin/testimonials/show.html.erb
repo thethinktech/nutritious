@@ -1,0 +1,13 @@
+<h3>Showing Testimonials</h3>
+
+<p>
+  Content: <%= @testimonials.content %>
+</p>
+
+<p>
+  Name: <%= @testimonials.name %>
+</p>
+
+<%#= link_to 'Edit', edit_admin_packege_path(@package) %>
+<%= link_to 'Add New Testimonial', new_admin_testimonial_path %> | 
+<%= link_to 'Back', admin_testimonials_path %>

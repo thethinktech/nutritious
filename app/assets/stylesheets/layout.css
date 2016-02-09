@@ -190,11 +190,16 @@ col-md-6 img{
 	position: absolute;
 	width: 100%;
 	margin-top: -23px;
+	z-index:999;
 }
 .store-info{
-	background-image: url(../images/green-back.png);
-	padding-top: 80px;
-	padding-bottom: 50px
+	background: url(../images/green-back.png)50% 0 no-repeat fixed;
+	padding-top: 50px;
+	background-size: cover;
+	background-position: fixed;
+	position: relative;
+	min-height: 360px;
+	height: auto;
 }
 .store-info-border{
 	background-image: url(../images/green-dot.png);
@@ -2325,4 +2330,5 @@ div.description_content{
 	.our-packages, .watch-videoButton, .subbotton{
 		width: 100%;
 	}
+	
 }

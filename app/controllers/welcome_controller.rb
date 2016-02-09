@@ -9,6 +9,8 @@ class WelcomeController < ApplicationController
     @newsletter = Newsletter.new
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")
+    @testimonials = Testimonial.all
+    @blogs = Blog.order('created_at desc')
   end  
 
   def add_newsletter

@@ -1,0 +1,27 @@
+<h1>Listing Testimonials</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Content</th>
+    <th>Name</th>
+    <th colspan="3">Actions</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @testimonials.each do |testimonial| %>
+      <tr>
+        <td><%= testimonial.content %></td>
+        <td><%= testimonial.name %></td>
+        <td><%= link_to 'Show', [:admin, testimonial] %></td>
+        <td><%#= link_to 'Edit', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Destroy', [:admin, testimonial] , method: :delete, data: { confirm: 'Are you sure you want to destroy this particular testimonial ?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Testimonial', new_admin_testimonial_path %>
