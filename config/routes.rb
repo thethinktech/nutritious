@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :packages
   resources :blogs
   resources :newsletters
+  resources :testimonials
 
   get "homes/show"
   get 'welcome/index'
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
     resources :categories
     resources :packages
     resources :newsletters
+    resources :testimonials
   end
 
 
