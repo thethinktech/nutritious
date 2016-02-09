@@ -30,6 +30,21 @@
 	src: local('Tahoma'), url('../fonts/Tahoma.ttf') format('ttf');
 }
 
+@font-face {
+	font-family: 'Tahoma';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tahoma'), url('../fonts/MTCORSVA.ttf') format('ttf');
+}
+
+@font-face {
+	font-family: 'Tahoma';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Tahoma'), url('../fonts/MTCORSVA.woff') format('woff');
+}
+
+
 body{
 	font-family:'Tahoma' !important;
 }
@@ -37,6 +52,7 @@ body{
 #top{
 	width:auto;
 	height: auto;
+	
 	
 }
 .topborder{
@@ -48,13 +64,19 @@ body{
 
 
 .top-email{
-	font-size: 12px;
+	font-size: 18px;
 	color: #fff;
-	padding-top: 5px;
+	padding-top: 20px;
 	font-family: 'Tahoma';
-	text-align: right
+	text-align: right;
+	position: relative;
+	left: 17%;
 }
 
+
+.vertical-xs{
+	padding-top: 105px;
+}
 col-md-6 img{
 	width:800px;
 	height: 800px;
@@ -66,7 +88,8 @@ col-md-6 img{
 }
 .social-icons{
 	text-align: right;
-	padding-right: 100px;
+	padding-right: 0px;
+	padding-top: 15px;
 }
 
 .navbar-nav>li>a:hover {
@@ -381,10 +404,50 @@ p{
 }
 .vegetarian-title{
 	font-family: 'Tahoma';
-	font-size: 18px;
+	font-size: 22px;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
+.read-more-state{
+	display: none;
+	margin-top: -50px;
+}
+
+.read-more-target {
+  opacity: 0;
+  max-height: 0;
+  font-size: 0;
+  transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+  opacity: 1;
+  font-size: inherit;
+  max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+  content: 'Read more';
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+  content: 'Close';
+}
+
+.read-more-trigger {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 .5em;
+  color: #fff;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: .25em;
+  background: #F26522;
+  
+
+}
+
 .vegetarian-p{
 	font-family: 'Tahoma';
 	color: #878787;
@@ -2155,7 +2218,6 @@ div.description_content{
 	}
 	.social-icons{
 		text-align: center;
-		margin-bottom: 10px;
 	}
 	.store-info > div.container > div.col-md-4{
 		margin-bottom: 50px;
