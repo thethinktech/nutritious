@@ -3841,16 +3841,13 @@ left: 29px;
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
-        <li style="font-family: monotype corsiva !important;"><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , packages_path %></li>
-        <li><%= link_to 'HEALTH STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_list_path %></li>
-        <li><%= link_to 'CONTACT' , new_contact_path %></li>
-        <li><!--<input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;font-size:11px">-->
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'HOME' , root_path, :class => '', :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'ABOUT' , about_path,:style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'PACKAGES' , packages_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'STORE' , store_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'BLOG' , blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'CONTACT' , new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
          <li><button type="button" class="cart-icon"> <img src="../images/cart-icon.png">cart: $0.00</button></li>
-         
-
         
       </ul>
     </div>
