@@ -6,7 +6,7 @@
 </style>
 <br><br>
 <div class="header">
-  <div class="container">
+  <div class="container" style="margin-top:-36px;">
     <div class="header-content"> 
     <div class="header-title">Health.... Your<br><br><br> Greatest Asset
 </div>
@@ -24,15 +24,15 @@
 <div class="store-info">
   <div class="container">
   <div class="quest">Have questions?  We have answers.</div>
-    <div class="col-md-4 animated fadeInup">
+    <div class="col-md-4 animated fadeInLeft">
 
       <div class="watch-videoButton hover-over"><img src="../images/video-icon.png" alt="">  <%= link_to 'Watch Our Video', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></div>
       <!--<div class="subbotton"></div>
       <div class="subbotton"></div>
       <div class="subbotton"></div>-->
     </div>
-      <div class="col-md-4">
-      <div class="watch-videoButton hover-over"><img src="../images/shopping-cart-icon.png" alt="">  Health Store</div>
+      <div class="col-md-4 animated fadeInUp">
+      <div class="watch-videoButton hover-over"><img src="../images/shopping-cart-icon.png" alt=""><%= link_to 'Health Store', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></div>
 
       <!--<div class="health-shop-number">+1 403 612 7767</div>
 
@@ -47,7 +47,7 @@
       <div class="health-shop-detail">
  Contact Bethany @ + 1 403 612 7767</div>-->
     </div>
-    <div class="col-md-4 animated ">
+    <div class="col-md-4 animated fadeInRight ">
 
       <div class="watch-videoButton hover-over"><img src="images/earth.png" alt="">  Talk To nutritionist</div>
       <div class="talk-shop-detail">Chat with Bethany C.H.N</div>
@@ -57,7 +57,7 @@
   </div>
 </div>
 <div class="store-info-border"></div>
-<div class="change-the-way">
+<div class="change-the-way ">
   <div class="container">
     <div class="col-md-8">
     
@@ -67,7 +67,7 @@ We work with a range of people who all have different needs and wants.
 </div>
     
       <div class="row">
-        <div class="col-sm-4" style="height: 324px; overflow-y: scroll;">
+        <div class="col-sm-4 " style="height: 324px; overflow-y: scroll;">
           <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-stacked change-the-tab">
             <li style="margin-left: 0px;" class="active"><a href="#vtab1" data-toggle="tab">Vegetarian / Vegan</a></li>
             <li><a href="#vtab2" data-toggle="tab">Detox </a></li>
@@ -225,18 +225,18 @@ The meal plan focuses on healthy legumes and beans along with lots of fresh frui
         </div>
       </div>
     </div>
-    <div class="col-md-4 my-hover vertical-xs"> <img src="images/change-the-way-banner.png" class="img-responsive" alt=""> </div>
+    <div class="col-md-4 my-hover vertical-xs animated flipInY"> <img src="images/change-the-way-banner.png" class="img-responsive" alt=""> </div>
   </div>
 </div>
 <div class="change-you-life2">
 
   <div class="container">
-    <div class="col-md-6" style="position: relative;
+    <div class="col-md-6 animated bounceInLeft" style="position: relative;
 left: 4%;">
       <div class="life-change-title">Change Your Life, One Step At A Time!</div><br>
       <div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 animated bounceInRight">
       <div class="our-packages">
       <%= link_to 'See Our Packages', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %><br>
         <span class="our-packages-subtitle"><%= link_to 'And Live The Life You Want!', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></span>
@@ -250,11 +250,11 @@ left: 4%;">
 
 <div class="discover-everythink">
   <div class="container">
-    <div class="col-md-6 my-hover">
+    <div class="col-md-6 my-hover animated fadeInLeftBig">
       <img src="images/discover-everythink.png" class="img-responsive" alt="">
     </div>
-    <div class="col-md-6">
-      <div class="discover-title">Information is key</div>
+    <div class="col-md-6 animated fadeInRightBig">
+      <div class="discover-title ">Information is key</div>
       <p class="discover-title-detail" style="font-family:'Tahoma';">Whoever said that healthy food can’t be tasty? Leave the planning to us. At Nutritious & Delicious, we take the work out of meal planning for you with recommendations that will have you looking forward to breakfast, lunch and dinner.</p>
       
       <ul class="discover-everythink-list">
@@ -463,22 +463,22 @@ Read for yourself some of the dramatic results we have created for our clients.
 <div class="all-rating">
 <hr class="hr-2dot">
   <div class="container">
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-3 text-center animated fadeInLeft">
       <div class="rating-icon"><img src="images/like-icon.png" alt=""></div>
       <div class="rating-number">1500% </div><br>
       <div class="rating-text">More Energy</div>
     </div>
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-3 text-center animated fadeInUp">
       <div class="rating-icon"><img src="images/user-icon.png" alt=""></div>
       <div class="rating-number">1, 000, 000 </div><br>
       <div class="rating-text">‘s Of Calories Lost</div>
     </div>
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-3 text-center animated fadeInUp">
       <div class="rating-icon"><img src="images/home-icon.png" alt=""></div>
       <div class="rating-number">150% </div><br>
       <div class="rating-text">More Meals At Home</div>
     </div>
-    <div class="col-sm-3 text-center">
+    <div class="col-sm-3 text-center animated fadeInRight">
       <div class="rating-icon"><img src="images/setting-icon.png" alt=""></div>
       <div class="rating-number">2641 </div><br>
       <div class="rating-text">More Choices</div>
