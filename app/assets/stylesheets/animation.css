@@ -115,9 +115,8 @@
 }
 
 .my-hover img:hover {
-    margin-left: width: 380px;
-
-    height: 230px;
+    width: 612px;
+    height: 380px;
 }
 
 #what_our_packages {
