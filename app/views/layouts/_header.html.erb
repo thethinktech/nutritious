@@ -3808,7 +3808,6 @@ left: 29px;
 
 </head>
 <body onLoad="window.parent.scroll(0,0);">
-
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
@@ -3859,6 +3858,40 @@ left: 29px;
 </nav>
 
 
+<script type="text/javascript">
+$(document).ready(function(){
+  var maxLength = 450;
+  $(".show-read-more").each(function(){
+    var myStr = $(this).text();
+    if($.trim(myStr).length > maxLength){
+      var newStr = myStr.substring(0, maxLength);
+      var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+      $(this).empty().html(newStr);
+      $(this).append(' <a href="javascript:void(0);" class="read-more"><br><i>read more >>></i></a>');
+      $(this).append('<span class="more-text">' + removedStr + '</span>');
+    }
+  });
+  $(".read-more").click(function(){
+    $(this).siblings(".more-text").contents().unwrap();
+    $(this).remove();
+  });
+});
+
+
+$("'[placeholder]'").focus(function() {
+  var input = $(this);
+  if (input.val() == input.attr("'placeholder'")) {
+    input.val("''");
+    input.removeClass("'placeholder'");
+  }
+}).blur(function() {
+  var input = $(this);
+  if (input.val() == "''" || input.val() == input.attr("'placeholder'")) {
+    input.addClass("'placeholder'");
+    input.val(input.attr("'placeholder'"));
+  }
+}).blur();
+</script>
 
 
 

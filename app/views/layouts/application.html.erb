@@ -15,24 +15,6 @@
 </head>
 <body>
 
-
-<p class="navbar-text pull-right">
-  <%# if user_signed_in? %>
-      <%#= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-      <%#= link_to "Admin Panel", admin_root_path, :class => 'navbar-link' %>
-  <%# end %>
-<br>
-
-
-<br>
-<br>
-
-<%#= render 'layouts/middle_nav_bar' %>
-
-<script src="javascript/jquery-1.11.2.min.js"></script>
-<script src="javascript/bootstrap.js"></script>
-
-
 <%= render "layouts/header" %>
 <%= yield %>
 <%= render "layouts/footer" %>

@@ -11,10 +11,10 @@
           <p class="alert alert-success"><%= notice %></p>
         <% end %>
         <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
-        <%= f.text_field :email, autofocus: true, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
+        <%= f.text_field :email, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
         <%#= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px;' %>
-        <button class="footer-subscribe-button"><i class="fa fa-envelope-o"></i></button>
+        <button class="footer-subscribe-button">Send</button>
         <% end %>
       </div>
 
@@ -82,5 +82,4 @@
     </div>
   </div>  
 </div>
-</body>
 

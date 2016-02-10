@@ -1,4 +1,5 @@
 class Admin::BlogsController < Admin::AdminController
+ # before_filter :set_blog, only: [:show, :edit, :update, :destroy]
   	layout 'admin'
 
   	def index
@@ -37,7 +38,8 @@ class Admin::BlogsController < Admin::AdminController
     end
 
     def edit
-      @blog = Blog.new
+      @blog = Blog.find(params[:id])
+       @categories = Category.all
   end
 
       def update
