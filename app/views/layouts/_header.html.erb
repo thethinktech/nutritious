@@ -3807,7 +3807,7 @@ left: 29px;
 
 
 </head>
-<body onLoad="window.parent.scroll(0,0);">
+<body>
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
@@ -3835,22 +3835,19 @@ left: 29px;
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
+      <a style="z-index:9999;" class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-family:'lobster' , cursive;"><%= link_to 'HOME' , root_path, :class => 'link-second-click' %></li>
-        <li><%= link_to 'ABOUT' , about_path %></li>
-        <li><%= link_to 'PACKAGES' , packages_path %></li>
-        <li><%= link_to 'STORE' , store_path %></li>
-        <li><%= link_to 'BLOG' , blog_list_path %></li>
-        <li><%= link_to 'CONTACT' , new_contact_path %></li>
-        <li><!--<input type="text" name="search" class="input-search" placeholder="CONTACT NUTRITIONIST" style="font-weight: bold;font-size:11px">-->
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'HOME' , root_path, :class => '', :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'ABOUT' , about_path,:style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'PACKAGES' , packages_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'STORE' , store_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'BLOG' , blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li style="font-family:monotype corsiva !important;"><%= link_to 'CONTACT' , new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
          <li><button type="button" class="cart-icon"> <img src="../images/cart-icon.png">cart: $0.00</button></li>
-         
-
         
       </ul>
     </div>
