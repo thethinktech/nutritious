@@ -216,10 +216,8 @@ col-md-6 img{
 	z-index:999;
 }
 .store-info{
-	background: url(../images/green-back.png)50% 0 no-repeat fixed;
+	background: url(../images/green-back.png) fixed;
 	padding-top: 50px;
-	background-size: cover;
-	background-position: fixed;
 	position: relative;
 	min-height: 360px;
 	height: auto;
@@ -280,10 +278,14 @@ col-md-6 img{
 }
 
 
-.change-you-life{
-	
+.change-you-life2{
+	background: url(../images/new-back.png)  !important ;
+	position: relative;
+	background-size: cover;
 	padding-top: 60px;
-	padding-bottom: 50px;
+	padding-bottom: 48px;
+	background-attachment: fixed;
+	
 }
 .life-change-title{
 	font-family: 'Tahoma';
@@ -428,7 +430,7 @@ p{
 .read-more-state:checked ~ .read-more-wrap .read-more-target {
   opacity: 1;
   font-size: inherit;
-  max-height: 999em;
+  
 }
 
 .read-more-state ~ .read-more-trigger:before {
@@ -560,12 +562,11 @@ p{
 	margin-bottom: 50px;
 }
 .all-rating{
-	background: url(../images/green-back.png) 20% 0 no-repeat fixed;
+	background: url(../images/green-back.png)  fixed;
 	padding-bottom: 70px;
 	padding-top: 6px;
 	position: relative;
 	background-position: fixed;
-	background-size: cover;
 	min-height: 200px;
 	height: auto;
 
