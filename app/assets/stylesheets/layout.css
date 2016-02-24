@@ -1811,7 +1811,7 @@ div.description_content{
         .accordion-toggle > span > img{
             vertical-align: bottom;
         }
-	a.accordion-toggle {
+	div.accordion-toggle {
         font-family: 'Tahoma';
         position: relative;
         display: block;

@@ -54,11 +54,11 @@
           <div class="item_price_left_item col-sm-12">
             <% @categories.each do |category| %>
                 <div class="accordion-container">
-                  <a href="#" class="accordion-toggle">
+                  <div class="accordion-toggle">
                     <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span>
-                      <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :class=> "pull-right"  %>
+                      <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :style => "background-color: none !important" %>
                     <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></span>
-                  </a>
+                  </div>
 
                   <div class="accordion-content">
                     <ul>
@@ -68,7 +68,6 @@
                       <li>4</li>
                       <li>5</li>
                     </ul>
-
                   </div>
                   <!--/.accordion-content-->
                 </div>

@@ -1,38 +1,46 @@
 <style>
-.quest {text-align:center;font-size:60px;height:58px;color:white} 
-.hover-over:hover{
-      border: 5px solid #f26522;
-  }
+    .quest {
+        text-align: center;
+        font-size: 60px;
+        height: 58px;
+        color: white
+    }
+
+    .hover-over:hover {
+        border: 5px solid #f26522;
+    }
 </style>
 <br><br>
 <div class="header">
   <div class="container" style="margin-top:-36px;">
-    <div class="header-content"> 
-    <div class="header-title">Health.... Your<br><br><br> Greatest Asset
-</div>
-    <div class="header-subtitle">Custom-designed meal<br> <br>plans for you and your <br><br>family.
-</div>
-    <div class="header-arrow"><%= link_to image_tag('/images/header-arrow.png'), packages_path , :style => 'background: transparent none repeat scroll 0% 0%;' %></div>
+    <div class="header-content">
+      <div class="header-title">Health.... Your<br><br><br> Greatest Asset
+      </div>
+      <div class="header-subtitle">Custom-designed meal<br> <br>plans for you and your <br><br>family.
+      </div>
+      <div class="header-arrow"><%= link_to image_tag('/images/header-arrow.png'), packages_path, :style => 'background: transparent none repeat scroll 0% 0%;' %></div>
+    </div>
   </div>
-  </div>
-  
-  </div>
-  </div>
-  <div class="header-flower"> <img src="../images/header-flower.png" alt=""> </div>
 
 </div>
+<div class="header-flower"><img src="../images/header-flower.png" alt=""></div>
+
 <div class="store-info">
   <div class="container">
-  <div class="quest">Have questions?  We have answers.</div>
+    <div class="quest">Have questions? We have answers.</div>
     <div class="col-md-4 animated fadeInLeft">
 
-      <div class="watch-videoButton hover-over"><img src="../images/video-icon.png" alt="">  <%= link_to 'Watch Our Video', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></div>
+      <div class="watch-videoButton hover-over">
+        <img src="../images/video-icon.png" alt="">  <%= link_to 'Watch Our Video', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>
+      </div>
       <!--<div class="subbotton"></div>
       <div class="subbotton"></div>
       <div class="subbotton"></div>-->
     </div>
-      <div class="col-md-4 animated fadeInUp">
-      <div class="watch-videoButton hover-over"><img src="../images/shopping-cart-icon.png" alt=""><%= link_to 'Health Store', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></div>
+    <div class="col-md-4 animated fadeInUp">
+      <div class="watch-videoButton hover-over">
+        <img src="../images/shopping-cart-icon.png" alt=""><%= link_to 'Health Store', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>
+      </div>
 
       <!--<div class="health-shop-number">+1 403 612 7767</div>
 
@@ -49,7 +57,7 @@
     </div>
     <div class="col-md-4 animated fadeInRight ">
 
-      <div class="watch-videoButton hover-over"><img src="images/earth.png" alt="">  Talk To nutritionist</div>
+      <div class="watch-videoButton hover-over"><img src="images/earth.png" alt=""> Talk To nutritionist</div>
       <div class="talk-shop-detail">Chat with Bethany C.H.N</div>
       <div class="subbotton">+1 403 612 7767</div>
       <div class="subbotton">nutrition4yoursouls@gmail.com</div>
@@ -60,12 +68,13 @@
 <div class="change-the-way ">
   <div class="container">
     <div class="col-md-8">
-    
+
       <div class="change-the-way-title">Change The Way You Eat!</div>
-      <div class="change-the-way-subtitle" style="font-family:'Tahoma';">The first question we have is ....what are your goals?</br>
-We work with a range of people who all have different needs and wants.
-</div>
-    
+      <div class="change-the-way-subtitle" style="font-family:'Tahoma';">The first question we have is ....what are your
+        goals?</br>
+        We work with a range of people who all have different needs and wants.
+      </div>
+
       <div class="row">
         <div class="col-sm-4 " style="height: 324px; overflow-y: scroll;">
           <ul id="nav-tabs-wrapper" class="nav nav-tabs nav-stacked change-the-tab">
@@ -83,167 +92,231 @@ We work with a range of people who all have different needs and wants.
         <div class="col-sm-8 change_content_tab">
           <div class="tab-content">
             <div role="tabpanel" class="tab-pane fade in active" id="vtab1">
-                <div class="vegetarian-title">Vegetarian / Vegan</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Frustrated with the limited options for vegan or vegetarian diets? Are you conscious about what foods you currently eat or about eating meat? New vegan or vegetarian looking for healthy options and correct portion control to keep your weight in check?  <br><br>
+              <div class="vegetarian-title">Vegetarian / Vegan</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Frustrated with the limited options
+                for vegan or vegetarian diets? Are you conscious about what foods you currently eat or about eating
+                meat? New vegan or vegetarian looking for healthy options and correct portion control to keep your
+                weight in check? <br><br>
 
-Our plans are based on weight maintenance + rich nutrients in the form of healthy carbohydrates, lots of juicy produce and different varieties of brands for your proteins. Prefer certain products—we can experiment and see what best suits you. <br><br>
+                Our plans are based on weight maintenance + rich nutrients in the form of healthy carbohydrates, lots of
+                juicy produce and different varieties of brands for your proteins. Prefer certain products—we can
+                experiment and see what best suits you. <br><br>
 
-Get our tasty recipes to add to your growing meal plan. Being vegan or vegetarian doesn’t have to be hard—customized recipes allow you to enjoy a varied and delicious diet.
-</p>
-                
-<!--<ul class="vegetarian-list">
-                  <li>Keep protein levels balanced</li>
-                  <li>Creative and tasty alternatives</li>
-                  <li>Learn where to quickly find the foods you need.</li>
-                </ul>-->
-         
-                <div class="free-quote">Request Free Quote</div>
-         
+                Get our tasty recipes to add to your growing meal plan. Being vegan or vegetarian doesn’t have to be
+                hard—customized recipes allow you to enjoy a varied and delicious diet.
+              </p>
+
+              <!--<ul class="vegetarian-list">
+                                <li>Keep protein levels balanced</li>
+                                <li>Creative and tasty alternatives</li>
+                                <li>Learn where to quickly find the foods you need.</li>
+                              </ul>-->
+
+              <div class="free-quote">Request Free Quote</div>
+
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="vtab2">
 
-<div class="vegetarian-title">Detox quick / weight loss</div>
-                  <input type="checkbox" class="read-more-state" id="post-1"/> 
-                <p class="vegetarian-p read-more-wrap " style="font-family:'Tahoma';font-size: 15px;" >Want to lose some weight after the holidays, need to get back into smaller clothes for the summer, have an important life event, need to clear your body of toxins or going to be in a bathing suit anytime soon? This plan is for you.
-<br><br>
+              <div class="vegetarian-title">Detox quick / weight loss</div>
+              <input type="checkbox" class="read-more-state" id="post-1"/>
 
-Our 21 day detox plan is full of fresh, wholesome produce. Only minimal alterations for allergies or sensitivities is granted, as it is designed to help encourage fat loss and increase vital energy within. The first two weeks are geared at lowering your overall calories while providing the body with as many nutrients as possible using the freshest, juiciest foods.
-<br><br>Women are allocated 1200 calories in the first two weeks followed by 1300 calories in the third week by increasing food variety and providing more carbohydrate substance. Men are allocated 1600 calories for the first two weeks, followed by an increase the third week with 1700 calories.<span class="read-more-target">
+              <p class="vegetarian-p read-more-wrap " style="font-family:'Tahoma';font-size: 15px;">Want to lose some
+                weight after the holidays, need to get back into smaller clothes for the summer, have an important life
+                event, need to clear your body of toxins or going to be in a bathing suit anytime soon? This plan is for
+                you.
+                <br><br>
+
+                Our 21 day detox plan is full of fresh, wholesome produce. Only minimal alterations for allergies or
+                sensitivities is granted, as it is designed to help encourage fat loss and increase vital energy within.
+                The first two weeks are geared at lowering your overall calories while providing the body with as many
+                nutrients as possible using the freshest, juiciest foods.
+                <br><br>Women are allocated 1200 calories in the first two weeks followed by 1300 calories in the third
+                week by increasing food variety and providing more carbohydrate substance. Men are allocated 1600
+                calories for the first two weeks, followed by an increase the third week with 1700
+                calories.<span class="read-more-target">
 Because of the lowered caloric intake, your energy levels are affected. Only light workouts are recommended during the first two weeks— light yoga, walks and meditations.</span>
 
-</p>
+              </p>
 
 
-               
-               <label for="post-1" class="read-more-trigger"></label>
-         
-                <div class="free-quote">Request Free Quote</div>
+              <label for="post-1" class="read-more-trigger"></label>
 
-           
+              <div class="free-quote">Request Free Quote</div>
+
 
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="vtab3">
 
 
-            <div class="vegetarian-title">Weight loss / long term</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Serious about losing weight and want to keep it off for good? This is your plan. Customized weight loss meal plans for our food preferences and any allergies or sensitivities.  We customize your calorie intake and ease you in to the program as we start to create a new healthy lifestyle for you.
+              <div class="vegetarian-title">Weight loss / long term</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Serious about losing weight and want
+                to keep it off for good? This is your plan. Customized weight loss meal plans for our food preferences
+                and any allergies or sensitivities. We customize your calorie intake and ease you in to the program as
+                we start to create a new healthy lifestyle for you.
 
-<br><br>
+                <br><br>
 
-We find lower calorie options of what you crave, but healthier, fresher ands more substantial. This plan can be a starting point on your journey to a healthier new you for the long term.
+                We find lower calorie options of what you crave, but healthier, fresher ands more substantial. This plan
+                can be a starting point on your journey to a healthier new you for the long term.
 
 
+              </p>
 
-</p>
-               
-         
-                <div class="free-quote">Request Free Quote</div>
+
+              <div class="free-quote">Request Free Quote</div>
             </div>
             <div role="tabpanel" class="tab-pane fade" id="vtab4">
 
 
-<div class="vegetarian-title">Picky Eaters / (Adolescents):</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Do you have a teenager, or are you a teen, who doesn't know what to eat, or how much for a growing body? Are you confused about all the hype on carbs and fats these days? Do you not have a great appetite or crave a lot of junk foods? Do you constantly feel tired and wish you could feel more energized to do the activities you want to do? We have created a meal plan for that family member who doesn't like what everyone else eats.
+              <div class="vegetarian-title">Picky Eaters / (Adolescents):</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Do you have a teenager, or are you a
+                teen, who doesn't know what to eat, or how much for a growing body? Are you confused about all the hype
+                on carbs and fats these days? Do you not have a great appetite or crave a lot of junk foods? Do you
+                constantly feel tired and wish you could feel more energized to do the activities you want to do? We
+                have created a meal plan for that family member who doesn't like what everyone else eats.
 
-<br><br>
+                <br><br>
 
-We have some interesting, hearty recipes the whole family can enjoy. We first find out what you or your teen likes and dislikes about food, then we can customize a meal plan catered to those needs. Based on current activity levels, growing needs, gender and height, we calculate the average daily calorie consumption and go from there. This will help fussy eaters to be proactive in their own health and wellness for the long term.
-</p>
-                <div class="free-quote">Request Free Quote</div>
+                We have some interesting, hearty recipes the whole family can enjoy. We first find out what you or your
+                teen likes and dislikes about food, then we can customize a meal plan catered to those needs. Based on
+                current activity levels, growing needs, gender and height, we calculate the average daily calorie
+                consumption and go from there. This will help fussy eaters to be proactive in their own health and
+                wellness for the long term.
+              </p>
+
+              <div class="free-quote">Request Free Quote</div>
 
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="vtab5">
 
 
-<div class="vegetarian-title">Gluten free</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Have you been diagnosed with celiac disease and don't know what you can eat? Or are you trying to avoid wheat products due to symptomatic problems you have been having? This meal plan will help those of you, new and old to this issue, with finding healthy and tasty options in the regular grocery aisle.
-<br><br>
+              <div class="vegetarian-title">Gluten free</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Have you been diagnosed with celiac
+                disease and don't know what you can eat? Or are you trying to avoid wheat products due to symptomatic
+                problems you have been having? This meal plan will help those of you, new and old to this issue, with
+                finding healthy and tasty options in the regular grocery aisle.
+                <br><br>
 
-With correct label reading, being adventurous and trying something new,  and education about certain restaurants and places to avoid, we can work together to make this an easier lifestyle for you.
-<br><br>
-Yummy gluten recipes are available. We take into account your calorie needs and then pick what you like, have tried and invite some more interesting options into your meal plan book.
-</p>
-                <div class="free-quote">Request Free Quote</div>
+                With correct label reading, being adventurous and trying something new, and education about certain
+                restaurants and places to avoid, we can work together to make this an easier lifestyle for you.
+                <br><br>
+                Yummy gluten recipes are available. We take into account your calorie needs and then pick what you like,
+                have tried and invite some more interesting options into your meal plan book.
+              </p>
+
+              <div class="free-quote">Request Free Quote</div>
             </div>
 
-<div role="tabpanel" class="tab-pane fade in" id="vtab6">
+            <div role="tabpanel" class="tab-pane fade in" id="vtab6">
 
-<div class="vegetarian-title">Lactose intolerant</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Have you been trying to avoid using dairy products? Do you feel they contribute to your low energy, breakouts, sinus problems or a sour smell? If you want to find better alternatives look no further.
-<br><br>
-We can assess which brands and substitutes best suit you. We fill your diet with lots of fresh, wholesome produce to help rid your body of the toxins and give your vitality back.
+              <div class="vegetarian-title">Lactose intolerant</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Have you been trying to avoid using
+                dairy products? Do you feel they contribute to your low energy, breakouts, sinus problems or a sour
+                smell? If you want to find better alternatives look no further.
+                <br><br>
+                We can assess which brands and substitutes best suit you. We fill your diet with lots of fresh,
+                wholesome produce to help rid your body of the toxins and give your vitality back.
 
-<br><br>
-Lactose free recipes are also available. If certain brands don’t suit you, we can always switch and find the right one that appeal to your taste buds. We recommend being open to experimenting as there are some tasty treats available.
+                <br><br>
+                Lactose free recipes are also available. If certain brands don’t suit you, we can always switch and find
+                the right one that appeal to your taste buds. We recommend being open to experimenting as there are some
+                tasty treats available.
 
-</p>
-                <div class="free-quote ">Request Free Quote</div>
+              </p>
+
+              <div class="free-quote ">Request Free Quote</div>
 
             </div>
 
             <div role="tabpanel" class="tab-pane fade in" id="vtab7">
 
 
-<div class="vegetarian-title">Heart health and sustained energy</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Has your bad cholesterol increased over the years? Do you need a plan to keep your blood sugars stable throughout the day without having energy crashes?
-<br><br>
+              <div class="vegetarian-title">Heart health and sustained energy</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Has your bad cholesterol increased
+                over the years? Do you need a plan to keep your blood sugars stable throughout the day without having
+                energy crashes?
+                <br><br>
 
-We have a few different meal plans that we can customize to you and your needs. To sustain your blood sugars our meal plan has balanced fat and protein ratios while keeping healthy fibrous carbs a part of your everyday plan. Eating every few hours is critical to this plan to keep your energy sustained so you are able to go about your day with more ease.
+                We have a few different meal plans that we can customize to you and your needs. To sustain your blood
+                sugars our meal plan has balanced fat and protein ratios while keeping healthy fibrous carbs a part of
+                your everyday plan. Eating every few hours is critical to this plan to keep your energy sustained so you
+                are able to go about your day with more ease.
 
 
-<br><br>
-Heart healthy includes much more fresh produce and lowering the saturated animal fats to a minimum. This plan focuses on lean poultry meats and more of a seafood diet to help lower your bad cholesterol over time.
+                <br><br>
+                Heart healthy includes much more fresh produce and lowering the saturated animal fats to a minimum. This
+                plan focuses on lean poultry meats and more of a seafood diet to help lower your bad cholesterol over
+                time.
 
-</p>     <div class="free-quote">Request Free Quote</div>
+              </p>
+
+              <div class="free-quote">Request Free Quote</div>
 
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="vtab8">
 
-<div class="vegetarian-title">Athletic training or building muscle</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Are you putting lots of focus and energy into your workouts, but not getting much results back in the form of muscle growth? It’s true. Abs come from the kitchen, so let me show you how with a meal plan that is right for you. We will take into account how much exercise you currently do, what type of exercise—whether it be aerobic or weight lifting and your calorie needs. We then create a balanced macro ratio for you to follow.
+              <div class="vegetarian-title">Athletic training or building muscle</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Are you putting lots of focus and
+                energy into your workouts, but not getting much results back in the form of muscle growth? It’s true.
+                Abs come from the kitchen, so let me show you how with a meal plan that is right for you. We will take
+                into account how much exercise you currently do, what type of exercise—whether it be aerobic or weight
+                lifting and your calorie needs. We then create a balanced macro ratio for you to follow.
 
-<br><br>
+                <br><br>
 
-The meal plan will put an emphasis on increasing your protein consumption while finding healthy forms of carbohydrates for you to lift heavier, or extend your aerobic activity levels. We can also incorporate a cheat meal once a week, depending on how strict you want your plan to be.
+                The meal plan will put an emphasis on increasing your protein consumption while finding healthy forms of
+                carbohydrates for you to lift heavier, or extend your aerobic activity levels. We can also incorporate a
+                cheat meal once a week, depending on how strict you want your plan to be.
 
-</p>
-                <div class="free-quote">Request Free Quote</div>
+              </p>
+
+              <div class="free-quote">Request Free Quote</div>
             </div>
             <div role="tabpanel" class="tab-pane fade in" id="vtab9">
-<div class="vegetarian-title">Lifestyle changes</div>
-                <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;" >Are you bored with what you are eating, day in and day out? We are typically creatures of habit so we generally don't go outside of the box to find new ways to eat.
-<br><br>
+              <div class="vegetarian-title">Lifestyle changes</div>
+              <p class="vegetarian-p" style="font-family:'Tahoma';font-size: 15px;">Are you bored with what you are
+                eating, day in and day out? We are typically creatures of habit so we generally don't go outside of the
+                box to find new ways to eat.
+                <br><br>
 
-If you want to spice up your palate, would like to start eating more organic foods with less pesticides and hormones, let’s get to work. Our meals plans are focused on the Mediterranean and Paleo lifestyle which incorporate many more healthy fats while balancing the protein and carb ratios.
-<br><br>
-The meal plan focuses on healthy legumes and beans along with lots of fresh fruit, veggies and plenty of fresh fish and healthy fats such as nuts, seeds, and olive oil. This is a sensible plan for someone looking to maintain their weight while creating a new twist to how they currently eat.
-</p>
-                <div class="free-quote">Request Free Quote</div>
+                If you want to spice up your palate, would like to start eating more organic foods with less pesticides
+                and hormones, let’s get to work. Our meals plans are focused on the Mediterranean and Paleo lifestyle
+                which incorporate many more healthy fats while balancing the protein and carb ratios.
+                <br><br>
+                The meal plan focuses on healthy legumes and beans along with lots of fresh fruit, veggies and plenty of
+                fresh fish and healthy fats such as nuts, seeds, and olive oil. This is a sensible plan for someone
+                looking to maintain their weight while creating a new twist to how they currently eat.
+              </p>
+
+              <div class="free-quote">Request Free Quote</div>
             </div>
 
           </div>
         </div>
       </div>
     </div>
-    <div class="col-md-4 my-hover vertical-xs animated flipInY"> <img src="images/change-the-way-banner.png" class="img-responsive" alt=""> </div>
+    <div class="col-md-4 my-hover vertical-xs animated flipInY">
+      <img src="images/change-the-way-banner.png" class="img-responsive" alt=""></div>
   </div>
 </div>
 <div class="change-you-life2">
 
   <div class="container">
     <div class="col-md-6 animated bounceInLeft" style="position: relative;
-left: 4%;">
-      <div class="life-change-title">Change Your Life, One Step At A Time!</div><br>
+            left: 4%;">
+      <div class="life-change-title">Change Your Life, One Step At A Time!</div>
+      <br>
+
       <div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>
     </div>
     <div class="col-md-6 animated bounceInRight">
       <div class="our-packages">
-      <%= link_to 'See Our Packages', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %><br>
-        <span class="our-packages-subtitle"><%= link_to 'And Live The Life You Want!', packages_path , :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></span>
+        <%= link_to 'See Our Packages', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>
+        <br>
+        <span class="our-packages-subtitle"><%= link_to 'And Live The Life You Want!', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></span>
       </div>
     </div>
   </div>
-  
 
 
 </div>
@@ -255,32 +328,42 @@ left: 4%;">
     </div>
     <div class="col-md-6 animated fadeInRightBig">
       <div class="discover-title ">Information is key</div>
-      <p class="discover-title-detail" style="font-family:'Tahoma';">Whoever said that healthy food can’t be tasty? Leave the planning to us. At Nutritious & Delicious, we take the work out of meal planning for you with recommendations that will have you looking forward to breakfast, lunch and dinner.</p>
-      
+      <p class="discover-title-detail" style="font-family:'Tahoma';">Whoever said that healthy food can’t be tasty?
+        Leave the planning to us. At Nutritious & Delicious, we take the work out of meal planning for you with
+        recommendations that will have you looking forward to breakfast, lunch and dinner.</p>
+
       <ul class="discover-everythink-list">
-        <li>Confused by food labels? Imagine how your view of the grocery store would change if you had a professional showing you around. Learn exactly what all those labels and ingredients mean. </li>
-        
-        <li>Age slowly and gracefully. Vitality + healthy skin, nails and teeth are just some of the benefits of a healthy lifestyle and proper diet.</li>
-        
-        <li>At Nutritious & Delicious, we don’t believe in one fix for everyone. That’s why diets don’t work. It’s essential to balance your meals with your weight and your metabolism.
-</li>
-        
+        <li>Confused by food labels? Imagine how your view of the grocery store would change if you had a professional
+          showing you around. Learn exactly what all those labels and ingredients mean.
+        </li>
+
+        <li>Age slowly and gracefully. Vitality + healthy skin, nails and teeth are just some of the benefits of a
+          healthy lifestyle and proper diet.
+        </li>
+
+        <li>At Nutritious & Delicious, we don’t believe in one fix for everyone. That’s why diets don’t work. It’s
+          essential to balance your meals with your weight and your metabolism.
+        </li>
+
       </ul>
-      
+
     </div>
   </div>
-  
+
 </div>
 
 
 
 <div class="yummy-recipes">
   <div class="container">
-    <div class="yummy-recipes-title">Yummy Recipes</div><br>
-    <div class="yummy-recipes-subtitle">Here are just a few of the tantalizing flavours we can introduce to your palate......<br><br>
+    <div class="yummy-recipes-title">Yummy Recipes</div>
+    <br>
 
-Read for yourself some of the dramatic results we have created for our clients.
-</div>
+    <div class="yummy-recipes-subtitle">Here are just a few of the tantalizing flavours we can introduce to your
+      palate......<br><br>
+
+      Read for yourself some of the dramatic results we have created for our clients.
+    </div>
   </div>
 </div>
 <div class="yummy-recipesBox col-lg-12 paddingNone">
@@ -292,8 +375,10 @@ Read for yourself some of the dramatic results we have created for our clients.
           <div class="text-center zoom_page text-center">
             <span class="paddingright10"><img src="images/zoom-icom.png" alt=""></span>
             <span><img src="images/detail-icon.png" alt=""></span>
-            
-            <div class="col-sm-12"><div class="zoomName">Page Detail</div></div>
+
+            <div class="col-sm-12">
+              <div class="zoomName">Page Detail</div>
+            </div>
           </div>
         </div>
         <!-- end description content -->
@@ -306,8 +391,10 @@ Read for yourself some of the dramatic results we have created for our clients.
           <div class="text-center zoom_page text-center">
             <span class="paddingright10"><img src="images/zoom-icom.png" alt=""></span>
             <span><img src="images/detail-icon.png" alt=""></span>
-            
-            <div class="col-sm-12"><div class="zoomName">Page Detail</div></div>
+
+            <div class="col-sm-12">
+              <div class="zoomName">Page Detail</div>
+            </div>
           </div>
         </div>
         <!-- end description content -->
@@ -320,8 +407,10 @@ Read for yourself some of the dramatic results we have created for our clients.
           <div class="text-center zoom_page text-center">
             <span class="paddingright10"><img src="images/zoom-icom.png" alt=""></span>
             <span><img src="images/detail-icon.png" alt=""></span>
-            
-            <div class="col-sm-12"><div class="zoomName">Page Detail</div></div>
+
+            <div class="col-sm-12">
+              <div class="zoomName">Page Detail</div>
+            </div>
           </div>
         </div>
         <!-- end description content -->
@@ -334,153 +423,301 @@ Read for yourself some of the dramatic results we have created for our clients.
           <div class="text-center zoom_page text-center">
             <span class="paddingright10"><img src="images/zoom-icom.png" alt=""></span>
             <span><img src="images/detail-icon.png" alt=""></span>
-            
-            <div class="col-sm-12"><div class="zoomName">Page Detail</div></div>
+
+            <div class="col-sm-12">
+              <div class="zoomName">Page Detail</div>
+            </div>
           </div>
         </div>
         <!-- end description content -->
       </div>
     </div>
   </div>
-  </div>
-  <br class="clear">
+</div>
+<br class="clear">
 <div class="col-sm-12 yummy-read-more-box">
-<div class="yummy-read-more">Read More</div>
+  <div class="yummy-read-more">Read More</div>
 </div>
 <br class="clear">
 <div class="yummy-recipes-border"></div>
-</div>
 <div class="customers-saying">
   <div class="container">
     <div class="customers-saying-title">What Customers Are Saying</div>
-		<div class="customers-saying-subtitle">Read for yourself some of the dramatic results we have created for our clients.</div>
-	</div>
-	<div class="container">
-		<div class="carousel slide" id="customers-quote-carousel" data-ride="carousel" data-interval="3000">
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-				
-      <%#= @testimonials.each do |testimonial| %>
-      <div class="item active blog_posts">
-					<div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""><%#= image_tag(testimonial.image, :class => "img-responsive") if testimonial.image? %></div>
-						<div class="col-md-9"><p class="show-read-more">I recently signed up with Bethany at Nutritious & Delicious and am very pleased with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad food and I was exercising 3x/week. Bethany determined that I was actually eating too little (shocking) and that key vitamins and minerals were missing from my diet which explained why I was feeling the way I was.</p><%#= testimonial.content %></p></div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Kara<%#= testimonial.name %></div>
-							<div class="customers-address">Calgary, AB<%#= testimonial.city %>, <%#= testimonial.country %></div>
-						</div>
-		</div>
-     </div>
-    <%#= end %>
-  
-					<div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
-						<div class="col-md-9"><p>I recently signed up with Bethany at Nutritious & Delicious and am very pleased with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad food and I was exercising 3x/week. Bethany determined that I was actually eating too little (shocking) and that key vitamins and minerals were missing from my diet which explained why I was feeling the way I was.</p></div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Kara</div>
-							<div class="customers-address">Calgary, AB</div>
-						</div>
-		</div>
-
-				
-
-
-
-
-				<div class="item blog_posts">
-					<div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
-						<div class="col-md-9">I would recommend Bethany to anyone who is looking for a customized, thorough and realistic plan to improve their overall level of nutrition through dietary coaching and education.
-</div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Suzanne</div>
-							<div class="customers-address">Airdrie, AB</div>
-						</div>
-		</div>
-
-					<!--div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
-						<div class="col-md-9"><p class="show-read-more">Bethany made up a detailed meal plan for me which left nothing out. It was tailored to the exact calories I needed to consume to achieve my goals, and fulfilled the daily vitamin and mineral requirement. She also made up a detailed, easy to follow shopping list. The list was broken down the way you would find the items in the grocery store so there would be no back and forth.  Bethany's list had recommendations for brands of food, but she explained that if you had a favorite brand you can use it as long as you made sure you were keeping in line with the amount of calories and fat in the meal plan.</p></div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Kara</div>
-							<div class="customers-address">Calgary, AB
-</div>
-						</div>
-		</div-->
-
-				</div>
-
-
-				<div class="item blog_posts">
-					<div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
-						<div class="col-md-9"><p>Thank you Bethany for putting together a great plan for my particular problem.  I was recently diagnosed with celiac disease so eating in and out has become a big challenge for me. Bethany put together a shopping list with things that I liked to eat so nothing was banned (only wheat etc of course) and even made me a shopping list to help me.  She also gave me lots of other useful  advice that could maintain my blood sugars and stop me buying fast food, in other words to be prepared instead of finding myself hungry with no snacks on standby etc. She even made up recipes for me to try.  I fully recommend that Bethany do anyone a plan for their lifestyle whatever the problem, mine was a challenging one and she rose to the challenge!  Thank you Bethany.</p>
-</div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Jayne</div>
-							<div class="customers-address">Dalemead, AB</div>
-						</div>
-		</div>
-
-					<!--div class="col-md-6">
-						<div class="customers-box col-sm-12">
-						<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
-						<div class="col-md-9">The meal plan and grocery list also correlated to Bethany's recipe guide that was included in her book. The recipes were easy to follow, quick to make and DELICIOUS. Even my husband likes the food. So far, a week following the plan and I feel I have more energy, feel fitter and have a better sense of wellbeing. Highly recommend!</div>
-						<div class="customers-box-arrow"></div>
-						</div>
-						<div class="customers-info col-sm-12 paddingNone">
-							<div class="customers-name">Kara</div>
-							<div class="customers-address">Calgary, AB</div>
+    <div class="customers-saying-subtitle">See for your self some of the dramatic results we have created for our
+      clients.
+    </div>
+  </div>
+  <div class="container">
+    <div class="carousel slide" id="customers-quote-carousel" data-ride="carousel" data-interval="3000">
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+        <div class="active item blog_posts">
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
             </div>
-          </div-->
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Kara H</div>
+              <div class="customers-address">Home Owner, Aspen Woods - Calgary</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
+            </div>
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Jeebon Heza</div>
+              <div class="customers-address">Home Owner, Newyork</div>
+            </div>
+          </div>
         </div>
+        <div class="item blog_posts">
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
+            </div>
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Kara H</div>
+              <div class="customers-address">Home Owner, Aspen Woods - Calgary</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
+            </div>
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Jeebon Heza</div>
+              <div class="customers-address">Home Owner, Newyork</div>
+            </div>
+          </div>
 
+        </div>
+        <div class="item blog_posts">
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
+            </div>
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Kara H</div>
+              <div class="customers-address">Home Owner, Aspen Woods - Calgary</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="customers-box col-sm-12">
+              <div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>
+              <div class="col-md-9">I recently signed up with Bethany at nutritious and delicious and am very pleased
+                with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food
+                intake. I always had issues with my weight and energy and I knew I wasn't eating copious amounts of bad
+                food and I was
+              </div>
+              <div class="customers-box-arrow"></div>
+            </div>
+            <div class="customers-info col-sm-12 paddingNone">
+              <div class="customers-name">Jeebon Heza</div>
+              <div class="customers-address">Home Owner, Newyork</div>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- Carousel indicators -->
       <ol class="carousel-indicators">
         <li data-target="#customers-quote-carousel" data-slide-to="0" class="active"></li>
         <li data-target="#customers-quote-carousel" data-slide-to="1"></li>
         <li data-target="#customers-quote-carousel" data-slide-to="2"></li>
-      </ol>   
+      </ol>
     </div>
   </div>
 </div>
+<!--<div class="customers-saying">-->
+<!--<div class="container">-->
+<!--<div class="customers-saying-title">What Customers Are Saying</div>-->
+<!--<div class="customers-saying-subtitle">Read for yourself some of the dramatic results we have created for our-->
+<!--clients.-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="container">-->
+<!--<div class="carousel slide" id="customers-quote-carousel" data-ride="carousel" data-interval="3000">-->
+<!--&lt;!&ndash; Carousel items &ndash;&gt;-->
+<!--<div class="carousel-inner">-->
+
+<!--<%#= @testimonials.each do |testimonial| %>-->
+<!--<div class="item active blog_posts">-->
+<!--<div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center">-->
+<img src="images/comment-user.png" class="img-responsive" alt=""><%#= image_tag(testimonial.image, :class => "img-responsive") if testimonial.image? %>
+<!--</div>-->
+<!--<div class="col-md-9">-->
+<!--<p class="show-read-more">I recently signed up with Bethany at Nutritious & Delicious and am very-->
+<!--pleased with the results. Bethany did a full, detailed analysis of my lifestyle, day-to-day-->
+<!--activities, and food intake. I always had issues with my weight and energy and I knew I wasn't eating-->
+<!--copious amounts of bad food and I was exercising 3x/week. Bethany determined that I was actually-->
+<!--eating too little (shocking) and that key vitamins and minerals were missing from my diet which-->
+<!--explained why I was feeling the way I was.</p><%#= testimonial.content %></p></div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Kara<%#= testimonial.name %></div>-->
+<!--<div class="customers-address">Calgary, AB<%#= testimonial.city %>, <%#= testimonial.country %></div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--<%#= end %>-->
+
+<!--<div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>-->
+<!--<div class="col-md-9">-->
+<!--<p>I recently signed up with Bethany at Nutritious & Delicious and am very pleased with the results.-->
+<!--Bethany did a full, detailed analysis of my lifestyle, day-to-day activities, and food intake. I always-->
+<!--had issues with my weight and energy and I knew I wasn't eating copious amounts of bad food and I was-->
+<!--exercising 3x/week. Bethany determined that I was actually eating too little (shocking) and that key-->
+<!--vitamins and minerals were missing from my diet which explained why I was feeling the way I was.</p>-->
+<!--</div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Kara</div>-->
+<!--<div class="customers-address">Calgary, AB</div>-->
+<!--</div>-->
+<!--</div>-->
+
+
+<!--<div class="item blog_posts">-->
+<!--<div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>-->
+<!--<div class="col-md-9">I would recommend Bethany to anyone who is looking for a customized, thorough and-->
+<!--realistic plan to improve their overall level of nutrition through dietary coaching and education.-->
+<!--</div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Suzanne</div>-->
+<!--<div class="customers-address">Airdrie, AB</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>-->
+<!--<div class="col-md-9"><p class="show-read-more">Bethany made up a detailed meal plan for me which left nothing out. It was tailored to the exact calories I needed to consume to achieve my goals, and fulfilled the daily vitamin and mineral requirement. She also made up a detailed, easy to follow shopping list. The list was broken down the way you would find the items in the grocery store so there would be no back and forth.  Bethany's list had recommendations for brands of food, but she explained that if you had a favorite brand you can use it as long as you made sure you were keeping in line with the amount of calories and fat in the meal plan.</p></div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Kara</div>-->
+<!--<div class="customers-address">Calgary, AB-->
+<!--</div>-->
+<!--</div>-->
+<!--</div&ndash;&gt;-->
+
+<!--</div>-->
+
+
+<!--<div class="item blog_posts">-->
+<!--<div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>-->
+<!--<div class="col-md-9">-->
+<!--<p>Thank you Bethany for putting together a great plan for my particular problem. I was recently-->
+<!--diagnosed with celiac disease so eating in and out has become a big challenge for me. Bethany put-->
+<!--together a shopping list with things that I liked to eat so nothing was banned (only wheat etc of-->
+<!--course) and even made me a shopping list to help me. She also gave me lots of other useful advice that-->
+<!--could maintain my blood sugars and stop me buying fast food, in other words to be prepared instead of-->
+<!--finding myself hungry with no snacks on standby etc. She even made up recipes for me to try. I fully-->
+<!--recommend that Bethany do anyone a plan for their lifestyle whatever the problem, mine was a-->
+<!--challenging one and she rose to the challenge! Thank you Bethany.</p>-->
+<!--</div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Jayne</div>-->
+<!--<div class="customers-address">Dalemead, AB</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;div class="col-md-6">-->
+<!--<div class="customers-box col-sm-12">-->
+<!--<div class="col-md-3 text-center"><img src="images/comment-user.png" class="img-responsive" alt=""></div>-->
+<!--<div class="col-md-9">The meal plan and grocery list also correlated to Bethany's recipe guide that was included in her book. The recipes were easy to follow, quick to make and DELICIOUS. Even my husband likes the food. So far, a week following the plan and I feel I have more energy, feel fitter and have a better sense of wellbeing. Highly recommend!</div>-->
+<!--<div class="customers-box-arrow"></div>-->
+<!--</div>-->
+<!--<div class="customers-info col-sm-12 paddingNone">-->
+<!--<div class="customers-name">Kara</div>-->
+<!--<div class="customers-address">Calgary, AB</div>-->
+<!--</div>-->
+<!--</div&ndash;&gt;-->
+<!--</div>-->
+
+<!--</div>-->
+<!--&lt;!&ndash; Carousel indicators &ndash;&gt;-->
+<!--<ol class="carousel-indicators">-->
+<!--<li data-target="#customers-quote-carousel" data-slide-to="0" class="active"></li>-->
+<!--<li data-target="#customers-quote-carousel" data-slide-to="1"></li>-->
+<!--<li data-target="#customers-quote-carousel" data-slide-to="2"></li>-->
+<!--</ol>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 <div class="all-rating">
-<hr class="hr-2dot">
+  <hr class="hr-2dot">
   <div class="container">
     <div class="col-sm-3 text-center animated fadeInLeft">
       <div class="rating-icon"><img src="images/like-icon.png" alt=""></div>
-      <div class="rating-number">1500% </div><br>
+      <div class="rating-number">1500%</div>
+      <br>
+
       <div class="rating-text">More Energy</div>
     </div>
     <div class="col-sm-3 text-center animated fadeInUp">
       <div class="rating-icon"><img src="images/user-icon.png" alt=""></div>
-      <div class="rating-number">1, 000, 000 </div><br>
+      <div class="rating-number">1, 000, 000</div>
+      <br>
+
       <div class="rating-text">‘s Of Calories Lost</div>
     </div>
     <div class="col-sm-3 text-center animated fadeInUp">
       <div class="rating-icon"><img src="images/home-icon.png" alt=""></div>
-      <div class="rating-number">150% </div><br>
+      <div class="rating-number">150%</div>
+      <br>
+
       <div class="rating-text">More Meals At Home</div>
     </div>
     <div class="col-sm-3 text-center animated fadeInRight">
       <div class="rating-icon"><img src="images/setting-icon.png" alt=""></div>
-      <div class="rating-number">2641 </div><br>
+      <div class="rating-number">2641</div>
+      <br>
+
       <div class="rating-text">More Choices</div>
     </div>
   </div>
@@ -491,7 +728,7 @@ Read for yourself some of the dramatic results we have created for our clients.
     <div class="blogpost-title">Blog Posts</div>
     <div class="blogpost-subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna cras quam vitae turpis</div>
   </div>
-  
+
   <div class="container">
     <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
       <!-- Carousel items -->
@@ -500,46 +737,55 @@ Read for yourself some of the dramatic results we have created for our clients.
 
           <%#= @blogs.each do |blog| %>
           <%#= @users = User.where(:id => blog.user_id) %>
-           <%#= @cateories = Category.where(:id => blog.category_id) %>
+          <%#= @cateories = Category.where(:id => blog.category_id) %>
           <%#= @total_comment = Comment.where(:blog_id => blog.id) %>
-        <div class="col-md-12 paddingNone">
-          <div class="col-md-4 blogpost-image"><%#= image_tag(blog.image, :class => "img-responsive") if blog.image? %></div>
-          <div class="col-md-8 blogpost-content">
-            <div class="blogpost-content-title"><%#= link_to blog.title, welcome_blog_details_path(id:blog.id) %></div>
-            <ul class="blogpost-content-list">
-            <%#= @users.each do |user| %>
-              <li>By Admin<%#= user.email %></li>
-             <%#= end %>
-             <%#= @cateories.each do |cat| %> 
-              <li>Beauty<%#= cat.name %></li>
-              <%#= end %>
-              <li><%#=  @total_comment.count %>0 Comments</li>
-              <li>10 April 2015<%#= blog.created_at.strftime('%B') %>&nbsp;<%#= blog.created_at.strftime('%d') %>, <%#= blog.created_at.strftime('%Y') %></li>
-            </ul>
-            <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-        od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.<%#= link_to blog.decsription, welcome_blog_details_path(id:blog.id) %></div>
+          <div class="col-md-12 paddingNone">
+            <div class="col-md-4 blogpost-image"><%#= image_tag(blog.image, :class => "img-responsive") if blog.image? %></div>
+            <div class="col-md-8 blogpost-content">
+              <div class="blogpost-content-title"><%#= link_to blog.title, welcome_blog_details_path(id:blog.id) %></div>
+              <ul class="blogpost-content-list">
+                <%#= @users.each do |user| %>
+                <li>By Admin<%#= user.email %></li>
+                <%#= end %>
+                <%#= @cateories.each do |cat| %>
+                <li>Beauty<%#= cat.name %></li>
+                <%#= end %>
+                <li><%#=  @total_comment.count %>0 Comments</li>
+                <li>10 April 2015<%#= blog.created_at.strftime('%B') %>&nbsp;<%#= blog.created_at.strftime('%d') %>
+                  , <%#= blog.created_at.strftime('%Y') %></li>
+              </ul>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut
+                aliquip.<%#= link_to blog.decsription, welcome_blog_details_path(id:blog.id) %></div>
+            </div>
+          </div>
+          <%#= end %>
+
+          <br class="clear"><br>
+
+
+          <div class="col-md-12 paddingNone">
+            <div class="col-md-4 blogpost-image"></div>
+            <div class="col-md-8 blogpost-content">
+              <div class="blogpost-content-title">Why Diets Can Make Keeping Weight Off Worse.</div>
+              <ul class="blogpost-content-list">
+                <li>By Admin</li>
+                <li>Garden Care</li>
+                <li>3 Comments</li>
+                <li>10 April 2015</li>
+              </ul>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut aliquip.
+              </div>
+            </div>
           </div>
         </div>
-        <%#= end %>
-
-        <br class="clear"><br>
-
-
-        <div class="col-md-12 paddingNone">
-          <div class="col-md-4 blogpost-image"></div>
-          <div class="col-md-8 blogpost-content">
-            <div class="blogpost-content-title">Why Diets Can Make Keeping Weight Off Worse.</div>
-            <ul class="blogpost-content-list">
-              <li>By Admin</li>
-              <li>Garden Care</li>
-              <li>3 Comments</li>
-              <li>10 April 2015</li>
-            </ul>
-            <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-      od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.</div>
-          </div>
-        </div>
-</div>
         <div class="item blog_posts">
           <div class="col-md-12 paddingNone">
             <div class="col-md-4 blogpost-image"></div>
@@ -551,11 +797,16 @@ Read for yourself some of the dramatic results we have created for our clients.
                 <li>3 Comments</li>
                 <li>10 April 2015</li>
               </ul>
-              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-        od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.</div>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut aliquip.
+              </div>
             </div>
-</div>
+          </div>
           <br class="clear"><br>
+
           <div class="col-md-12 paddingNone">
             <div class="col-md-4 blogpost-image"></div>
             <div class="col-md-8 blogpost-content">
@@ -566,10 +817,14 @@ Read for yourself some of the dramatic results we have created for our clients.
                 <li>3 Comments</li>
                 <li>10 April 2015</li>
               </ul>
-              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-        od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.</div>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut aliquip.
+              </div>
             </div>
-</div>
+          </div>
         </div>
 
 
@@ -584,11 +839,16 @@ Read for yourself some of the dramatic results we have created for our clients.
                 <li>3 Comments</li>
                 <li>10 April 2015</li>
               </ul>
-              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-        od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.</div>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut aliquip.
+              </div>
             </div>
-</div>
+          </div>
           <br class="clear"><br>
+
           <div class="col-md-12 paddingNone">
             <div class="col-md-4 blogpost-image"></div>
             <div class="col-md-8 blogpost-content">
@@ -599,10 +859,14 @@ Read for yourself some of the dramatic results we have created for our clients.
                 <li>3 Comments</li>
                 <li>10 April 2015</li>
               </ul>
-              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero. Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit amet consects etur adipis icing elit sed doiusm
-        od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation ullamco laboris nisiut aliquip.</div>
+              <div class="blogpost-content-detail">Neque arcu tincidunt neque pharetra coduct modo nibh leo non libero.
+                Cras augue ipsum mphare train sed. Intege ante nunc accumsan sed tempus rutrum. Lorem ipsum dolor sit
+                amet consects etur adipis icing elit sed doiusm
+                od tempor incididunt ut labore et dolore magna aliqua. Enim ad minim ven iam, quis nostrud exercitation
+                ullamco laboris nisiut aliquip.
+              </div>
             </div>
-</div>
+          </div>
         </div>
 
 
@@ -612,7 +876,7 @@ Read for yourself some of the dramatic results we have created for our clients.
         <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
         <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
         <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
-</ol>   
+      </ol>
     </div>
   </div>
 </div>
