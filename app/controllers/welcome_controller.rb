@@ -178,7 +178,7 @@ class WelcomeController < ApplicationController
             'SearchIndex' => @category.search_index,
             'Keywords' => @category.keyword,
             'ItemPage' => @page,
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds"
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings"
         }
     )
 
@@ -199,6 +199,8 @@ class WelcomeController < ApplicationController
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
       product.review = item['Reviews'] if item['Reviews']
       product.id = item['ASIN']
+      product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId']
+      # binding.pry
       @products << product
     end
 

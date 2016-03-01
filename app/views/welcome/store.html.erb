@@ -56,7 +56,7 @@
                 <div class="accordion-container">
                   <div class="accordion-toggle">
                     <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span>
-                      <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :style => "background-color: none !important" %>
+                    <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :style => "background-color: none !important" %>
                     <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></span>
                   </div>
 
@@ -160,12 +160,16 @@
                 <div class="col-md-4 col-sm-6">
                   <div class="col-sm-12 item_box">
                     <div class="col-sm-12 item_image"><%#= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %>
-                    <%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword), style: 'background-color:none' %>
+                      <%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword), style: 'background-color:none' %>
                     </div>
                     <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword) %></div>
                     <div class="col-sm-12 item_subtitle">Demo</div>
                     <div class="col-sm-12 paddingNone add_card_and_price">
-                      <div class="col-sm-6 item_add_button paddingNone">Add to Card</div>
+                      <% if user_signed_in? %>
+                          <div class="col-sm-6 item_add_button paddingNone create_cart" data="<%= product.offer_listing_id %>">Add to Cart</div>
+                      <% else %>
+                          <div class="col-sm-6 item_add_button paddingNone redirect_user">Add to Cart</div>
+                      <% end %>
                       <div class="col-sm-5 paddingNone text-right reviewAndprice">
                         <div class="item_price"><%= product.price %></div>
                         <div class="item_review">
@@ -185,8 +189,8 @@
         <ul>
           <% count = 1 %>
           <% @total_pages.to_i.times do %>
-          <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></a></li>
-          <% count = count + 1 %>
+              <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></a></li>
+              <% count = count + 1 %>
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
         </ul>
@@ -199,7 +203,9 @@
 <div class="our_brands_list">
   <div class="our_brands_list_border"></div>
   <div class="container our_brands_list_container">
-    <div class="our_brands_list_title">Our Brands</div><br>
+    <div class="our_brands_list_title">Our Brands</div>
+    <br>
+
     <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae
     </div>
     <div class="our_brands_list_name">
@@ -240,3 +246,31 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".redirect_user").click(function () {
+            alert("You need to sign in before you can add to your cart");
+            window.location.replace("http://nutritiousapp.herokuapp.com/users/sign_in");
+        });
+        $(".create_cart").click(function () {
+//            alert("sadasd");
+            var quantity = "1";
+//            alert(quantity);
+            var offer_id = $(this).attr("data");
+//            alert(offer_id);
+            $.ajax({
+                method: "POST",
+                url: "/cart_creation",
+                data: {quantity: quantity, offer_id: offer_id},
+//                success: success,
+                dataType: "html"
+            })
+                    .done(function (msg) {
+                        window.location.replace("http://nutritiousapp.herokuapp.com/cart_get");
+
+                    });
+//      window.location.replace("http://localhost:3000/users/sign_in");
+        })
+    });
+</script>
