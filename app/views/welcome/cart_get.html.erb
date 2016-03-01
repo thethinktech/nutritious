@@ -167,7 +167,10 @@
                     <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, "#" %></div>
                     <div class="col-sm-12 item_subtitle">Demo</div>
                     <div class="col-sm-12 paddingNone add_card_and_price">
-                      <div class="col-sm-6 item_add_button paddingNone"><%= link_to "Buy", @purchase_url %></div>
+                      <a href="<%= @purchase_url %>">
+                        <div class="col-sm-6 item_add_button paddingNone purchase_url">Buy</div>
+
+                      </a>
 
                       <div class="col-sm-5 paddingNone text-right reviewAndprice">
                         <div class="item_price"><%= product.price %></div>
@@ -188,7 +191,10 @@
                 <div class="col-sm-12 item_title" id='pt-name1'><%= link_to @product.name, "#" %></div>
                 <div class="col-sm-12 item_subtitle">Demo</div>
                 <div class="col-sm-12 paddingNone add_card_and_price">
-                  <div class="col-sm-6 item_add_button paddingNone"><%= link_to "Buy", @purchase_url %></div>
+                  <a href="<%= @purchase_url %>">
+                      <div class="col-sm-6 item_add_button paddingNone purchase_url">Buy</div>
+
+                  </a>
                   <div class="col-sm-5 paddingNone text-right reviewAndprice">
                     <div class="item_price"><%= @product.price %></div>
                     <div class="item_review">
@@ -221,7 +227,9 @@
 <div class="our_brands_list">
   <div class="our_brands_list_border"></div>
   <div class="container our_brands_list_container">
-    <div class="our_brands_list_title">Our Brands</div><br>
+    <div class="our_brands_list_title">Our Brands</div>
+    <br>
+
     <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae
     </div>
     <div class="our_brands_list_name">
@@ -262,3 +270,30 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+//    $(document).ready(function () {
+//        $(".purchase_url").click(function () {
+////            alert("You need to sign in before you can add to your cart");
+//            window.location.replace("<%#= @purchase_url %>");
+//        });
+//        $(".create_cart").click(function () {
+////            alert("sadasd");
+//            var quantity = "1";
+////            alert(quantity);
+//            var offer_id = $(this).attr("data");
+////            alert(offer_id);
+//            $.ajax({
+//                method: "POST",
+//                url: "/cart_creation",
+//                data: {quantity: quantity, offer_id: offer_id},
+////                success: success,
+//                dataType: "html"
+//            })
+//                    .done(function (msg) {
+//                        window.location.replace("http://nutritiousapp.herokuapp.com/cart_get");
+//
+//                    });
+////      window.location.replace("http://localhost:3000/users/sign_in");
+//        })
+//    });
+</script>
