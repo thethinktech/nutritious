@@ -452,6 +452,11 @@ class WelcomeController < ApplicationController
 
     else
       @product = OpenStruct.new
+      @product.name = response['CartGetResponse']['Cart']['CartItems']['CartItem']['Title']
+      @product.quantity = response['CartGetResponse']['Cart']['CartItems']['CartItem']['Quantity']
+      @product.price = response['CartGetResponse']['Cart']['CartItems']['CartItem']['ItemTotal']['FormattedPrice']
+
+
 
     end
 
