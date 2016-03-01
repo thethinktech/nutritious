@@ -270,7 +270,7 @@
     $(document).ready(function () {
         $(".redirect_user").click(function () {
             alert("You need to sign in before you can add to your cart");
-            window.location.replace("http://localhost:3000/users/sign_in");
+            window.location.replace("http://nutritiousapp.herokuapp.com/users/sign_in");
         });
         $(".create_cart").click(function () {
 //            alert("sadasd");
@@ -286,7 +286,7 @@
                 dataType: "html"
             })
                 .done(function(msg) {
-                      window.location.replace("http://localhost:3000/cart_get");
+                      window.location.replace("http://nutritiousapp.herokuapp.com/cart_get");
 
                     });
 //      window.location.replace("http://localhost:3000/users/sign_in");
