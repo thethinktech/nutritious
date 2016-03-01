@@ -1,30 +1,32 @@
 <style type="text/css">
-.on-hover img{
-  width:425px;
-  height: 282px;
-  transition:all 0.9s;
-}
+    .on-hover img {
+        width: 425px;
+        height: 282px;
+        transition: all 0.9s;
+    }
 
-.on-hover img:hover{
-  opacity: 0.9;
-  border-radius: 50px 0 50px 0;
-}
+    .on-hover img:hover {
+        opacity: 0.9;
+        border-radius: 50px 0 50px 0;
+    }
 
 </style>
 <header class="sub_header sub_header_contact_bg">
   <div class="container">
-    <div class="sub_header_title">Contact Us</div><br>
+    <div class="sub_header_title">Contact Us</div>
+    <br>
+
     <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
   </div>
 </header>
-<div class="sub_header_flower"> <img src="../images/header-flower.png" alt=""> </div>
+<div class="sub_header_flower"><img src="../images/header-flower.png" alt=""></div>
 <div class="sub_breadcrumb">
   <div class="white_dashed"></div>
   <div class="container">
     <div class="sub_top_menu">
       <ul>
-       <li><%= link_to 'HOME' , root_path, :class => '' %></li>
-        <li><%= link_to 'CONTACT' , new_contact_path %></li>
+        <li><%= link_to 'HOME', root_path, :class => '' %></li>
+        <li><%= link_to 'CONTACT', new_contact_path %></li>
       </ul>
     </div>
   </div>
@@ -36,12 +38,13 @@
       <div><img src="../images/location-icon.png" alt=""></div>
       <div class="contact_info_title">Our Location</div>
       <div class="contact_info_subtitle">151 West Sprints Road SW Calgary,<br>
-        AB T3H 4P6</div>
+        AB T3H 4P6
+      </div>
     </div>
     <div class="col-sm-3 text-center animated fadeInDown">
       <div><img src="../images/call-icon.png" alt=""></div>
       <div class="contact_info_title">Give Us A Call</div>
-      <div class="contact_info_subtitle">Phone:  +1 403 612 7767</div>
+      <div class="contact_info_subtitle">Phone: +1 403 612 7767</div>
     </div>
     <div class="col-sm-3 text-center animated fadeInDown">
       <div><img src="../images/email-icon.png" alt=""></div>
@@ -51,7 +54,8 @@
     <div class="col-sm-3 text-center animated fadeInDown">
       <div><img src="../images/website-icon.png" alt=""></div>
       <div class="contact_info_title">We Are Social</div>
-      <div class="white-social-icons"> <span><i class="fa fa-facebook"></i></span> <span><i class="fa fa-twitter"></i></span> </span> <span><i class="fa fa-instagram"></i></span>  </div>
+      <div class="white-social-icons"><span><i class="fa fa-facebook"></i></span>
+        <span><i class="fa fa-twitter"></i></span> </span> <span><i class="fa fa-instagram"></i></span></div>
     </div>
   </div>
 </div>
@@ -59,7 +63,9 @@
   <div class="container">
     <div class="col-md-4">
       <div class="working-hours-title">Working Hours</div>
-      <div class="working-hours-detail">Nam lobortis fringilla felis sce sed utpat miate urna cras utnec. Lorem ipsum dolor sit.</div>
+      <div class="working-hours-detail">Nam lobortis fringilla felis sce sed utpat miate urna cras utnec. Lorem ipsum
+        dolor sit.
+      </div>
       <div class="row contact-days">
         <div class="col-sm-5 working-hours-day">Monday to Friday:</div>
         <div class="col-sm-7 working-hours-time">9:00 AM to 6:00 PM</div>
@@ -73,41 +79,41 @@
         <div class="col-sm-7 working-hours-time">-- Closed --</div>
       </div>
     </div>
-<%= form_for (@contact), :class => "" do |f| %>
-    
-    <div class="col-md-8">
-  <% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-<% end %>
-      <div class="working-hours-title">Say Hello!</div>
-      <div class="row">
-        <div class="col-md-4">
-          <%= f.text_field :name, autofocus: true, required: true, :placeholder => "Full Name" %>
+    <%= form_for (@contact), :class => "" do |f| %>
+
+        <div class="col-md-8">
+          <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <div class="working-hours-title">Say Hello!</div>
+          <div class="row">
+            <div class="col-md-4">
+              <%= f.text_field :name, autofocus: true, required: true, :placeholder => "Full Name" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.email_field :email, required: true, :placeholder => "Email Address" %>
+            </div>
+            <div class="col-md-4">
+              <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.text_area :message, required: true, :placeholder => "Your Message" %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.submit "Send Message", :class => "contact-submit" %>
+            </div>
+          </div>
         </div>
-        <div class="col-md-4">
-          <%= f.email_field :email, required: true, :placeholder => "Email Address"%>
         </div>
-        <div class="col-md-4">
-          <%= f.text_field :phone_number, :placeholder => "Phone Number" %>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <%= f.text_area :message, required: true, :placeholder => "Your Message" %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <%= f.submit "Send Message", :class => "contact-submit" %>
-        </div>
-      </div>
+    <% end %>
+    <div class="contact-footer-images-list">
+      <div class="on-hover"><img src="../images/contact-footer-images-1.png" alt=""></div>
+      <div class="on-hover"><img src="../images/contact-footer-images-2.png" alt=""></div>
+      <div class="on-hover"><img src="../images/contact-footer-images-3.png" alt=""></div>
     </div>
-  </div>
-</div>
-<% end %>
-<div class="contact-footer-images-list">
-  <div class="on-hover"><img src="../images/contact-footer-images-1.png" alt=""></div>
-  <div class="on-hover"><img src="../images/contact-footer-images-2.png" alt=""></div>
-  <div class="on-hover"><img src="../images/contact-footer-images-3.png" alt=""></div>
-</div>
-<div class="clear"></div>   
+    <div class="clear"></div>

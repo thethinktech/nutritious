@@ -1,10 +1,10 @@
 class SessionsController < Devise::SessionsController
-  before_filter :authenticate_admin!, :only => :create
+  # before_filter :authenticate_admin!, :only => :create
+  #
+  # layout 'admin'
 
-  layout 'admin'
-
-  def create
-    super
-  end
+  # def create
+  #   super
+  # end
 
 end

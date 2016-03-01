@@ -38,8 +38,8 @@ class ContactsController < ApplicationController
   def new
     @newsletter = Newsletter.new()
     @contact = Contact.new
-    @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
-    @tweet_news = $client.get_all_tweets("NutritiousDe")
+    # @instagram = Instagram.user_recent_media("2860181756" , {:count => 9})
+    # @tweet_news = $client.get_all_tweets("NutritiousDe")
   end
 
   # GET /contacts/1/edit

@@ -1,4 +1,4 @@
 class RegistrationsController < Devise::RegistrationsController
-  layout 'admin'
+  # layout 'admin'
 
 end

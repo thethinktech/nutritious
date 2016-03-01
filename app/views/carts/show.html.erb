@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cart.user_id %>
+</p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @cart.cart_id %>
+</p>
+
+<p>
+  <strong>Hmac:</strong>
+  <%= @cart.hmac %>
+</p>
+
+<p>
+  <strong>Purchase url:</strong>
+  <%= @cart.purchase_url %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @cart.quantity %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @cart.price %>
+</p>
+
+<p>
+  <strong>Cart item:</strong>
+  <%= @cart.cart_item_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cart.title %>
+</p>
+
+<%= link_to 'Edit', edit_cart_path(@cart) %> |
+<%= link_to 'Back', carts_path %>

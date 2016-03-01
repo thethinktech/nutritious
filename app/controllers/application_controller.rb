@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
+  # before_filter :set_newsletter
+
   def authenticate_admin!
     email = params[:user][:email]
     user = User.find_by_email email
@@ -21,13 +23,16 @@ class ApplicationController < ActionController::Base
     redirect_to root_path unless current_user.admin == true
   end
 
+  def set_newsletter
+    @newsletter = Newsletter.new
+  end
+
   protected
   def after_sign_out_path_for(resource)
     admin_root_path
   end
 
-
-$client = Twitter::REST::Client.new do |config|
+  $client = Twitter::REST::Client.new do |config|
   config.consumer_key = 'F7Bs3Y3teUeYkMWRTV6LzU4g9'
   config.consumer_secret = 'WvnVNRPFdpsVfLpDlfvhGubbnRDoZJRUZQX3vOZ2Zi1n9OEIgB'
   config.access_token = '4859074155-HSphHp1y3Q2MEWKCpn2CKaLNEMxiblqZgvHSgM6'

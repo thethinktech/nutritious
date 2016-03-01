@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :carts
   #get 'homes/show'
 
   resources :contacts
@@ -16,6 +17,9 @@ Rails.application.routes.draw do
   get '/item_lookup' => 'welcome#item_lookup'
   get '/blog' => 'welcome#blog' 
   get '/blog_detail' => 'welcome#blog_detail'
+  post '/cart_creation' => 'welcome#cart_creation'
+  get '/cart_addition' => 'welcome#cart_addition'
+  get '/cart_get' => 'welcome#cart_get'
   get 'welcome/store_details'
   get '/blog_list' => 'welcome#blog' 
   #get '/blog_detail' => 'welcome#blog_detail'
@@ -28,9 +32,9 @@ Rails.application.routes.draw do
   post 'contacts/add_newsletter'
   post 'packages/add_newsletter'
 
-  scope '/admin' do
+  # scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions", :registrations => "registrations"}
-  end
+  # end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

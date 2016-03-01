@@ -122,12 +122,16 @@
               <div class="add_to_card_box col-sm-5">
                 <div class="inc button add_to_card_input"></div>
                 <div class="add_to_card_input">
-                  <input type="text" name="french-hens" value="1">
+                  <input type="text" id="quantity" name="french-hens" value="1">
                 </div>
                 <div class="dec button add_to_card_input" data-type="plus"></div>
               </div>
               <div class="col-sm-6">
-                <div class="input_add_card">Add To Card</div>
+                <% if user_signed_in? %>
+                    <div class="input_add_card create_cart">Add To Cart</div>
+                <% else %>
+                    <div class="input_add_card redirect_user">Add To Cart</div>
+                <% end %>
               </div>
             </div>
             <div class="item_category col-sm-12 paddingNone">Category: Garden Tools. Lawn movers, Best Sellers</div>
@@ -156,7 +160,7 @@
                 <%= @product.feature %>
               </div>
               <div class="item_detail_info tab-pane fade" id="tab2primary">
-                <iframe style="border: none !important; width: 100%; height: auto;" src= <%= @product.review %> >
+                <iframe style="border: none !important; width: 100%; height: auto;" src=<%= @product.review %>>
                   <p>No reviews for this product</p>
                 </iframe>
               </div>
@@ -225,7 +229,9 @@
 <div class="our_brands_list">
   <div class="our_brands_list_border"></div>
   <div class="container our_brands_list_container">
-    <div class="our_brands_list_title">Our Brands</div><br>
+    <div class="our_brands_list_title">Our Brands</div>
+    <br>
+
     <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae</div>
     <div class="our_brands_list_name">
       <ul>
@@ -259,3 +265,31 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".redirect_user").click(function () {
+            alert("You need to sign in before you can add to your cart");
+            window.location.replace("http://localhost:3000/users/sign_in");
+        });
+        $(".create_cart").click(function () {
+//            alert("sadasd");
+            var quantity = $("#quantity").val();
+//            alert(quantity);
+            var offer_id = "<%= @product.offer_listing_id %>";
+//            alert(offer_id);
+            $.ajax({
+                method: "POST",
+                url: "/cart_creation",
+                data: { quantity: quantity, offer_id: offer_id },
+//                success: success,
+                dataType: "html"
+            })
+                .done(function(msg) {
+                      window.location.replace("http://localhost:3000/cart_get");
+
+                    });
+//      window.location.replace("http://localhost:3000/users/sign_in");
+        })
+    });
+</script>

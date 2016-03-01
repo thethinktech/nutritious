@@ -1,0 +1,264 @@
+<!--<br><br><br><br><br><br>-->
+<!--<%#= @response.to_h %>-->
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<style>
+    #pt-name a:hover {
+        background-color: white;
+    }
+
+    #pt-name1 a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    .change-you-life1 {
+        background-image: url("../images/orange-back.png");
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 122px;
+    }
+
+</style>
+<br>
+<br>
+
+<header class="sub_header sub_header_contact_bg">
+  <div class="container">
+    <div class="sub_header_title">Store</div>
+    <div class="sub_header_detail">Have a question or comment? Get in touch!</div>
+  </div>
+</header>
+
+<div class="sub_header_flower"><img src="images/header-flower.png" alt=""></div>
+
+<div class="sub_breadcrumb">
+  <div class="white_dashed"></div>
+  <div class="container">
+    <div class="sub_top_menu">
+      <ul>
+        <li><%= link_to 'Home', root_path, :class => '' %></li>
+        <li><%= link_to 'Shop', store_path %></li>
+        <li><a href="">Lawn Movers</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="green_dot_border"></div>
+
+<div class="blog_container">
+  <div class="container">
+    <div class="col-md-3">
+      <div class="col-sm-12 item_left_item">
+        <div class="row">
+          <div class="blog_categories">Categories</div>
+          <!------------ product list-------------->
+          <div class="item_price_left_item col-sm-12">
+            <% @categories.each do |category| %>
+                <div class="accordion-container">
+                  <div class="accordion-toggle">
+                    <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span>
+                    <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :style => "background-color: none !important" %>
+                    <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></span>
+                  </div>
+
+                  <div class="accordion-content">
+                    <ul>
+                      <li>1</li>
+                      <li>2</li>
+                      <li>3</li>
+                      <li>4</li>
+                      <li>5</li>
+                    </ul>
+                  </div>
+                  <!--/.accordion-content-->
+                </div>
+            <% end %>
+          </div>
+
+
+          <!------------ product list-------------->
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 item_price_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 filter_item_box ">
+            <div id="slider-range"></div>
+          </div>
+          <form method="post " action="get_items.php ">
+            <input type="hidden " id="amount1 ">
+            <input type="hidden " id="amount2 ">
+
+            <div class="filter_box ">
+              <div class="col-sm-6"><input type="submit " name="submit_range " class="submit_range " value="Submit ">
+              </div>
+              <div class="col-sm-6 item_price_value ">Price : <span id="amount "></span></div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-sm-12 blog_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 recent_post_box ">
+            <div class="recent_post_cate_name ">I myself have realized over the</div>
+            <div class="recent_post_cate_date "><img src="images/time_icon.png" alt=" "><samp>October 30, 2015</samp>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-12 paddingNone blog_left_item ">
+
+        <div class="offer_limit ">
+          <div class="offer_limit_title1 ">Limited Time</div>
+          <div class="offer_limit_title2 "><span>offer</span></div>
+          <div class="offer_limit_text ">
+            <div class="offer_limit_price ">20% OFF</div>
+            <div class="offer_limit_price_detail ">Save 20% For 2 or More Packahes Within The Same Family</div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    <div class="col-md-9">
+      <!---------------- show top list ------->
+      <div class="col-sm-12 item_list_change_box ">
+        <div class="row ">
+          <div class="col-sm-8">
+            <span class="sort_by_span ">Sort By: </span>
+					   <span class="sort_by_select ">
+						   <select>
+                             <option>Default Sorting</option>
+                           </select>
+					   </span>
+
+            <span class="show_items_by ">Show Items: </span>
+					   <span class="show_items_select ">
+						   <select>
+                             <option>9 Per Page</option>
+                           </select>
+					   </span>
+          </div>
+          <div class="col-sm-4 text-right">
+            <span class="change_section_box "><img src="images/change_section_box_active.png" alt=" "></span>
+            <span class="change_section_list "><img src="images/change_section_list.png" alt=" "></span>
+          </div>
+        </div>
+      </div>
+      <!---------------- show top list ------->
+
+
+      <!-------------- All item  ------------>
+      <div class="row all_item_list " id='pt-name'>
+        <% if @products %>
+            <% @products.each do |product| %>
+                <div class="col-md-4 col-sm-6">
+                  <div class="col-sm-12 item_box">
+                    <div class="col-sm-12 item_image"><%#= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %>
+                      <%= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), "#", style: 'background-color:none' %>
+                    </div>
+                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name, "#" %></div>
+                    <div class="col-sm-12 item_subtitle">Demo</div>
+                    <div class="col-sm-12 paddingNone add_card_and_price">
+                      <div class="col-sm-6 item_add_button paddingNone"><%= link_to "Buy", @purchase_url %></div>
+
+                      <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                        <div class="item_price"><%= product.price %></div>
+                        <div class="item_review">
+                          <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+        <% else %>
+            <div class="col-md-4 col-sm-6">
+              <div class="col-sm-12 item_box">
+                <div class="col-sm-12 item_image"><%#= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %>
+                  <%= link_to image_tag(@product.image_url, style: 'width: 43%;margin-left: 50px;'), "#", style: 'background-color:none' %>
+                </div>
+                <div class="col-sm-12 item_title" id='pt-name1'><%= link_to @product.name, "#" %></div>
+                <div class="col-sm-12 item_subtitle">Demo</div>
+                <div class="col-sm-12 paddingNone add_card_and_price">
+                  <div class="col-sm-6 item_add_button paddingNone"><%= link_to "Buy", @purchase_url %></div>
+                  <div class="col-sm-5 paddingNone text-right reviewAndprice">
+                    <div class="item_price"><%= @product.price %></div>
+                    <div class="item_review">
+                      <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <% end %>
+      </div>
+      <!-------------- End all item  -------->
+
+
+      <div class="item_paging">
+        <ul>
+          <% count = 1 %>
+          <% @total_pages.to_i.times do %>
+              <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></a></li>
+              <% count = count + 1 %>
+          <% end %>
+          <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="our_brands_list">
+  <div class="our_brands_list_border"></div>
+  <div class="container our_brands_list_container">
+    <div class="our_brands_list_title">Our Brands</div><br>
+    <div class="our_brands_list_subtitle">Nam lobortis fringilla felis. Fusce vol utpat mi at urna ras quam vitae
+    </div>
+    <div class="our_brands_list_name">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="return_shipping_detail_border"></div>
+<div class="return_shipping_detail">
+  <div class="container">
+    <div class="col-md-4 return_exchange">
+      <div><img src="images/return_policy.png" class="vertical-align" alt=""></div>
+      <div>
+        <span>Return &amp; Exchange in 5 working days</span>
+        <span class="return_exchange_subtitle">Lorem ipsum dolor sit amet consectetur</span>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="col-sm-12">
+        <div class="col-sm-12 saveoffericonBox">Limited Time offer</div>
+      </div>
+      <div class="col-sm-12 saveoffer">Get Our Services &amp; Get 25% Off</div>
+    </div>
+    <div class="col-md-4 return_exchange">
+      <div><img src="images/walit.png" class="vertical-align" alt=""></div>
+      <div>
+        <span>Return &amp; Exchange in 5 working days</span>
+        <span class="return_exchange_subtitle">Lorem ipsum dolor sit amet consectetur</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@
         <% if notice %>
           <p class="alert alert-success"><%= notice %></p>
         <% end %>
-        <%= form_for @newsletter, :url => {:action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= form_for (@newsletter ||= Newsletter.new), :url => {:controller =>"welcome", :action => "add_newsletter"},:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, required: true, :placeholder => "Email", :class => 'footer-subscribe-input1' %>
         <%= hidden_field_tag(:status,value='1')%>
         <%#= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px;' %>
@@ -22,22 +22,22 @@
     <div class="col-md-3 animated fadeInUp">
       <div class="latest-tweets-title">Latest Tweets</div>
       <ul class="latest-tweets-list">
-      <%= @tweet_news.each do |f| %>
+      <%#= @tweet_news.each do |f| %>
         <li>
-          <div class="latest-tweets-name"><%= f.text %></div>
-          <div class="latest-tweets-time"><%= time_ago_in_words(f.created_at) %> ago</div>
+          <div class="latest-tweets-name"><%#= f.text %></div>
+          <div class="latest-tweets-time"><%#= time_ago_in_words(f.created_at) %> ago</div>
         </li>
-        <% end %>
+        <%# end %>
       </ul>
     </div>
     <div class="col-md-3 animated fadeInUp">
       <div class="latest-tweets-title">Instagram Feed</div>
       <ul class="latest-instagram-list">
-        <% @instagram.each do |instagram| %>
+        <% #@instagram.each do |instagram| %>
 
-              <li><%= image_tag instagram.images.standard_resolution.url, :style => 'width:79px' %></li>
+              <li><%#= image_tag instagram.images.standard_resolution.url, :style => 'width:79px' %></li>
 
-          <% end %>
+          <%# end %>
       </ul>
     </div>
     <div class="col-md-3 animated fadeInRight">
