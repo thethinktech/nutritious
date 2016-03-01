@@ -3795,7 +3795,7 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
       <% end %>
       <span><i class="fa fa-facebook"></i></span>
-      <span><i class="fa fa-twitter"></i></span>
+      <span><i class="fa fa-ou"></i></span>
       <span><i class="fa fa-instagram"></i></span>
 
     </div>
@@ -3824,6 +3824,11 @@
         <li style="font-family:monotype corsiva !important;"><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li style="font-family:monotype corsiva !important;"><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li style="font-family:monotype corsiva !important;"><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <% if user_signed_in? %>
+            <% unless current_user.carts.blank? %>
+                <li style="font-family:monotype corsiva !important;"><%= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>
+            <% end %>
+        <% end %>
         <li>
           <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
         </li>
