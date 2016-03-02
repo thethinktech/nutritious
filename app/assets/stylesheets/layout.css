@@ -792,13 +792,14 @@ footer{
 	margin-bottom: 10px;
 }
 .footer-subscribe-input{
-	background: #333333;
-	border: 0px;
-	border-radius: 5px 0px 0px 5px;
-	height: 43px;
-	display: inline-block;
-	width: 78%;
-	outline: none;
+    background: #333333;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    height: 48px;
+    display: inline-block;
+    width: 78%;
+    outline: none;
+    padding-left: 10px;
 }
 .footer-subscribe-button{
 	display: inline-block;

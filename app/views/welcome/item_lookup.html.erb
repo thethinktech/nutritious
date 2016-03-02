@@ -40,11 +40,11 @@
           <div class="item_price_left_item col-sm-12">
             <% @categories.each do |category| %>
                 <div class="accordion-container">
-                  <a href="#" class="accordion-toggle">
+                  <div class="accordion-toggle">
                     <span class="item_list_flower"><img src="images/none_active_list_flower.png" alt=""></span>
-                    <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :class => "pull-right" %>
+                    <%= link_to category.name, store_path(:s_i => category.search_index, :key => category.keyword), :style => "background-color: none !important" %>
                     <span class="toggle-icon"><img src="images/item_list_plus.png" alt=""></span>
-                  </a>
+                  </div>
 
                   <div class="accordion-content">
                     <ul>
@@ -54,55 +54,62 @@
                       <li>4</li>
                       <li>5</li>
                     </ul>
-
                   </div>
                   <!--/.accordion-content-->
                 </div>
             <% end %>
           </div>
 
+
           <!------------ product list-------------->
         </div>
       </div>
-      <div class="col-sm-12 item_price_left_item">
-        <div class="row">
-          <div class="blog_categories">Recent Post</div>
-          <div class="col-sm-12 filter_item_box">
+
+
+      <div class="col-sm-12 item_price_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 filter_item_box ">
             <div id="slider-range"></div>
           </div>
-          <form method="post" action="get_items.php">
-            <input type="hidden" id="amount1">
-            <input type="hidden" id="amount2">
+          <form method="post " action="get_items.php ">
+            <!--<input type="hidden " id="amount1 ">-->
+            <!--<input type="hidden " id="amount2 ">-->
 
-            <div class="filter_box">
-              <div class="col-sm-6">
-                <input type="submit" name="submit_range" class="submit_range" value="Submit">
+            <div class="filter_box ">
+              <div class="col-sm-6"><input type="submit " name="submit_range " class="submit_range " value="Submit ">
               </div>
-              <div class="col-sm-6 item_price_value">Price : <span id="amount"></span></div>
+              <div class="col-sm-6 item_price_value ">Price : <span id="amount "></span></div>
             </div>
           </form>
         </div>
       </div>
-      <div class="col-sm-12 blog_left_item">
-        <div class="row">
-          <div class="blog_categories">Recent Post</div>
-          <div class="col-sm-12 recent_post_box">
-            <div class="recent_post_cate_name">I myself have realized over the</div>
-            <div class="recent_post_cate_date"><img src="images/time_icon.png" alt=""><samp>October 30, 2015</samp>
+
+      <div class="col-sm-12 blog_left_item ">
+        <div class="row ">
+          <div class="blog_categories ">Recent Post</div>
+          <div class="col-sm-12 recent_post_box ">
+            <div class="recent_post_cate_name ">I myself have realized over the</div>
+            <div class="recent_post_cate_date "><img src="images/time_icon.png" alt=" "><samp>October 30, 2015</samp>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-12 paddingNone blog_left_item">
-        <div class="offer_limit">
-          <div class="offer_limit_title1">Limited Time</div>
-          <div class="offer_limit_title2"><span>offer</span></div>
-          <div class="offer_limit_text">
-            <div class="offer_limit_price">20% OFF</div>
-            <div class="offer_limit_price_detail">Save 20% For 2 or More Packahes Within The Same Family</div>
+
+      <div class="col-sm-12 paddingNone blog_left_item ">
+
+        <div class="offer_limit ">
+          <div class="offer_limit_title1 ">Limited Time</div>
+          <div class="offer_limit_title2 "><span>offer</span></div>
+          <div class="offer_limit_text ">
+            <div class="offer_limit_price ">20% OFF</div>
+            <div class="offer_limit_price_detail ">Save 20% For 2 or More Packahes Within The Same Family</div>
           </div>
         </div>
+
       </div>
+
+
     </div>
     <div class="col-md-9">
       <div class="item_detail_title"><%= @product.name %></div>
