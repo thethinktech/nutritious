@@ -1645,9 +1645,10 @@ div.description_content{
             background: #fff;
             margin-bottom: 20px;
         }
-        .item_image{
+        .item_image {
             border-bottom: 1px dashed #c6c6c6;
             height: 200px;
+            overflow: auto;
         }
         .item_title{
             font-family: 'Tahoma';
