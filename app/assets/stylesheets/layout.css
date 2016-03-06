@@ -2044,6 +2044,12 @@ div.description_content{
 	.socail_share_icon_detail span a{
 		color: #fff;
 	}
+
+.youtube_iframe{
+    max-width: 540px;
+    width: 100%;
+    max-height: 349px;
+}
 .item_tab_title{
 	padding: 0px;
 	margin: 0px
