@@ -292,7 +292,7 @@ col-md-6 img{
 	font-family: 'Tahoma';
 	font-size: 25px;
 	color: #fff;
-	margin-top: 12px;
+	margin-top: 10px;
 }
 .life-change-subtitle{
 	font-family: 'Tahoma';
@@ -1047,6 +1047,7 @@ button{
 .sub_header_title{
 	font-family: 'Tahoma';
 	font-size: 30px;
+    margin-bottom: 14px;
 }
 .sub_header_detail{
 	font-family: 'Tahoma';
