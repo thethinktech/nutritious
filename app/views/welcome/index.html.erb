@@ -9,6 +9,10 @@
     .hover-over:hover {
         border: 5px solid #f26522;
     }
+    a.navbar-link,  a.navbar-link:hover {
+        color: #FFF;
+        text-decoration: none;
+    }
 </style>
 <br><br>
 <div class="header">
@@ -298,26 +302,43 @@ Because of the lowered caloric intake, your energy levels are affected. Only lig
     <div class="col-md-4 my-hover vertical-xs animated flipInY"> <img style="box-shadow: 10px 11px 20px -8px rgba(0, 0, 0, 0.75);" src="images/change-the-way-banner.png" class="img-responsive" alt=""> </div>
   </div>
 </div>
-<div class="change-you-life2">
 
+<div class="change-you-life">
   <div class="container">
     <div class="col-md-6">
       <div class="life-change-title">Change Your Life, One Step At A Time!</div>
-      <br>
-
       <div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>
     </div>
     <div class="col-md-6">
       <div class="our-packages">
-        <%= link_to 'See Our Packages', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>
+        <%= link_to 'See Our Packages', packages_path %>
         <br>
-        <span class="our-packages-subtitle"><%= link_to 'And Live The Life You Want!', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></span>
+        <span class="our-packages-subtitle">And Live The Life You Want!</span>
       </div>
     </div>
   </div>
-
-
 </div>
+<div class="change-your-border"></div>
+<!--<div class="change-you-life2">-->
+
+  <!--<div class="container">-->
+    <!--<div class="col-md-6">-->
+      <!--<div class="life-change-title">Change Your Life, One Step At A Time!</div>-->
+      <!--<br>-->
+
+      <!--<div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-6">-->
+      <!--<div class="our-packages">-->
+        <!--<%#= link_to 'See Our Packages', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>-->
+        <!--<br>-->
+        <!--<span class="our-packages-subtitle"><%= link_to 'And Live The Life You Want!', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %></span>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+
+<!--</div>-->
 
 <div class="discover-everythink">
   <div class="container">
