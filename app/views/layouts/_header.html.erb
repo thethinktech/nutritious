@@ -3790,7 +3790,7 @@
     </div>
     <div class="col-md-3 social-icons">
       <% if user_signed_in? %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %> |
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
       <% else %>
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
       <% end %>
@@ -3829,11 +3829,11 @@
         <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li><input type="text" name="search" class="input-search"></li>
 
-        <% if user_signed_in? %>
-            <% unless current_user.carts.blank? %>
-                <li><%= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>
-            <% end %>
-        <% end %>
+        <%# if user_signed_in? %>
+            <%# unless current_user.carts.blank? %>
+                <!--<li><%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>-->
+            <%# end %>
+        <%# end %>
         <li>
           <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
         </li>

@@ -83,8 +83,8 @@ col-md-6 img{
 }
 .social-iconBox{
 	background: #f26522;
-	padding-bottom: 36px;
-	height: 100px;
+	/*padding-bottom: 36px;*/
+	/*height: 100px;*/
 }
 .social-icons{
 	text-align: right;
@@ -154,6 +154,7 @@ col-md-6 img{
 	-webkit-box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
 	box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
+    z-index: 9999;
 }
 .header{
 	background: url(../images/header.png) 50% 0 no-repeat fixed;
@@ -178,7 +179,7 @@ col-md-6 img{
 }
 .header-title{
 	font-family: 'Tahoma';
-	font-size: 40px;
+	font-size: 25px;
 	color: #fff;
 	position:relative;
 	top:-25px;
@@ -186,7 +187,7 @@ col-md-6 img{
 .header-subtitle{
 	position: relative;
 	font-family: 'Tahoma';
-	font-size: 24px;
+	font-size: 15px;
 	color: #fff;
 	margin-top: 15px;
 }
@@ -2395,5 +2396,8 @@ div.description_content{
 	.our-packages, .watch-videoButton, .subbotton{
 		width: 100%;
 	}
+    .quest {
+        font-size: 20px;
+    }
 	
 }

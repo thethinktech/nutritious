@@ -1,7 +1,7 @@
 <style>
     .quest {
         text-align: center;
-        font-size: 60px;
+        font-size: 26px;
         height: 58px;
         color: white
     }
@@ -14,7 +14,7 @@
 <div class="header">
   <div class="container" style="margin-top:-36px;">
     <div class="header-content">
-      <div class="header-title">Health.... Your<br><br><br> Greatest Asset
+      <div class="header-title">Health.... Your Greatest Asset
       </div>
       <div class="header-subtitle">Custom-designed meal<br> <br>plans for you and your <br><br>family.
       </div>
@@ -60,7 +60,7 @@
       <div class="watch-videoButton hover-over"><img src="images/earth.png" alt=""> Talk To nutritionist</div>
       <div class="talk-shop-detail">Chat with Bethany C.H.N</div>
       <div class="subbotton">+1 403 612 7767</div>
-      <div class="subbotton">nutrition4yoursouls@gmail.com</div>
+      <div class="subbotton"><%= mail_to "nutrition4yoursouls@gmail.com", "nutrition4yoursouls@gmail.com", :style =>"color: white " %></div>
     </div>
   </div>
 </div>
@@ -301,14 +301,13 @@ Because of the lowered caloric intake, your energy levels are affected. Only lig
 <div class="change-you-life2">
 
   <div class="container">
-    <div class="col-md-6 animated bounceInLeft" style="position: relative;
-            left: 4%;">
+    <div class="col-md-6">
       <div class="life-change-title">Change Your Life, One Step At A Time!</div>
       <br>
 
       <div class="life-change-subtitle">View all of our packages and the steps involved with them.</div>
     </div>
-    <div class="col-md-6 animated bounceInRight">
+    <div class="col-md-6">
       <div class="our-packages">
         <%= link_to 'See Our Packages', packages_path, :style => 'background: transparent none repeat scroll 0% 0%;text-decoration:none;color:black' %>
         <br>
