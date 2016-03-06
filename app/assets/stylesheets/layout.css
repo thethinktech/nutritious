@@ -64,13 +64,13 @@ body{
 
 
 .top-email{
-	font-size: 18px;
+	font-size: 14px;
 	color: #fff;
 	padding-top: 20px;
 	font-family: 'Tahoma';
 	text-align: right;
 	position: relative;
-	left: 17%;
+	/*left: 17%;*/
 }
 
 
