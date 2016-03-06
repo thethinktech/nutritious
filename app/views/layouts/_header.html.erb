@@ -3786,7 +3786,7 @@
     <div class="col-md-9 top-email">
       <span style="font-size:18px;">Bethany Gettis - Certified Holistic Nutritionist™</span>
       <span style="font-size:18px;">+1 403 612 7767 </span>
-
+      <span>nutrition4yoursoul@gmail.com</span>
     </div>
     <div class="col-md-3 social-icons">
       <% if user_signed_in? %>
@@ -3795,14 +3795,17 @@
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
       <% end %>
       <span><i class="fa fa-facebook"></i></span>
-      <span><i class="fa fa-ou"></i></span>
+      <span><i class="fa fa-twitter"></i></span>
       <span><i class="fa fa-instagram"></i></span>
+      <span><i class="fa fa-pinterest-p"></i></span>
+      <span><i class="fa fa-youtube-play"></i></span>
+      <span><i class="fa fa-google-plus"></i></span>
 
     </div>
   </div>
-  <!--<hr class="hr-dot">-->
+  <hr class="hr-dot">
 </div>
-<nav class="navbar navbar-background" role="navigation" style="margin-top: -40px;height: 75px;">
+<nav class="navbar navbar-background" role="navigation">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -3812,21 +3815,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a style="z-index:9999;" class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
+      <a class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'HOME', root_path, :class => '', :style => "font-family:monotype corsiva !important;" %></li>
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'ABOUT', about_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'PACKAGES', packages_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li style="font-family:monotype corsiva !important;"><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'HOME', root_path, :class => '', :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'ABOUT', about_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'PACKAGES', packages_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
+        <!--<li><input type="text" name="search" class="input-search"></li>-->
+
         <% if user_signed_in? %>
             <% unless current_user.carts.blank? %>
-                <li style="font-family:monotype corsiva !important;"><%= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>
+                <li><%= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>
             <% end %>
         <% end %>
         <li>
