@@ -3651,7 +3651,7 @@
 .change-you-life {
     padding-top: 60px;
     padding-bottom: 50px;
-    background-image: url("../images/new-back.png") !important;
+    /*background-image: url("../images/new-back.png") !important;*/
 }
 
 .life-change-title {
@@ -3667,10 +3667,10 @@
     color: #FFF;
 }
 
-/*.change-your-border {
+.change-your-border {
    background-image: url("../images/red-dot.png");
     height: 10px;
-}*/
+}
 
 .my-hover img{
     width: 512px;

@@ -801,6 +801,7 @@ footer{
     width: 78%;
     outline: none;
     padding-left: 10px;
+    color:#fff;
 }
 .footer-subscribe-button{
 	display: inline-block;
