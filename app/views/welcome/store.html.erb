@@ -87,20 +87,20 @@
       </div>
 
 
-      <div class="col-sm-12 item_price_left_item ">
-        <div class="row ">
-          <div class="blog_categories ">Recent Post</div>
-          <div class="col-sm-12 filter_item_box ">
+      <div class="col-sm-12 item_price_left_item">
+        <div class="row">
+          <div class="blog_categories">Filter by Price</div>
+          <div class="col-sm-12 filter_item_box">
             <div id="slider-range"></div>
           </div>
-          <form method="post " action="get_items.php ">
-            <input type="hidden " id="amount1 " val="0">
-            <input type="hidden " id="amount2 " val="100">
-
-            <div class="filter_box ">
-              <div class="col-sm-6"><input type="submit " name="submit_range " class="submit_range " value="Submit ">
+          <form method="post" action="get_items.php">
+            <input type="hidden" id="amount1">
+            <input type="hidden" id="amount2">
+            <div class="filter_box">
+              <div class="col-sm-6">
+                <input type="submit" name="submit_range" class="submit_range" value="Submit">
               </div>
-              <div class="col-sm-6 item_price_value ">Price : <span id="amount "></span></div>
+              <div class="col-sm-6 item_price_value">Price : <span id="amount"></span></div>
             </div>
           </form>
         </div>
@@ -196,7 +196,7 @@
         <ul>
           <% count = 1 %>
           <% @total_pages.to_i.times do %>
-              <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></a></li>
+              <li class="<%= count == @page  ? 'active' : 'nth' %>"><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
               <% count = count + 1 %>
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
@@ -323,3 +323,5 @@
 
     });
 </script>
+
+<!--<script src="/assets/jquery-ui.css"></script>-->

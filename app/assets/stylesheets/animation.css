@@ -208,14 +208,27 @@
     background: #F26522 none repeat scroll 0% 0%;
     padding-top: 60px;
     padding-bottom: 60px;
+    position: relative;
 }
 
 .all_packages_list {
     padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     list-style: outside none none;
     text-align: center;
     font-family: "Roboto Slab Light";
     font-size: 14px;
+}
+
+.red-flower-box{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: -46px;
+    margin-top: 17px;
+    border-bottom: 1px dashed #fff;
+    height: 36px;
 }
 
 .purchase_now_button {

@@ -3828,10 +3828,12 @@
         <li><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li><a href="#"><i class="fa fa-search"></i></a></li>
-        <li><input type="text" name="search" class="input-search"></li>
+        <% if request.original_url == root_url %>
+            <li><a href="#"><i class="fa fa-search"></i></a></li>
+            <li><img src="images/contact-nutrionist.png"></li>
+        <% else %>
 
-        <%# if user_signed_in? %>
+            <%# if user_signed_in? %>
             <%# unless current_user.carts.blank? %>
                 <!--<li><%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>-->
             <%# end %>
@@ -3839,6 +3841,7 @@
         <li>
           <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
         </li>
+            <% end %>
 
       </ul>
     </div>
