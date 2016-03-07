@@ -3783,16 +3783,17 @@
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
-    <div class="col-md-9 top-email">
+    <div class="col-md-10 top-email new-header">
+
       <span>Bethany Gettis - Certified Holistic Nutritionist™</span>
       <span>+1 403 612 7767 </span>
       <span>nutrition4yoursoul@gmail.com</span>
     </div>
-    <div class="col-md-3 social-icons">
+    <div class="col-lg-3 social-icons new-social-icons">
       <% if user_signed_in? %>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
       <% else %>
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+      <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
       <% end %>
       <span><i class="fa fa-facebook"></i></span>
       <span><i class="fa fa-twitter"></i></span>
