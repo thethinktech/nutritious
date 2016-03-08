@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # before_filter :set_newsletter
+  before_filter :set_cart
 
   def authenticate_admin!
     email = params[:user][:email]
@@ -25,6 +26,26 @@ class ApplicationController < ActionController::Base
 
   def set_newsletter
     @newsletter = Newsletter.new
+  end
+
+  def set_cart
+    if current_user && current_user.carts.count > 1
+      price_array = current_user.carts.map(&:price)
+      new_price_array = []
+      price_array.each do |p|
+        p.slice! "$"
+        new_price_array << p
+      end
+      float_array = new_price_array.collect { |i| i.to_f }
+      @total_cart_amount = float_array.inject(0){|sum,x| sum + x }
+    elsif current_user && current_user.carts.count == 1
+      cart_price = current_user.carts.first.price
+      cart_price.slice! "$"
+      @total_cart_amount = cart_price
+    elsif current_user && current_user.carts.blank?
+      @total_cart_amount = "0.00"
+    end
+
   end
 
   protected

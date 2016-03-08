@@ -3833,14 +3833,23 @@
             <li><img src="images/contact-nutrionist.png"></li>
         <% else %>
 
-            <%# if user_signed_in? %>
+            <% if user_signed_in? %>
             <%# unless current_user.carts.blank? %>
-                <!--<li><%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %></li>-->
+                <li>
+                  <%= link_to(cart_get_path) do %>
+                    <li>
+                      <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $<%= @total_cart_amount %></button>
+                    </li>
+                  <% end %>
+                  <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>
+                </li>
             <%# end %>
-        <%# end %>
-        <li>
-          <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
-        </li>
+                <% else %>
+                <li>
+                  <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
+                </li>
+            <% end %>
+
             <% end %>
 
       </ul>
