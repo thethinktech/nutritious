@@ -273,6 +273,22 @@ col-md-6 img{
 .btn-custom:focus {
     color: #fff;
 }
+.remove-cart{
+    font-family: 'Tahoma';
+    font-size: 13px;
+    text-align: center;
+    width: 121px;
+    height: 40px;
+    color: #000;
+    line-height: 35px;
+    cursor: pointer;
+    background-image: url(../images/item_button.png);
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
 
 #footer {
     color: #6d6d6d;
