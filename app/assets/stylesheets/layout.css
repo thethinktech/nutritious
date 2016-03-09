@@ -289,6 +289,9 @@ col-md-6 img{
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
+.remove-cart1 a:hover{
+    text-decoration: none;
+}
 
 #footer {
     color: #6d6d6d;
@@ -2522,4 +2525,19 @@ div.description_content{
         font-size: 20px;
     }
 	
+}
+@media(max-width:767px) {
+    .item_add_button {
+        margin-bottom: 10px;
+    }
+
+    .reviewAndprice {
+        max-width: 103px;
+        margin: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .item_price {
+        text-align: center;
+    }
 }
