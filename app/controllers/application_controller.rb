@@ -38,10 +38,12 @@ class ApplicationController < ActionController::Base
       end
       float_array = new_price_array.collect { |i| i.to_f }
       @total_cart_amount = float_array.inject(0){|sum,x| sum + x }
+      @total_cart_amount = @total_cart_amount.round(2)
     elsif current_user && current_user.carts.count == 1
       cart_price = current_user.carts.first.price
       cart_price.slice! "$"
       @total_cart_amount = cart_price
+      # @total_cart_amount = @total_cart_amount.round(2)
     elsif current_user && current_user.carts.blank?
       @total_cart_amount = "0.00"
     end
