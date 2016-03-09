@@ -171,10 +171,7 @@
                         <div class="col-sm-6 item_add_button paddingNone purchase_url">Buy</div>
 
                       </a>
-                      <a href="<%= @purchase_url %>">
-                        <div class="col-sm-6 item_add_button paddingNone remove-cart">Remove</div>
 
-                      </a>
 
                       <div class="col-sm-5 paddingNone text-right reviewAndprice">
                         <div class="item_price"><%= product.price %></div>
@@ -182,6 +179,13 @@
                           <img src="images/active_star.png" alt=""><img src="images/active_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt=""><img src="images/none_star.png" alt="">
                         </div>
                       </div>
+                      <div class="col-sm-12">
+
+                      <a href="<%= @purchase_url %>">
+                        <div class="item_add_button paddingNone remove-cart">Remove</div>
+                      </a>
+                      </div>
+
                     </div>
                   </div>
                 </div>
