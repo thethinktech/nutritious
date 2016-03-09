@@ -196,8 +196,13 @@
         <ul>
           <% count = 1 %>
           <% @total_pages.to_i.times do %>
-              <li class="<%= count == @page  ? 'active' : 'nth' %>"><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
-              <% count = count + 1 %>
+              <% if count == @page %>
+                  <li class="active" style="color: green;"><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
+
+              <% else %>
+                  <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
+              <% end %>
+                  <% count = count + 1 %>
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
         </ul>
@@ -285,17 +290,19 @@
                 rowDivs[currentDiv].height(currentTallest);
             }
         });
-    }
+    };
 
-    $(window).load(function() {
-        equalheight('.item_title');
-    });
-
-
-    $(window).resize(function(){
-        equalheight('.item_title');
-    });
     $(document).ready(function () {
+
+        $(window).load(function() {
+            equalheight('.item_title');
+        });
+
+
+        $(window).resize(function(){
+            equalheight('.item_title');
+        });
+
         $(".redirect_user").click(function () {
             alert("You need to sign in before you can add to your cart");
             window.location.replace("http://nutritiousapp.herokuapp.com/users/sign_in");
