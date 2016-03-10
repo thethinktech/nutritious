@@ -3816,7 +3816,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="company-logo" href="#"><img src="../images/logo.png" alt=""></a>
+      <a class="company-logo" href="#"><img src="/images/logo.png" alt=""></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -3830,7 +3830,7 @@
         <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
         <% if request.original_url == root_url %>
             <li><a href="#"><i class="fa fa-search"></i></a></li>
-            <li><img src="images/contact-nutrionist.png"></li>
+            <li><img src="/images/contact-nutrionist.png"></li>
         <% else %>
 
             <% if user_signed_in? %>
@@ -3838,7 +3838,7 @@
                 <li>
                   <%= link_to(cart_get_path) do %>
                     <li>
-                      <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $<%= @total_cart_amount %></button>
+                      <button type="button" class="cart-icon"><img src="/images/cart-icon.png">cart: $<%= @total_cart_amount %></button>
                     </li>
                   <% end %>
                   <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>
@@ -3846,7 +3846,7 @@
             <%# end %>
                 <% else %>
                 <li>
-                  <button type="button" class="cart-icon"><img src="../images/cart-icon.png">cart: $0.00</button>
+                  <button type="button" class="cart-icon"><img src="/images/cart-icon.png">cart: $0.00</button>
                 </li>
             <% end %>
 
