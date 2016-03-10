@@ -10,7 +10,7 @@
         <% if notice %>
           <p class="alert alert-success"><%= notice %></p>
         <% end %>
-        <%= form_for (@newsletter ||= Newsletter.new), :url => {:controller =>"welcome", :action => "add_newsletter"},:remote => false, :class => "" do |f| %>
+        <%= form_for (@newsletter ||= Newsletter.new), :url => welcome_add_newsletter_path,:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, required: true, :placeholder => "Email", :class => 'footer-subscribe-input' %>
         <%= hidden_field_tag(:status,value='1')%>
         <%#= f.submit "Send", :class => "footer-subscribe-button ",:style => 'width: 25%; margin-top: -6px;' %>
