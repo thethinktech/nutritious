@@ -195,14 +195,18 @@ class WelcomeController < ApplicationController
       product = OpenStruct.new
       product.name = item['ItemAttributes']['Title']
       # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
-      product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+      if item['Offers']['Offer']
+        product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+      else
+        product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
+      end
       product.url = item['DetailPageURL']
       product.feature = item['ItemAttributes']['Feature']
       product.image_url = item['LargeImage']['URL'] if item['LargeImage']
       product.link = item['ItemLinks']['ItemLink'][5]['URL']
       product.review = item['Reviews'] if item['Reviews']
       product.id = item['ASIN']
-      product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId']
+      product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId'] if item['Offers']['Offer']
       # binding.pry
       @products << product
     end
