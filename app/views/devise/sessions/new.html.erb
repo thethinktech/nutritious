@@ -9,7 +9,9 @@
         <div class="form-wrap">
           <h2 align="center">Log in</h2>
           <br>
-
+          <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+          <% end %>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
         <div class="form-group">

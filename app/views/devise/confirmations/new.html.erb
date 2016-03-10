@@ -1,16 +1,39 @@
-<h2>Resend confirmation instructions</h2>
+<section id="login">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="form-wrap">
+          <h2 align="center">Resend confirmation instructions</h2>
+          <br>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+          <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+              <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %> 
+              <div class="form-group">
+                <%#= f.label :email %>
+                <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), :placeholder => "somebody@example.com", :class => "form-control", :required => true %>
+                <!--<input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">-->
+              </div>
+
+              <%= f.submit "Resend confirmation instructions", :class => "btn btn-custom btn-lg btn-block" %>
+
+              <!--<input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">-->
+          <% end %>
+
+          <%= render "devise/shared/links" %>
+
+          <!--<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Sign up</a>-->
+          <!--<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>-->
+          <!--<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Didn't receive confirmation instructions?</a>-->
+          <hr>
+        </div>
+      </div>
+      <!-- /.col-xs-12 -->
+    </div>
+    <!-- /.row -->
   </div>
+  <!-- /.container -->
+</section>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+
