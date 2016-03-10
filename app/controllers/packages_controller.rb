@@ -8,7 +8,7 @@ class PackagesController < ApplicationController
   	@newsletter = Newsletter.new
     @instagram = Instagram.user_recent_media("2860181756" , {:count => 9}) 
     @tweet_news = $client.get_all_tweets("NutritiousDe")
-    @packages = Package.order('created_at desc').limit(6)
+    @packages = Package.order('created_at desc').limit(3)
   end
 
   def add_newsletter
