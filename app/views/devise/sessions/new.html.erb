@@ -13,15 +13,16 @@
               <p class="alert alert-success"><%= notice %></p>
           <% end %>
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
 
         <div class="form-group">
           <%#= f.label :email %>
-          <%= f.email_field :email, autofocus: true, :placeholder => "somebody@example.com", :class=>"form-control" %>
+          <%= f.email_field :email, :required => true, autofocus: true, :placeholder => "somebody@example.com", :class=>"form-control" %>
               <!--<input type="email" name="email" id="email" class="form-control" placeholder="somebody@example.com">-->
             </div>
             <div class="form-group">
               <label for="key" class="sr-only">Password</label>
-              <%= f.password_field :password, autocomplete: "off", :placeholder=>"Password" , :class=>"form-control"%>
+              <%= f.password_field :password, :required => true, autocomplete: "off", :placeholder=>"Password" , :class=>"form-control"%>
 
               <!--<input type="password" name="key" id="key" class="form-control" placeholder="Password">-->
             </div>
