@@ -17,7 +17,7 @@ module Admin
       # user = User.find_by_email email
 
       unless current_user.admin
-        flash[:notice] = "You are not allowed to login!"
+        # flash[:notice] = "You are not allowed to login!"
         redirect_to root_path
       end
     end

@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
     user = User.find_by_email email
 
     if user.present? && user.admin != true
-      flash[:notice] = "You are not allowed to login!"
+      # flash[:notice] = "You are not allowed to login!"
       redirect_to root_path
     end
   end

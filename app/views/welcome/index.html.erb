@@ -15,6 +15,10 @@
     }
 </style>
 <br><br>
+<%#= flash[:notice] %>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
 <div class="header">
   <div class="container" style="margin-top:-36px;">
     <div class="header-content">

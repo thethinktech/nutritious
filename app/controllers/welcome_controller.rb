@@ -153,6 +153,7 @@ class WelcomeController < ApplicationController
   end
 
   def store
+
     @newsletter = Newsletter.new
     #@instagram = Instagram.user_recent_media("2860181756" , {:count => 9})
     # @tweet_news = $client.get_all_tweets("NutritiousDe")
@@ -178,11 +179,12 @@ class WelcomeController < ApplicationController
             'SearchIndex' => @category.search_index,
             'Keywords' => @category.keyword,
             'ItemPage' => @page,
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings"
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
         }
     )
 
     hashed_products = response.to_h
+
 
     @total_pages = hashed_products['ItemSearchResponse']['Items']['TotalPages']
 
@@ -192,7 +194,8 @@ class WelcomeController < ApplicationController
     hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
       product = OpenStruct.new
       product.name = item['ItemAttributes']['Title']
-      product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
+      # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
+      product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
       product.url = item['DetailPageURL']
       product.feature = item['ItemAttributes']['Feature']
       product.image_url = item['LargeImage']['URL'] if item['LargeImage']
@@ -290,18 +293,6 @@ class WelcomeController < ApplicationController
 
     @newsletter = Newsletter.new()
 
-
-    # key = "your-secret-access-key"
-    # data = "data you want signed"
-    #
-    # signature = Base64.encode64(OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha256'), key, data)).strip()
-
-    p "***************************************************"
-    p "***************************************************"
-    p params
-    p "***************************************************"
-    p "***************************************************"
-
     requestd = Vacuum.new
 
     requestd.configure(
@@ -319,6 +310,7 @@ class WelcomeController < ApplicationController
               'Item.1.Quantity' => params[:quantity]
           }
       )
+
       response = response.to_h
       p "***************************************"
       p "***************************************"
@@ -330,11 +322,12 @@ class WelcomeController < ApplicationController
       purchase_url = response['CartCreateResponse']['Cart']['PurchaseURL']
       quantity = response['CartCreateResponse']['Cart']['Request']['CartCreateRequest']['Items']['Item']['Quantity']
       price = response['CartCreateResponse']['Cart']['SubTotal']['FormattedPrice']
+      cart_item_id = response['CartCreateResponse']['Cart']['CartItems']['CartItem']['CartItemId']
       # cart_item_id = response['CartCreateResponse']['Cart']['CartItems']['CartItem']['CartItemId']
       # title = response['CartCreateResponse']['Cart']['CartItems']['CartItem']['Title']
 
       Cart.create(:user_id => current_user.id, :cart_id => cart_id, :hmac => hmac, :purchase_url => purchase_url, :quantity => quantity,
-                  :price => price)
+                  :price => price, :cart_item_id => cart_item_id)
     else
 
       response = requestd.cart_add(
@@ -346,15 +339,24 @@ class WelcomeController < ApplicationController
           }
       )
       response = response.to_h
-
+      p "***************************************"
+      p "***************************************"
+      p response.to_h
+      p "***************************************"
+      p "***************************************"
+      # binding.pry
       cart_id = response['CartAddResponse']['Cart']['CartId']
       hmac = response['CartAddResponse']['Cart']['HMAC']
       purchase_url = response['CartAddResponse']['Cart']['PurchaseURL']
       quantity = response['CartAddResponse']['Cart']['Request']['CartAddRequest']['Items']['Item']['Quantity']
-      price = response['CartAddResponse']['Cart']['SubTotal']['FormattedPrice']
+      price = response['CartAddResponse']['Cart']['CartItems']['CartItem'][0]['ItemTotal']['FormattedPrice']
+      cart_item_id = response['CartAddResponse']['Cart']['CartItems']['CartItem'][0]['CartItemId']
       Cart.create(:user_id => current_user.id, :cart_id => cart_id, :hmac => hmac, :purchase_url => purchase_url, :quantity => quantity,
-                  :price => price)
+                  :price => price, :cart_item_id => cart_item_id)
+      # binding.pry
+
     end
+    # binding.pry
 
     respond_to do |format|
       format.json {
@@ -392,16 +394,6 @@ class WelcomeController < ApplicationController
     @categories = Category.all
 
     cart = current_user.carts.first
-    # p "+++++++++++++++++++++++++++++++++++++++++++++++++++"
-    # p "+++++++++++++++++++++++++++++++++++++++++++++++++++"
-    # p current_user
-    # p current_user.carts
-    # p "#####################################"
-    # # p user.carts
-    # p current_user.carts.first
-    # p current_user.carts.first.cart_id
-    # p "+++++++++++++++++++++++++++++++++++++++++++++++++++"
-    # p "+++++++++++++++++++++++++++++++++++++++++++++++++++"
 
     requestd = Vacuum.new
 
@@ -410,22 +402,7 @@ class WelcomeController < ApplicationController
         aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
         associate_tag: ENV['ASSOCIATE_TAG']
     )
-    # # user = current_user
-    # p "***********************************"
-    # p "***********************************"
-    # p "***********************************"
-    # p "***********************************"
-    # p current_user
-    # p current_user.carts
-    # p "#####################################"
-    # p user.carts
-    # p current_user.carts.first
-    # p current_user.carts.first.cart_id
-    # p current_user.carts.first
-    # p "***********************************"
-    # p "***********************************"
-    # p "***********************************"
-    # p "***********************************"
+
     response = requestd.cart_get(
         query: {
             'CartId' => cart.cart_id,
@@ -436,7 +413,12 @@ class WelcomeController < ApplicationController
     )
 
     response = response.to_h
-
+    p "*********************************************88"
+    p "*********************************************88"
+    p response
+    p "*********************************************88"
+    p "*********************************************88"
+    # binding.pry
     ar_check = response['CartGetResponse']['Cart']['CartItems']['CartItem']
 
 
@@ -449,6 +431,9 @@ class WelcomeController < ApplicationController
         product.name = item['Title']
         product.quantity = item['Quantity']
         product.price = item['ItemTotal']['FormattedPrice']
+        product.id = item['CartItemId']
+        # binding.pry
+
         @products << product
       end
 
@@ -457,8 +442,9 @@ class WelcomeController < ApplicationController
       @product.name = response['CartGetResponse']['Cart']['CartItems']['CartItem']['Title']
       @product.quantity = response['CartGetResponse']['Cart']['CartItems']['CartItem']['Quantity']
       @product.price = response['CartGetResponse']['Cart']['CartItems']['CartItem']['ItemTotal']['FormattedPrice']
+      @product.id = response['CartGetResponse']['Cart']['CartItems']['CartItem']['CartItemId']
 
-
+# binding.pry
 
     end
 
@@ -466,6 +452,62 @@ class WelcomeController < ApplicationController
       format.html
     end
     # binding.pry
+  end
+
+  def cart_remove
+    @categories = Category.all
+
+    cart = current_user.carts.first
+
+    requestd = Vacuum.new
+
+    requestd.configure(
+        aws_access_key_id: ENV["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        associate_tag: ENV['ASSOCIATE_TAG']
+    )
+
+
+    response = requestd.cart_modify(
+        query: {
+            'CartId' => current_user.carts.first.cart_id,
+            'HMAC' => current_user.carts.first.hmac,
+            'Item.1.CartItemId' => params[:id],
+            'Item.1.Quantity' => 0
+        }
+    )
+
+    response = response.to_h
+
+    Cart.where(:cart_item_id => params[:id]).destroy_all
+
+
+
+    respond_to do |format|
+      if current_user.carts.blank?
+        p"**************************************************88"
+        p"**************************************************88"
+        p"**************************************************88"
+        p"**************************************************88"
+        p"**************************************************88"
+        p"**************************************************88"
+        format.html { redirect_to store_path }
+      else
+        p "#######################################################"
+        p "#######################################################"
+        p "#######################################################"
+        p "#######################################################"
+        p "#######################################################"
+        ip "#######################################################"
+        format.html { redirect_to (:back) }
+      end
+    end
+
+    p "***************************************************"
+    p "***************************************************"
+    p response
+    p "***************************************************"
+    p "***************************************************"
   end
 
 end

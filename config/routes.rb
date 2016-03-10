@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   post '/cart_creation' => 'welcome#cart_creation'
   get '/cart_addition' => 'welcome#cart_addition'
   get '/cart_get' => 'welcome#cart_get'
+  get '/cart_remove' => 'welcome#cart_remove'
   get 'welcome/store_details'
   get '/blog_list' => 'welcome#blog' 
   #get '/blog_detail' => 'welcome#blog_detail'
@@ -31,6 +32,7 @@ Rails.application.routes.draw do
   post 'welcome/add_newsletter'
   post 'contacts/add_newsletter'
   post 'packages/add_newsletter'
+
 
   # scope '/admin' do
     devise_for :users, :controllers => {:sessions => "sessions", :registrations => "registrations"}
