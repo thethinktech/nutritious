@@ -53,12 +53,12 @@ $(function () {
           });
 	/*************** item select **********************************************/
 	$(document).ready(function () {
-    $('.accordion-toggle').on('click', function(event){
+    $('.toggle-icon').on('click', function(event){
     	event.preventDefault();
     	// create accordion variables
-    	var accordion = $(this);
+    	var accordion = $(this).parent('.accordion-toggle');
     	var accordionContent = accordion.next('.accordion-content');
-    	var accordionToggleIcon = $(this).children('.toggle-icon');
+    	var accordionToggleIcon = $(this);
     	var accordionToggleFlower = $(this).children('.item_list_flower');
     	
     	// toggle accordion link open class
