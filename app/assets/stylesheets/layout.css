@@ -187,10 +187,11 @@ col-md-6 img{
 }
 .header-title{
     font-family: monotype corsiva !important;
-	font-size: 25px;
+	font-size: 36px;
 	color: #fff;
 	position:relative;
 	top:-25px;
+    line-height: 40px;
 }
 .header-subtitle{
 	position: relative;
