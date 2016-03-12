@@ -186,7 +186,7 @@ col-md-6 img{
 	margin-right: 15%;
 }
 .header-title{
-	font-family: 'Tahoma';
+    font-family: monotype corsiva !important;
 	font-size: 25px;
 	color: #fff;
 	position:relative;
