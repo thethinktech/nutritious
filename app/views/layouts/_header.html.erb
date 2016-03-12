@@ -237,6 +237,7 @@
           background: #F26522 none repeat scroll 0% 0%;
           padding-top: 60px;
           padding-bottom: 60px;
+          position: relative;
       }
 
       .all_packages_list {
@@ -3682,7 +3683,7 @@
           outline: medium none;
       }
 
-      .
+
       .change-you-life {
           padding-top: 60px;
           padding-bottom: 50px;
@@ -3787,20 +3788,23 @@
 
       <span>Bethany Gettis - Certified Holistic Nutritionist™</span>
       <span>+1 403 612 7767 </span>
-      <span>nutrition4yoursoul@gmail.com</span>
+
+      <span>
+        <a href="mailto:nutrition4yoursouls@gmail.com" style="color: white;"><i class="fa fa-envelope"></i></a></span>
     </div>
     <div class="col-lg-3 social-icons new-social-icons">
       <% if user_signed_in? %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+          <a class="navbar-link" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_image.png" title="Logout"></a>
       <% else %>
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+          <a class="navbar-link" href="/users/sign_in"><img src="/images/login_image.png" title="Login"></a>
       <% end %>
       <span><i class="fa fa-facebook"></i></span>
       <span><i class="fa fa-twitter"></i></span>
       <span><i class="fa fa-instagram"></i></span>
-      <span><i class="fa fa-pinterest-p"></i></span>
-      <span><i class="fa fa-youtube-play"></i></span>
-      <span><i class="fa fa-google-plus"></i></span>
+      <span><i class="fa fa-linkedin"></i></span>
+      <!--<span><i class="fa fa-pinterest-p"></i></span>-->
+      <!--<span><i class="fa fa-youtube-play"></i></span>-->
+      <!--<span><i class="fa fa-google-plus"></i></span>-->
 
     </div>
   </div>
@@ -3828,10 +3832,10 @@
         <li><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
         <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <% if request.original_url == root_url %>
-            <li><a href="#"><i class="fa fa-search"></i></a></li>
-            <li><img src="/images/contact-nutrionist.png"></li>
-        <% else %>
+        <%# if request.original_url == root_url %>
+            <!--<li><a href="#"><i class="fa fa-search"></i></a></li>-->
+            <!--<li><img src="/images/contact-nutrionist.png"></li>-->
+        <%# else %>
 
             <% if user_signed_in? %>
             <%# unless current_user.carts.blank? %>
@@ -3850,7 +3854,7 @@
                 </li>
             <% end %>
 
-            <% end %>
+            <%# end %>
 
       </ul>
     </div>

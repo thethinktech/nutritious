@@ -34,40 +34,41 @@
 <div class="green_white_border"></div>
 <div class="contact_infomation">
   <div class="container">
-    <div class="col-sm-3 text-center animated fadeInDown">
+    <div class="col-sm-3 text-center wow bounceInUp">
       <div><img src="../images/location-icon.png" alt=""></div>
       <div class="contact_info_title">Our Location</div>
       <div class="contact_info_subtitle">151 West Sprints Road SW Calgary,<br>
         AB T3H 4P6
       </div>
     </div>
-    <div class="col-sm-3 text-center animated fadeInDown">
+    <div class="col-sm-3 text-center wow bounceInUp">
       <div><img src="../images/call-icon.png" alt=""></div>
       <div class="contact_info_title">Give Us A Call</div>
       <div class="contact_info_subtitle"><a href="tel:+14036127767">Phone: +1 403 612 7767</a></div>
     </div>
-    <div class="col-sm-3 text-center animated fadeInDown">
+    <div class="col-sm-3 text-center wow bounceInUp">
       <div><img src="../images/email-icon.png" alt=""></div>
       <div class="contact_info_title">Email Us</div>
       <div class="contact_info_subtitle"><%= mail_to "nutrition4yoursouls@gmail.com", "nutrition4yoursouls@gmail.com", :style =>"color: black" %></div>
     </div>
-    <div class="col-sm-3 text-center animated fadeInDown">
+    <div class="col-sm-3 text-center wow bounceInUp">
       <div><img src="../images/website-icon.png" alt=""></div>
       <div class="contact_info_title">We Are Social</div>
       <div class="white-social-icons">
         <span><i class="fa fa-facebook"></i></span>
         <span><i class="fa fa-twitter"></i></span>
         <span><i class="fa fa-instagram"></i></span>
-        <span><i class="fa fa-pinterest-p"></i></span>
-        <span><i class="fa fa-youtube-play"></i></span>
-        <span><i class="fa fa-google-plus"></i></span>
+        <span><i class="fa fa-linkedin"></i></span>
+        <!--<span><i class="fa fa-pinterest-p"></i></span>-->
+        <!--<span><i class="fa fa-youtube-play"></i></span>-->
+        <!--<span><i class="fa fa-google-plus"></i></span>-->
       </div>
     </div>
   </div>
 </div>
 <div class="contact_queryinfo">
   <div class="container">
-    <div class="col-md-4">
+    <div class="col-md-4 wow fadeInUp">
       <div class="working-hours-title">Working Hours</div>
       <div class="working-hours-detail">Nam lobortis fringilla felis sce sed utpat miate urna cras utnec. Lorem ipsum
         dolor sit.
@@ -87,14 +88,14 @@
     </div>
     <%= form_for (@contact), :class => "" do |f| %>
 
-        <div class="col-md-8">
+        <div class="col-md-8 wow fadeInUp">
           <% if notice %>
               <p class="alert alert-success"><%= notice %></p>
           <% end %>
           <div class="working-hours-title">Say Hello!</div>
           <div class="row">
             <div class="col-md-4">
-              <%= f.text_field :name, autofocus: true, required: true, :placeholder => "Full Name" %>
+              <%= f.text_field :name, autofocus: false, required: true, :placeholder => "Full Name" %>
             </div>
             <div class="col-md-4">
               <%= f.email_field :email, required: true, :placeholder => "Email Address" %>
