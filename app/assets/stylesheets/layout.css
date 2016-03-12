@@ -196,7 +196,7 @@ col-md-6 img{
 .header-subtitle{
 	position: relative;
 	font-family: 'Tahoma';
-	font-size: 15px;
+	font-size: 20px;
 	color: #fff;
 	margin-top: 15px;
 }
@@ -451,10 +451,13 @@ col-md-6 img{
 }
 .change-the-way-subtitle{
 	font-family: 'Tahoma';
-	font-size: 14px;
+	font-size: 17px;
 	color: #878787;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+.our-packages:hover{
+    border: 5px solid #f26522;
 }
 .nav-stacked li a{
 	padding-top: 20px;
