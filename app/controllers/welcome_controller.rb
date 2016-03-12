@@ -96,8 +96,8 @@ class WelcomeController < ApplicationController
 
   def about
     @newsletter = Newsletter.new
-    @instagram = Instagram.user_recent_media("2860181756", {:count => 9})
-    @tweet_news = $client.get_all_tweets("NutritiousDe")
+    # @instagram = Instagram.user_recent_media("2860181756", {:count => 9})
+    # @tweet_news = $client.get_all_tweets("NutritiousDe")
   end
 
   def contact

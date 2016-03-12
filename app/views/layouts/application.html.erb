@@ -6,11 +6,14 @@
   <title>Nutritious</title>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
-
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.css' rel='stylesheet' type='text/css'>-->
+  <link rel="stylesheet" href="assets/stylesheets/animation.css">
+  <script src="assets/javascripts/wow.min.js"></script>
+  <script src="assets/stylesheets/animation.css"></script>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true, 'data-scrolling-animations' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true, 'data-scrolling-animations' => true %>
 
   <%= csrf_meta_tags %>
 </head>
@@ -18,12 +21,14 @@
     .quest {text-align: center;}
 
 </style>
-<body>
+<body data-scrolling-animations="true">
 
 <%= render "layouts/header" %>
 <%= yield %>
 <%= render "layouts/footer" %>
-
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>
 

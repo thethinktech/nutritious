@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-    <div class="col-md-3 animated fadeInLeft">
+    <div class="col-md-3 wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
       <div><img src="/images/footer-logo.png" alt=""></div>
       <div class="footer-about-detail">Neque arcu tincidunt neque pharetra code uct modo nibh leo non libero. Cras augues ipsum mpharetra inter sed. Integ er anterl nunc accumsan sed tempus rutrum.</div>
       <div class="footer-about-readMore">Read More</div>
@@ -19,7 +19,7 @@
       </div>
 
     </div>
-    <div class="col-md-3 animated fadeInUp">
+    <div class="col-md-3 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
       <div class="latest-tweets-title">Latest Tweets</div>
       <ul class="latest-tweets-list">
       <%#= @tweet_news.each do |f| %>
@@ -30,7 +30,7 @@
         <%# end %>
       </ul>
     </div>
-    <div class="col-md-3 animated fadeInUp">
+    <div class="col-md-3 wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
       <div class="latest-tweets-title">Instagram Feed</div>
       <ul class="latest-instagram-list">
         <% #@instagram.each do |instagram| %>
@@ -40,7 +40,7 @@
           <%# end %>
       </ul>
     </div>
-    <div class="col-md-3 animated fadeInRight">
+    <div class="col-md-3 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
       <div class="col-md-12">
         <div class="latest-tweets-title">Contact Info</div>
         <div class="row contact-fild">
@@ -67,10 +67,10 @@
 <div class="footer-border"></div>
 <div class="copyright-Box">
   <div class="container">
-    <div class="col-sm-6 copyright-text">
+    <div class="col-sm-6 copyright-text wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
       Copyrights Nutritious &amp; Delicious 2015
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-6 wow fadeInRight" style="visibility: visible; animation-name: fadeInRight;">
       <ul class="footer-menu-list">
         <li><%= link_to 'HOME' , root_path, :class => '' %></li>
         <li><%= link_to 'ABOUT' , about_path %></li>
