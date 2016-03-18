@@ -20,7 +20,7 @@
 	font-family: 'Roboto Slab Bold';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Roboto Slab Bold'), url('../fonts/RobotoSlab-Bold.woff') format('woff');
+	src: local('Roboto Slab Bold'), url('../fonts/robotoSlab-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -2444,7 +2444,7 @@ div.description_content{
 	background-image: url("../images/change-the-way-border.png");
 	background-position: bottom;
 	text-align: center;
-	padding-bottom: 23px !important;
+	padding-bottom: 10px !important;
 	margin-bottom: 25px;
 }
 .our_approach_title_name {
