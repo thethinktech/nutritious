@@ -186,8 +186,8 @@ col-md-6 img{
 	margin-right: 15%;
 }
 .header-title{
-    font-family: monotype corsiva !important;
-	font-size: 36px;
+    font-family: 'Roboto Slab Regular';
+    font-size: 25px;
 	color: #fff;
 	position:relative;
 	top:-25px;
@@ -498,12 +498,11 @@ col-md-6 img{
 .nav-stacked>li+li{
 	margin-top: 0px;
 }
-.nav-tabs>li>a{
-	margin-right: 0px;
-	border-right: 0px !important;
-	border: 0px;
-	text-decoration: none;
-	color: #000;
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
 }
 .discover-everythink{
 	padding-top: 80px;
@@ -1088,6 +1087,7 @@ button{
 	color: #fff;
 	margin-left: 5px;
 	border-radius: 20px;
+	line-height: 10px;
 }
 .meet-our-white-social-icons{
 	text-align: right;
@@ -1104,6 +1104,7 @@ button{
 	color: #fff;
 	margin-left: 5px;
 	border-radius: 20px;
+	line-height: 10px;
 }
 .company-sublogo{
 	margin-top: 15px;
@@ -1173,10 +1174,13 @@ button{
 	position: absolute;
 	width: 100%;
 	margin-top: -28px;
+	z-index: 999;
 }
-.sub_breadcrumb{
+.sub_breadcrumb {
 	background: #7da500;
+	position: relative;
 }
+
 .white_dashed{
 	border-bottom: 1px dashed #fff;
 	padding-top: 5px;
@@ -1221,6 +1225,8 @@ button{
 	font-size: 12px;
 	line-height: 23px;
 	color: #858585;
+	max-width: 680px;
+    margin: auto;
 }
 .meet_our_holistic_border{
 	background-image: url(../images/change-the-way-border.png);
@@ -1231,6 +1237,8 @@ button{
 	font-size: 30px;
 	color: #f26521;
 	text-align: left;
+	background-position: center top;
+	text-align: center;
 }
 .meet-our-holistic{
 	padding-bottom: 120px;
@@ -2328,6 +2336,137 @@ div.description_content{
 	.return_shipping_detail{
 		color: #fff;
 	}
+.services {
+	background: url("../images/pattern.jpg") repeat;
+	position: relative;
+	overflow: hidden;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.nav-tabs.vertical-tabs li > a span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 67px;
+	padding-left: 76px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.nav-tabs.vertical-tabs {
+    border-right: 4px solid #ddd;
+    position: relative;
+    overflow: hidden;
+}
+.nav-tabs.vertical-tabs li.active {
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.nav-tabs.vertical-tabs li {
+	padding-left: 4px;
+}
+.nav-tabs.vertical-tabs li.active, .nav-tabs.vertical-tabs li:hover {
+	border-left: 4px solid #7da500;
+	padding-left: 0;
+}
+.nav-tabs.vertical-tabs li {
+	display: block;
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+.nav-tabs>li {
+	float: left;
+	margin-bottom: -1px;
+}
+.nav-tabs.vertical-tabs li.active a, .nav-tabs.vertical-tabs li:hover a {
+	background: #fff;
+}
+.nav-tabs.vertical-tabs li a {
+	color: #444;
+}
+.nav-tabs.vertical-tabs li > a {
+	height: 67px;
+	display: block;
+	width: 100%;
+	padding: 0;
+	border-radius: 0;
+}
+
+.nav-tabs.vertical-tabs li > a img {
+	position: absolute;
+	left: 25px;
+	top: 50%;
+	margin-top: -17px;
+}
+.h1-tab-content {
+	padding-left: 28px;
+}
+.tab-content h3 {
+	font-weight: normal;
+	margin-bottom: 25px;
+}
+.tab-content p {
+	margin-bottom: 25px;
+}
+.right-image-box .content-right-image {
+	max-width: 100%;
+}
+.section-title-box {
+	margin-bottom: 60px;
+}
+.our_approach_img_box {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 171px;
+}
+.our_approach_images{
+    border-bottom: 3px solid #7da500;
+    text-align: center;
+}
+.our_approach_detail_box {
+    padding: 20px;
+    background: #f8f8f8;
+    padding-top: 55px;
+}
+.our_approach_title_name {
+    font-family: 'Roboto Slab Bold';
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+.green_borderwithoutwhite{
+	    height: 10px;
+		background-image: url(../images/green-white-border-nowhite.png);
+		position: absolute;
+		width: 100%;
+		bottom: -9px;
+}
+.video_whiteBox{
+	background-image: url(../images/food-healthy-red-summer.jpg);
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.our-packages_video{
+	max-width: 500px;
+	margin: auto;
+}
+.green_back{
+		background: #7da500;
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}	
+.green_inner{
+	max-width: 600px;
+	color: #fff;
+	text-align: center;
+	margin: auto
+}
+.the_magic_title{
+	font-family: 'Tahoma';
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.the_magic_detail{
+	font-size: 13px;
+}
 /***************************** End item list *****************************/
 
 @media(max-width:1200px){
@@ -2545,3 +2684,4 @@ div.description_content{
         text-align: center;
     }
 }
+
