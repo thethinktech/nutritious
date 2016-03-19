@@ -2,25 +2,25 @@
 	font-family: 'Roboto Slab Light';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Roboto Slab Light'), url('../fonts/RobotoSlab-Light.woff') format('woff');
+	src: local('Roboto Slab Light'), url('../fonts/robotoslab-light.woff') format('woff');
 }
 @font-face {
 	font-family: 'Roboto Slab Regular';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Roboto Slab Regular'), url('../fonts/RobotoSlab-Regular.woff') format('woff');
+	src: local('Roboto Slab Regular'), url('../fonts/robotoslab-regular.woff') format('woff');
 }
 @font-face {
 	font-family: 'Roboto Slab Thin';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Roboto Slab Thin'), url('../fonts/RobotoSlab-Thin.woff') format('woff');
+	src: local('Roboto Slab Thin'), url('../fonts/robotoslab-thin.woff') format('woff');
 }
 @font-face {
 	font-family: 'Roboto Slab Bold';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Roboto Slab Bold'), url('../fonts/robotoSlab-Bold.woff') format('woff');
+	src: local('Roboto Slab Bold'), url('../fonts/fonts/robotoslab-bold.woff') format('woff');
 }
 
 @font-face {
