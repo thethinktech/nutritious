@@ -3792,11 +3792,11 @@
 
     </div>
     <div class="col-lg-3 social-icons new-social-icons">
-      <% if user_signed_in? %>
+<!--       <%# if user_signed_in? %>
           <a class="navbar-link" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_image.png" title="Logout"></a>
-      <% else %>
+      <%# else %>
           <a class="navbar-link" href="/users/sign_in"><img src="/images/login_image.png" title="Login"></a>
-      <% end %>
+      <%# end %> -->
             <span>
         <a href="mailto:nutrition4yoursouls@gmail.com" style="color: #F26522;"><i class="fa fa-envelope"></i></a>
             </span>
@@ -3845,15 +3845,21 @@
                 <li>
                   <%= link_to(cart_get_path) do %>
                     <li>
-                      <button type="button" class="cart-icon"><img src="/images/cart-icon.png">cart: $<%= @total_cart_amount %></button>
+                      <button type="button" class="cart-icon"><img src="/images/cart_img.png"><!-- cart: $ --><%#= @total_cart_amount %></button>
                     </li>
                   <% end %>
                   <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>
                 </li>
+                <li>
+                          <a class="navbar-link" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_img.png" title="Logout"></a>
+                          </li>
             <%# end %>
                 <% else %>
                 <li>
-                  <button type="button" class="cart-icon"><img src="/images/cart-icon.png">cart: $0.00</button>
+                  <button type="button" class="cart-icon"><img src="/images/cart_img.png"></button>
+                </li>
+                <li>
+                <a class="navbar-link" href="/users/sign_in"><img src="/images/login_img.png" title="Login"></a>
                 </li>
             <% end %>
 
