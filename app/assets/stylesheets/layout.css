@@ -2451,6 +2451,7 @@ div.description_content{
     font-family: 'Roboto Slab Bold';
     font-size: 14px;
     margin-bottom: 25px;
+    font-weight: bold;
 }
 .green_borderwithoutwhite{
 	    height: 10px;
