@@ -2495,6 +2495,15 @@ div.description_content{
 .the_magic_detail{
 	font-size: 13px;
 }
+.button_shopping_cart {
+	padding: 0px;
+    border: 0px;
+}
+
+.login_button {
+	padding: 0px;
+    margin-left: 10px;
+}
 /***************************** End item list *****************************/
 
 @media(max-width:1200px){

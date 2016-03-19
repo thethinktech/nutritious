@@ -3845,21 +3845,21 @@
                 <li>
                   <%= link_to(cart_get_path) do %>
                     <li>
-                      <button type="button" class="cart-icon"><img src="/images/cart_img.png"><!-- cart: $ --><%#= @total_cart_amount %></button>
+                      <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"><!-- cart: $ --><%#= @total_cart_amount %></button>
                     </li>
                   <% end %>
                   <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>
                 </li>
                 <li>
-                          <a class="navbar-link" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_img.png" title="Logout"></a>
+                          <a class="login_button" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_img.png" title="Logout"></a>
                           </li>
             <%# end %>
                 <% else %>
                 <li>
-                  <button type="button" class="cart-icon"><img src="/images/cart_img.png"></button>
+                  <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"></button>
                 </li>
                 <li>
-                <a class="navbar-link" href="/users/sign_in"><img src="/images/login_img.png" title="Login"></a>
+                <a class="login_button" href="/users/sign_in"><img src="/images/login_img.png" title="Login"></a>
                 </li>
             <% end %>
 
