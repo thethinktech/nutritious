@@ -3840,7 +3840,7 @@
             <!--<li><img src="/images/contact-nutrionist.png"></li>-->
         <%# else %>
 
-            <% if user_signed_in? %>
+            <% if user_signed_in? && !current_user.carts.blank?%>
             <%# unless current_user.carts.blank? %>
                 <li>
                   <%= link_to(cart_get_path) do %>

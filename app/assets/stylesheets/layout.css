@@ -2501,7 +2501,7 @@ div.description_content{
 }
 
 .login_button {
-	padding: 0px;
+    padding: 0px !important;
     margin-left: 10px;
 }
 /***************************** End item list *****************************/
