@@ -83,7 +83,7 @@ body{
 }
 
 .vertical-xs{
-	padding-top: 105px;
+	padding-top: 175px;
 }
 col-md-6 img{
 	width:800px;
@@ -444,19 +444,19 @@ col-md-6 img{
 
 
 .change-the-way-title{
-	background-image: url(../images/change-the-way-border.png);
+	/*background-image: url(../images/change-the-way-border.png);*/
 	background-repeat: no-repeat;
 	padding-top: 25px;
 	font-family: 'Tahoma';
-	font-size: 30px;
+	font-size: 36px;
 	color: #f26521;
 	display: table;
     width: 100%;
-    margin-bottom: 47px;
+    margin-bottom: 40px;
 }
 .change-the-way-subtitle{
 	font-family: 'Tahoma';
-	font-size: 17px;
+	font-size: 21px;
 	color: #878787;
 	margin-top: 15px;
 	margin-bottom: 55px;
@@ -1208,7 +1208,7 @@ button{
 	padding-bottom: 50px;
 }
 .subhead_our_mission_title {
-	background-image: url(../images/change-the-way-border.png);
+	/*background-image: url(../images/change-the-way-border.png);*/
 	background-position: center top;
 	background-repeat: no-repeat;
 	padding-top: 25px;
@@ -2439,6 +2439,13 @@ div.description_content{
     font-family: 'Tahoma';
     font-size: 30px;
     color: #f26522;
+}
+.subabout_header_images {
+    background: url(../images/AboutUS.jpg);
+    background-size: 100% 100%;
+    height: auto;
+    background-attachment: fixed;
+    min-height: 200px;
 }
 .our_approach_title_Box {
 	background-image: url("../images/change-the-way-border.png");
