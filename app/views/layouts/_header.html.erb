@@ -3784,7 +3784,7 @@
 <div class="topborder"></div>
 <div class="social-iconBox">
   <div class="container">
-    <div class="col-md-10 top-email new-header">
+    <div class="col-md-offset-3 col-md-6 top-email new-header">
 
       <span>Bethany Gettis - Certified Holistic Nutritionist™</span>
       <span>+1 403 612 7767 </span>
@@ -3843,7 +3843,7 @@
             <% if user_signed_in? && !current_user.carts.blank?%>
             <%# unless current_user.carts.blank? %>
                 <li>
-                  <%= link_to(cart_get_path) do %>
+                  <%= link_to(cart_get_path, :class => "login_button") do %>
                     <li>
                       <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"><!-- cart: $ --><%#= @total_cart_amount %></button>
                     </li>
