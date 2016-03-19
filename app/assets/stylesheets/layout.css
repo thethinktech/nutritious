@@ -1192,7 +1192,7 @@ button{
 }
 .gray_dashed{
 	border-bottom: 1px dashed #bbbbbb;
-	padding-top: 5px;
+	/*padding-top: 5px;*/
 }
 .sub_top_menu{
 	padding-top: 50px;
@@ -1220,7 +1220,7 @@ button{
 .subhead_our_mission_subtitle{
 	font-family: 'Tahoma';
 	text-align: center;
-	font-size: 12px;
+	font-size: 24px;
 	margin-top: 10px;
 	margin-bottom: 60px;
 	color: #858585;
@@ -2503,6 +2503,19 @@ div.description_content{
 .login_button {
     padding: 0px !important;
     margin-left: 10px;
+}
+.subour_mission_title {
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    font-family: 'Tahoma';
+    font-size: 30px;
+    color: #f26521;
+    text-align: center;
+    display: table;
+    width: 100%;
+    background-image: url(../images/change-the-way-border.png);
+    background-position: bottom center;
+    padding-bottom: 20px;
 }
 /***************************** End item list *****************************/
 
