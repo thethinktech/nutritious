@@ -607,7 +607,7 @@ p{
 	background-position: 0px -15px;
 	padding: 3px 0px 30px 38px;
 	color: #868686;
-	font-size: 12px
+	font-size: 13px
 }
 .discover-title-detail {
 	margin: 0 0 34px;
@@ -625,7 +625,7 @@ p{
 }
 .yummy-recipes-subtitle{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #878787;
 	margin-top: 5px
 }
@@ -741,10 +741,13 @@ p{
 	font-family: 'Tahoma';
 	font-size: 30px;
 	color: #f26521;
+	display: table;
+    width: 100%;
+    margin-bottom: 13px;
 }
 .blogpost-subtitle{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #878787;
 	margin-top: 5px;
 	margin-bottom: 50px;
@@ -766,14 +769,14 @@ p{
 }
 .blogpost-content-detail{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .blogpost-content-list{
 	list-style: none;
 	padding: 0px;
 	margin: 0px;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	margin-bottom: 30px;
 		margin-top: 7px;
 }
@@ -811,7 +814,7 @@ p{
 }
 .customers-address{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .client-box{
 	background-image: url(../images/dote-line.png);
@@ -917,7 +920,7 @@ footer{
 	background-repeat: no-repeat;
 	font-family: 'Tahoma';
 	color: #fff;
-	font-size: 12px;
+	font-size: 13px;
 	text-align: center;
 	line-height: 31px;
 	margin-top: 25px
@@ -957,7 +960,7 @@ footer{
 .latest-tweets-list{
 	list-style: url(../images/twitter-icon.png);
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #878787;
 	padding: 0px;
 	padding-left: 23px;
@@ -983,7 +986,7 @@ footer{
 .latest-instagram-list{
 	list-style:none;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #878787;
 	padding: 0px;
 }
@@ -1015,7 +1018,7 @@ footer{
 	width: 100px;
 	height: 37px;
 	background-image: url(../images/send-message.png);
-	font-size: 12px;
+	font-size: 13px;
 	font-family: 'Tahoma';
 	color: #fff;
 	text-align: center;
@@ -1032,7 +1035,7 @@ footer{
 .footer-menu-list li a{
 	color: #888888;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	text-decoration: none;
 }
 .footer-menu-list li a.active{
@@ -1040,7 +1043,7 @@ footer{
 }
 .copyright-text{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #888888;
 }
 .footer-border{
@@ -1135,7 +1138,7 @@ button{
 	display: block;
 }
 .white-top-email {
-	font-size: 12px;
+	font-size: 13px;
 	color: #000;
 	padding-top: 5px;
 	font-family: 'Tahoma';
@@ -1245,7 +1248,7 @@ button{
 }
 .subhead_our_mission_detail{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 23px;
 	color: #858585;
 	max-width: 680px;
@@ -1287,7 +1290,7 @@ button{
 }
 .meet-our-holistic-subtitle{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	margin-top: 5px;
 }
 .meet-our-white-detail{
@@ -1334,7 +1337,7 @@ button{
 }
 .contact_info_subtitle{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .contact_queryinfo{
 	background-image: url(../images/dote-line.png);
@@ -1349,7 +1352,7 @@ button{
 	padding: 10px;
 	outline: none;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	-webkit-box-shadow: 5px 4px 8px -1px rgba(207,207,207,1);
 	-moz-box-shadow: 5px 4px 8px -1px rgba(207,207,207,1);
 	box-shadow: 5px 4px 8px -1px rgba(207,207,207,1);
@@ -1366,7 +1369,7 @@ button{
 .working-hours-detail{
 	font-family: 'Tahoma';
 	color: #858585;
-	font-size: 12px;
+	font-size: 13px;
 	margin-bottom: 15px;
 }
 .contact-days{
@@ -1374,11 +1377,11 @@ button{
 }
 .working-hours-day{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .working-hours-time{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .contact-submit{
 	background: #f26522;
@@ -1409,7 +1412,7 @@ button{
 }
 .sub_top_menu ul li{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	display: inline-block;
 	color: #fff;
 }
@@ -1499,19 +1502,19 @@ ul.blog_categories_list li{
 }
 .recent_post_cate_name_light{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color: #c3c3c3;
 }
 .recent_post_cate_date{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	margin-top: 10px;
 	color: #c3c3c3;
 }
 .recent_post_cate_date samp{
 	padding-left: 15px;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 
 }
 .offer_limit{
@@ -1557,7 +1560,7 @@ ul.blog_categories_list li{
 .offer_limit_price_detail{
 	padding: 20px;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	color:#fff;
 }
 .blog_left_item{
@@ -1682,7 +1685,7 @@ ul.blog_categories_list li{
 	padding: 10px;
 	border: 0px;
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	outline: none;
 }
 .post_comment_inputBox textarea{
@@ -1722,11 +1725,11 @@ ul.blog_categories_list li{
 }
 .comment_user_date{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 }
 .comment_user_text{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	margin-top: 10px;
 }
 .comment_user_reply{
@@ -1734,7 +1737,7 @@ ul.blog_categories_list li{
 }
 .comment_user_reply button{
 	font-family: 'Tahoma';
-	font-size: 12px;
+	font-size: 13px;
 	width: 90px;
 	height: 32px;
 	border: 1px solid #f36817;
@@ -1809,7 +1812,7 @@ div.description_content{
         }
         .item_subtitle{
             font-family: 'Tahoma';
-            font-size: 12px;
+            font-size: 13px;
             text-align: center;
             color: #a2a2a2;
             margin-bottom: 20px;
@@ -1857,7 +1860,7 @@ div.description_content{
             font-family: 'Tahoma';
             padding: 20px;
             background: #fff;
-            font-size: 12px;
+            font-size: 13px;
 			margin-bottom: 25px;
         }
         .sort_by_span{
@@ -1926,7 +1929,7 @@ div.description_content{
 	}
 	.our_brands_list_subtitle{
 		font-family: 'Tahoma';
-		font-size: 12px;
+		font-size: 13px;
 		text-align: center;
 	}
 	.our_brands_list_name{
@@ -2050,7 +2053,7 @@ div.description_content{
 	}
 	.item_price_value{
 		font-family: 'Tahoma';
-		font-size: 12px;
+		font-size: 13px;
 		padding-left: 0px;
 		margin-top: 8px;
 	}
