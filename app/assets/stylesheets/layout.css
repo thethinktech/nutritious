@@ -49,6 +49,7 @@
 body{
 	font-family:'Tahoma' !important;
 	font-style: normal;
+	font-size: 16px;
 }
 
 #top{
@@ -607,7 +608,7 @@ p{
 	background-position: 0px -15px;
 	padding: 3px 0px 30px 38px;
 	color: #868686;
-	font-size: 13px
+	font-size: 16px
 }
 .discover-title-detail {
 	margin: 0 0 34px;
