@@ -7,9 +7,9 @@
       <div class="subscribe-newsletter">Subscribe Newsletter</div>
       
       <div>
-        <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
-        <% end %>
+        <%# if notice %>
+          <!-- <p class="subscribe_newsletter"><%#= notice %></p> -->
+        <%# end %>
         <%= form_for (@newsletter ||= Newsletter.new), :url => welcome_add_newsletter_path,:remote => false, :class => "" do |f| %>
         <%= f.text_field :email, required: true, :placeholder => "Email", :class => 'footer-subscribe-input' %>
         <%= hidden_field_tag(:status,value='1')%>
