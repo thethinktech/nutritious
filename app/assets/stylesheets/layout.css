@@ -86,7 +86,7 @@ body{
 }
 
 .vertical-xs{
-	padding-top: 190px;
+	padding-top: 165px;
 }
 col-md-6 img{
 	width:800px;
@@ -536,7 +536,7 @@ p{
 .vegetarian-title{
 	font-family: 'Tahoma';
 	font-size: 22px;
-	font-weight: bold;
+	font-weight: normal;
 	margin-bottom: 20px;
 }
 .read-more-state{
@@ -582,7 +582,9 @@ p{
 .vegetarian-p{
 	font-family: 'Tahoma';
 	color: #878787;
-	margin-bottom: 30px
+	margin-bottom: 30px;
+	font-size: 18px !important; 
+	line-height: 24px !important;
 }
 .free-quote{
 	background: #f26522;

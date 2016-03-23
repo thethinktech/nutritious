@@ -28,6 +28,10 @@ class ApplicationController < ActionController::Base
     @newsletter = Newsletter.new
   end
 
+  def cart_item_count
+    @cart_item_count = current_user.carts.count if current_user
+  end
+
   def set_cart
     if current_user && current_user.carts.count > 1
       price_array = current_user.carts.map(&:price)
