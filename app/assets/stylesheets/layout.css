@@ -86,14 +86,14 @@ body{
 }
 
 .vertical-xs{
-	padding-top: 165px;
+	padding-top: 0px;
 }
 col-md-6 img{
 	width:800px;
 	height: 800px;
 }
 .social-iconBox{
-	background: #f26522;
+	background: #F57C42;
 	/*padding-bottom: 36px;*/
 	/*height: 100px;*/
 }
@@ -129,7 +129,7 @@ col-md-6 img{
 	margin-bottom: 0px;
 }
 .navbar-background{
-	background-image: url(../images/dote-line.png);
+	background-image: url(../images/dot-1.png);
 	position: relative;
 }
 .input-search{
@@ -350,7 +350,8 @@ col-md-6 img{
 	background: #f2f2f2;
 	border-radius: 67px;
 	border: 5px solid #b1c966;
-	width: 254px;
+	max-width: 320px;
+    width: 100%;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: auto;
@@ -449,8 +450,10 @@ col-md-6 img{
 
 
 .change-the-way-title{
-	/*background-image: url(../images/change-the-way-border.png);*/
-	background-repeat: no-repeat;
+	background-image: url(../images/change-the-way-border.png);
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
 	padding-top: 25px;
 	font-family: 'Tahoma';
 	font-size: 36px;
@@ -458,6 +461,8 @@ col-md-6 img{
 	display: table;
     width: 100%;
     margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 20px;
 }
 .change-the-way-subtitle{
 	font-family: 'Tahoma';
@@ -466,6 +471,8 @@ col-md-6 img{
 	margin-top: 15px;
 	margin-bottom: 55px;
 	line-height: 26px;
+    text-align: center;
+
 }
 .our-packages:hover{
     border: 5px solid #f26522;
@@ -2754,6 +2761,7 @@ div.description_content{
 	}
     .quest {
         font-size: 20px;
+        margin-top: 25px;
     }
 	
 }
