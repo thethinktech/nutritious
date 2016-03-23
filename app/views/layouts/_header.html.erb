@@ -3838,7 +3838,10 @@
                 <li>
                   <%= link_to(cart_get_path, :class => "login_button") do %>
                     <li>
-                      <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"><!-- cart: $ --><%#= @total_cart_amount %></button>
+                      <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"><!-- cart: $ -->
+                      
+                      <%#= @cart_item_count %>
+                      </button>
                     </li>
                   <% end %>
                   <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>

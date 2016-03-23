@@ -190,7 +190,7 @@ col-md-6 img{
 }
 .header-title{
     font-family: 'Roboto Slab Regular';
-    font-size: 30px;
+    font-size: 36px;
 	color: #fff;
 	position:relative;
 	top:-25px;
@@ -198,10 +198,12 @@ col-md-6 img{
 }
 .header-subtitle{
 	position: relative;
-	font-family: 'Tahoma';
-	font-size: 20px;
-	color: #fff;
-	margin-top: 15px;
+    font-family: 'Tahoma';
+    font-size: 28px;
+    color: #fff;
+    margin-top: 15px;
+    text-align: center;
+    line-height: 18px;
 }
 .header-arrow{
 	margin-left: 50px;
