@@ -201,9 +201,9 @@ col-md-6 img{
     font-family: 'Tahoma';
     font-size: 28px;
     color: #fff;
-    margin-top: 15px;
+    margin-top: 0px;
     text-align: center;
-    line-height: 18px;
+    line-height: 24px;
 }
 .header-arrow{
 	margin-left: 50px;
