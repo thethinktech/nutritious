@@ -236,6 +236,8 @@
 
       .all_packages_list {
           padding: 0px;
+          padding-left: 10px;
+          padding-right: 10px;
           list-style: outside none none;
           text-align: center;
           font-family: "Roboto Slab Light";
@@ -3806,66 +3808,69 @@
   </div>
   <hr class="hr-dot">
 </div>
+<!-- New menu bar starts -->
+
 <nav class="navbar navbar-background" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle menu_space" data-toggle="collapse" data-target="#navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="company-logo" href="#"><img src="/images/logo.png" alt=""></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse nav-right-pull" id="navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to 'HOME', root_path, :class => '', :style => "font-family:monotype corsiva !important;" %></li>
-        <li><%= link_to 'ABOUT', about_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li><%= link_to 'PACKAGES', packages_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li><%= link_to 'STORE', store_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li><%= link_to 'BLOG', blog_list_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:monotype corsiva !important;" %></li>
-        <%# if request.original_url == root_url %>
-            <!--<li><a href="#"><i class="fa fa-search"></i></a></li>-->
-            <!--<li><img src="/images/contact-nutrionist.png"></li>-->
-        <%# else %>
-
-            <% if user_signed_in? && !current_user.carts.blank?%>
-            <%# unless current_user.carts.blank? %>
-                <li>
-                  <%= link_to(cart_get_path, :class => "login_button") do %>
-                    <li>
-                      <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"><!-- cart: $ -->
-                      
-                      <%#= @cart_item_count %>
-                      </button>
-                    </li>
-                  <% end %>
-                  <%#= link_to 'YOUR CART', cart_get_path, :style => "font-family:monotype corsiva !important;" %>
-                </li>
-                <li>
-                          <a class="login_button" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_img.png" title="Logout"></a>
-                          </li>
-            <%# end %>
-                <% else %>
-                <li>
-                  <button type="button" class="button_shopping_cart"><img src="/images/cart_img.png"></button>
-                </li>
-                <li>
-                <a class="login_button" href="/users/sign_in"><img src="/images/login_img.png" title="Login"></a>
-                </li>
-            <% end %>
-
-            <%# end %>
-
-      </ul>
-    </div>
+ <div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+   <button type="button" class="navbar-toggle menu_space" data-toggle="collapse" data-target="#navbar-collapse-1">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+   </button>
+   
   </div>
-  <!-- /.container-fluid -->
+  <div class="col-md-3 col-xs-12"><div class="company-logo"><a href="#"><img src="images/logo.png" alt=""></a></div></div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse center-menu-box" id="navbar-collapse-1">
+   <div class="col-md-6 col-sm-12">
+    <ul class="nav navbar-nav top-menu-list">
+     <li><%= link_to 'HOME', root_path %></li>
+     <li><%= link_to 'ABOUT', about_path %></li>
+     <li><%= link_to 'PACKAGES', packages_path %></li>
+     <li><%= link_to 'STORE', store_path %></li>
+     <li><%= link_to 'BLOG', blog_list_path %></li>
+     <li><%= link_to 'CONTACT', new_contact_path %></li>
+    </ul>
+   </div>
+   
+   
+   <div class="col-md-3 col-sm-12">
+    <ul class="nav navbar-nav navbar-right cardAndLogin">
+      <li>
+     <% if user_signed_in? && !current_user.carts.blank?%>
+    
+     <%= link_to(cart_get_path, :class => "login_button") do %>
+     <button class="button_shopping_cart"><img src="images/cart_img.png" alt=""></button>
+     <% end %>
+     <% else %>
+     <button class="button_shopping_cart"><img src="images/cart_img.png" alt=""></button>
+     
+    
+     <% end %>
+      </li>
+     
+     <li>
+     <% if user_signed_in? %>
+     <a class="login_button" rel="nofollow" data-method="delete" href="/users/sign_out"><img src="/images/logout_img.png" title="Logout"></a>
+     <% else %>
+     <a class="login_button" href="/users/sign_in"><img src="/images/login_img.png" title="Login"></a>
+     <% end %>
+     </li>
+    
+    </ul>
+   </div>
+   
+   
+  </div>
+ </div><!-- /.container-fluid -->
 </nav>
+
+<!-- New bar ends -->
+
+
 
 
 <script type="text/javascript">
