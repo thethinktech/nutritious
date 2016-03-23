@@ -607,6 +607,14 @@ p{
 	height: 40px;
 	line-height: 40px;
 	padding-left: 35px;
+	margin-left: 140px;
+}
+.free-quote:hover{
+	cursor: pointer;
+	background: #F57C42;
+    background-image: url(../images/file-icon.png);
+	background-repeat: no-repeat;
+	background-position: 13px 12px;
 }
 .discover-everythink-list{
 	padding: 0px;
