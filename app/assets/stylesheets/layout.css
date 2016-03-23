@@ -164,7 +164,7 @@ col-md-6 img{
 	display: block;
 	-webkit-box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
-	box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);
+	/*box-shadow: 10px 11px 5px -8px rgba(0,0,0,0.75);*/
     z-index: 9999;
 }
 .header{
@@ -2528,7 +2528,7 @@ div.description_content{
 
 .login_button {
     padding: 0px !important;
-    margin-left: 10px;
+    margin-left: 6px;
 }
 .subour_mission_title {
     background-repeat: no-repeat;
@@ -2861,4 +2861,16 @@ div.description_content{
  .company-logo a img{
   width: 80%;
  }
+}
+.shopping_card{
+     width: 153px;
+     height: 40px;
+     border: 0px;
+     padding-left: 24px;
+     outline: none;
+     font-family: 'Roboto Slab Regular';
+     background-image: url(../images/cart_image.png);
+     font-size: 12px;
+     padding-top: 11px;
+     font-weight: bold;
 }
