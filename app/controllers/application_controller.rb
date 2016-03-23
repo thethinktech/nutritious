@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # before_filter :set_newsletter
-  before_filter :set_cart
+  before_filter :set_cart, :cart_item_count
 
   def authenticate_admin!
     email = params[:user][:email]

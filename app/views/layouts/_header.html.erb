@@ -3827,12 +3827,12 @@
   <div class="collapse navbar-collapse center-menu-box" id="navbar-collapse-1">
    <div class="col-md-6 col-sm-12">
     <ul class="nav navbar-nav top-menu-list">
-     <li><%= link_to 'HOME', root_path %></li>
-     <li><%= link_to 'ABOUT', about_path %></li>
-     <li><%= link_to 'PACKAGES', packages_path %></li>
-     <li><%= link_to 'STORE', store_path %></li>
-     <li><%= link_to 'BLOG', blog_list_path %></li>
-     <li><%= link_to 'CONTACT', new_contact_path, :style => "font-weight: normal !important;" %></li>
+     <li><%= link_to 'HOME', root_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'ABOUT', about_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'PACKAGES', packages_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'STORE', store_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'BLOG', blog_list_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:Monotype Corsiva !important;" %></li>
     </ul>
    </div>
    
@@ -3844,10 +3844,10 @@
     
      <%= link_to(cart_get_path, :class => "login_button") do %>
     
-     <div class="shopping_card">SHOPING CART (100)</div>
+     <div class="shopping_card">SHOPING CART (<%= @cart_item_count %>)</div>
      <% end %>
      <% else %>
-     <div class="shopping_card">SHOPING CART (100)</div>
+     <div class="shopping_card">SHOPING CART </div>
      
     
      <% end %>

@@ -2836,6 +2836,7 @@ div.description_content{
     .navbar-nav>li>a {
         padding-top: 10px;
         padding-bottom: 10px;
+        /*font-family: monotype corsiva !important;*/
     }
     .collapse.in{
         display:block !important;
