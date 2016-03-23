@@ -610,6 +610,10 @@ p{
 	margin-left: 140px;
 	margin-bottom: 40px;
 }
+.free-quote a{
+	color: #fff !important;
+	text-decoration: none;
+}
 .free-quote:hover{
 	cursor: pointer;
 	background: #F57C42;
@@ -2881,7 +2885,7 @@ div.description_content{
  }
 }
 .shopping_card{
-     width: 152px;
+     width: 151px;
      height: 40px;
      border: 0px;
      padding-left: 24px;
