@@ -86,7 +86,7 @@ body{
 }
 
 .vertical-xs{
-	padding-top: 0px;
+	padding-top: 40px;
 }
 col-md-6 img{
 	width:800px;
@@ -608,6 +608,7 @@ p{
 	line-height: 40px;
 	padding-left: 35px;
 	margin-left: 140px;
+	margin-bottom: 40px;
 }
 .free-quote:hover{
 	cursor: pointer;
@@ -2890,4 +2891,10 @@ div.description_content{
      font-size: 12px;
      padding-top: 11px;
      font-weight: bold;
+}
+.shopping_card:hover{
+	cursor: pointer;
+}
+.social_icons:hover{
+	cursor: pointer;
 }
