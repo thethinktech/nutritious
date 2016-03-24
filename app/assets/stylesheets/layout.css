@@ -52,6 +52,10 @@ body{
 	font-size: 16px;
 }
 
+.nav>li>a{
+	padding: 6px 10px;
+}
+
 #top{
 	width:auto;
 	height: auto;
@@ -67,7 +71,7 @@ body{
 
 
 .top-email{
-	font-size: 16px;
+	font-size: 18px;
 	color: #fff;
 	padding-top: 20px;
 	font-family: 'Tahoma';
@@ -318,7 +322,7 @@ col-md-6 img{
 		padding-bottom: 21px;
 		    font-family: 'lobster' , cursive;
     /*color: #337ab7;*/
-    font-size: 15px;
+    font-size: 18px;
 	}
 	.navbar-nav>li>a {
 		padding-top: 12px;
@@ -455,7 +459,22 @@ col-md-6 img{
     background-repeat: no-repeat;
     background-position: center bottom;
 	padding-top: 25px;
-	font-family: 'Tahoma';
+	font-family: 'Roboto Slab Regular';
+	font-size: 36px;
+	color: #f26521;
+	display: table;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.change-the-way-title-new{
+	background-image: url(../images/grey_border.png);
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+	padding-top: 25px;
+	font-family: 'Roboto Slab Regular';
 	font-size: 36px;
 	color: #f26521;
 	display: table;
@@ -694,13 +713,15 @@ p{
 }
 .customers-saying-title{
 	background-image: url(../images/change-the-way-border.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	text-align: center;
-	font-family: 'Tahoma';
-	font-size: 30px;
-	padding-top: 100px;
-	color: #f26520
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Tahoma';
+    font-size: 30px;
+    padding-bottom: 20px;
+    color: #f26520;
+    display: table;
+    width: 100%;
 }
 .customers-saying-subtitle{
 	font-size: 14px;
@@ -2902,3 +2923,8 @@ div.description_content{
 .social_icons:hover{
 	cursor: pointer;
 }
+.store-info-border-blank{
+    background-image: url(../images/double_arrow.png);
+    height: 10px;
+}
+
