@@ -473,7 +473,22 @@ col-md-6 img{
 
     background-repeat: no-repeat;
     background-position: center bottom;
-	padding-top: 25px;
+	padding-top: 80px;
+	font-family: 'Roboto Slab Regular';
+	font-size: 36px;
+	color: #f26521;
+	display: table;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.discover-title-new{
+	background-image: url(../images/grey_border.png);
+
+    background-repeat: no-repeat;
+    background-position: center bottom;
+	padding-top: 0px;
 	font-family: 'Roboto Slab Regular';
 	font-size: 36px;
 	color: #f26521;
@@ -494,7 +509,7 @@ col-md-6 img{
 
 }
 .our-packages:hover{
-    border: 5px solid #f26522;
+    border: 5px solid #16B503;
 }
 .nav-stacked li a{
 	padding-top: 20px;
@@ -650,8 +665,9 @@ p{
 	background-repeat: no-repeat;
 	background-position: 0px -15px;
 	padding: 3px 0px 30px 38px;
-	color: #868686;
-	font-size: 16px
+	color: #878787;
+	font-size: 18px;
+	line-height: 24px;
 }
 .discover-title-detail {
 	margin: 0 0 34px;
@@ -660,18 +676,24 @@ p{
 
 }
 .yummy-recipes-title{
-	background-image: url(../images/change-the-way-border.png);
+	background-image: url(../images/grey_border.png);
 	background-repeat: no-repeat;
 	padding-top: 30px;
-	font-family: 'Tahoma';
+	font-family: 'Roboto Slab Regular';
 	font-size: 30px;
 	color: #f26522;
+	display: table;
+    width: 100%;
+    background-position: center bottom;
+    text-align: center;
+    padding-bottom: 23px;
 }
 .yummy-recipes-subtitle{
 	font-family: 'Tahoma';
-	font-size: 13px;
+	font-size: 14px;
 	color: #878787;
-	margin-top: 5px
+	margin-top: 5px;
+	text-align: center;
 }
 .paddingNone{
 	padding: 0px;
@@ -712,11 +734,11 @@ p{
 	padding-bottom: 140px;
 }
 .customers-saying-title{
-	background-image: url(../images/change-the-way-border.png);
+	background-image: url(../images/grey_border.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     text-align: center;
-    font-family: 'Tahoma';
+    font-family: 'Roboto Slab Regular';
     font-size: 30px;
     padding-bottom: 20px;
     color: #f26520;
@@ -781,22 +803,28 @@ p{
 	padding-bottom: 77px;
 }
 .blogpost-title{
-	background-image: url(../images/change-the-way-border.png);
+	background-image: url(../images/grey_border.png);
 	background-repeat: no-repeat;
 	padding-top: 25px;
-	font-family: 'Tahoma';
+	font-family: 'Roboto Slab Regular';
 	font-size: 30px;
 	color: #f26521;
-	display: table;
+	/*display: table;*/
     width: 100%;
     margin-bottom: 13px;
+    display: table;
+    width: 100%;
+    background-position: center bottom;
+    text-align: center;
+    padding-bottom: 23px;
 }
 .blogpost-subtitle{
 	font-family: 'Tahoma';
-	font-size: 13px;
+	font-size: 14px;
 	color: #878787;
 	margin-top: 5px;
 	margin-bottom: 50px;
+	text-align: center;
 }
 .blogpost-image{
 	background: #cccccc;
