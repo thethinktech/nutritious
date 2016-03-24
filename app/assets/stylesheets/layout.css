@@ -1316,7 +1316,7 @@ button{
 	font-family: 'Tahoma';
 	text-align: center;
 	font-size: 24px;
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 60px;
 	color: #858585;
 }
@@ -1992,18 +1992,23 @@ div.description_content{
 		margin-top: 80px;
 	}
 	.our_brands_list_title{
-		background-image: url(../images/change-the-way-border.png);
+		background-image: url(../images/grey_border.png);
 		background-repeat: no-repeat;
-		background-position: center top;
+		/*background-position: center top;*/
 		padding-top: 25px;
-		font-family: 'Tahoma';
+		font-family: 'Roboto Slab Regular';
 		font-size: 30px;
 		color: #7da500;
 		text-align: center;
+		display: table;
+	    width: 100%;
+	    background-position: center bottom;
+	    text-align: center;
+	    padding-bottom: 23px;
 	}
 	.our_brands_list_subtitle{
 		font-family: 'Tahoma';
-		font-size: 13px;
+		font-size: 14px;
 		text-align: center;
 	}
 	.our_brands_list_name{
@@ -2327,7 +2332,7 @@ div.description_content{
 	.our_brands_list_container{
 		margin-top: 80px;
 	}
-	.our_brands_list_title{
+	/*.our_brands_list_title{
 		background-image: url(../images/change-the-way-border.png);
 		background-repeat: no-repeat;
 		background-position: center top;
@@ -2336,10 +2341,10 @@ div.description_content{
 		font-size: 30px;
 		color: #7da500;
 		text-align: center;
-	}
+	}*/
 	.our_brands_list_subtitle{
 		font-family: 'Tahoma';
-		font-size: 13px;
+		font-size: 14px;
 		text-align: center;
 	}
 	.our_brands_list_name{
@@ -2531,7 +2536,7 @@ div.description_content{
     /*background-image: url(../images/change-the-way-border.png);*/
     background-repeat: no-repeat;
     padding-top: 30px;
-    font-family: 'Tahoma';
+    font-family: 'Roboto Slab Regular';
     font-size: 30px;
     color: #f26522;
 }
@@ -2543,7 +2548,7 @@ div.description_content{
     min-height: 200px;
 }
 .our_approach_title_Box {
-	background-image: url("../images/change-the-way-border.png");
+	background-image: url("../images/grey_border.png");
 	background-position: bottom;
 	text-align: center;
 	padding-bottom: 10px !important;
@@ -2602,13 +2607,13 @@ div.description_content{
 .subour_mission_title {
     background-repeat: no-repeat;
     padding-top: 25px;
-    font-family: 'Tahoma';
+    font-family: 'Roboto Slab Regular';
     font-size: 30px;
     color: #f26521;
     text-align: center;
     display: table;
     width: 100%;
-    background-image: url(../images/change-the-way-border.png);
+    background-image: url(../images/grey_border.png);
     background-position: bottom center;
     padding-bottom: 20px;
 }
