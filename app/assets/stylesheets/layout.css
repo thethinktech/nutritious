@@ -677,6 +677,29 @@ p{
 	line-height: 23px;
 
 }
+.modal-backdrop{
+  z-index: -58;
+ }
+ .close_modal_button{
+  position: absolute;
+  right: 0;
+  border: 0px;
+  font-weight: bold;
+ }
+ .modal_padding_body{
+  padding-top: 30px;
+  padding-bottom: 30px;
+ }
+ .close_button_icon{
+  position: absolute;
+  right: 0px;
+  border: 0px;
+  z-index: 9999;
+  font-weight: bold;
+ }
+ .outline_none{
+  outline: none;
+ }
 .discover-title-detail {
 	margin: 0 0 10px;
 }
@@ -709,10 +732,29 @@ p{
 .yummy-recipesBox{
 	margin-top: 50px;
 }
-.yummy-recipes-slidBox{
-	height: 250px;
-	background: #dddddd
+.yummy-recipes-slidBox {
+ height: auto;
+    background: #dddddd;
+    display: table;
+ width: 100%;
 }
+
+.yummy-grid{
+ width:25%;
+}
+ .yummy-grid > img{
+  width: 100%;
+ }
+@media(max-width:992px){
+  .yummy-grid{
+   width:50%;
+  }
+ }
+ @media(max-width:786px){
+  .yummy-grid{
+   width:100%;
+  }
+ }
 .yummy-read-more-box{
 	margin-top: 50px;
 	margin-bottom: 50px;

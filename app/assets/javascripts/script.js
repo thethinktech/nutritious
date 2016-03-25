@@ -77,18 +77,41 @@ $(function () {
     	}
     });
 });
+// $(window).load(function(){
+// 	$('div.description').each(function(){
+// 		$(this).css('opacity', 0);
+// 		$(this).css('width', $(this).siblings('img').width());
+// 		$(this).parent('.description').css('width', $(this).siblings('img').width());
+// 		$(this).css('display', 'block');
+// 	});
+	
+// 	$('div.yummy-recipes-slidBox').hover(function(){
+// 		$(this).children('.description').stop().fadeTo(500, 0.7);
+// 	},function(){
+// 		$(this).children('.description').stop().fadeTo(500, 0);
+// 	});
+	
+// });
+
+ function yummy_images(){
+ $('div.description').each(function(){
+  $(this).css('opacity', 0);
+  $(this).css('width', $(this).siblings('img').width());
+  $(this).parent('.description').css('width', $(this).siblings('img').width());
+  $(this).css('display', 'block');
+ });
+ 
+ $('div.yummy-recipes-slidBox').hover(function(){
+  $(this).children('.description').stop().fadeTo(500, 0.7);
+ },function(){
+  $(this).children('.description').stop().fadeTo(500, 0);
+ });
+};
+
 $(window).load(function(){
-	$('div.description').each(function(){
-		$(this).css('opacity', 0);
-		$(this).css('width', $(this).siblings('img').width());
-		$(this).parent().css('width', $(this).siblings('img').width());
-		$(this).css('display', 'block');
-	});
-	
-	$('div.yummy-recipes-slidBox').hover(function(){
-		$(this).children('.description').stop().fadeTo(500, 0.7);
-	},function(){
-		$(this).children('.description').stop().fadeTo(500, 0);
-	});
-	
+ yummy_images();
+});
+
+$(window).resize(function(){
+ yummy_images();
 });
