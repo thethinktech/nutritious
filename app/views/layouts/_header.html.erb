@@ -3843,12 +3843,14 @@
    <div class="col-md-3 col-sm-12">
     <ul class="nav navbar-nav navbar-right cardAndLogin">
       <li>
-     <% if user_signed_in? && !current_user.carts.blank?%>
+     <% if user_signed_in? && !current_user.carts.blank? %>
     
-     <%= link_to(cart_get_path, :class => "login_button") do %>
+     <%= link_to(cart_get_path, :class => "logout_button") do %>
     
      <div class="shopping_card">SHOPPING CART (<%= @cart_item_count %>)</div>
      <% end %>
+
+     
      <% else %>
      <div class="shopping_card">SHOPPING CART (0)</div>
      
