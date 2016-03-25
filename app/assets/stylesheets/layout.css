@@ -671,13 +671,14 @@ p{
 	background-image: url(../images/right-mark.png);
 	background-repeat: no-repeat;
 	background-position: 0px -15px;
-	padding: 3px 0px 30px 38px;
+	padding: 3px 0px 5px 37px;
 	color: #878787;
 	font-size: 18px;
-	line-height: 24px;
+	line-height: 23px;
+
 }
 .discover-title-detail {
-	margin: 0 0 34px;
+	margin: 0 0 10px;
 }
 .yummy-recipes{
 
