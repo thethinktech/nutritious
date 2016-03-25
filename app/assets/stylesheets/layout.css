@@ -73,7 +73,7 @@ body{
 .top-email{
 	font-size: 18px;
 	color: #fff;
-	padding-top: 20px;
+	padding-top: 10px;
 	font-family: 'Tahoma';
 	text-align: right;
 	position: relative;
@@ -104,7 +104,7 @@ col-md-6 img{
 .social-icons{
 	text-align: left;
 	padding-right: 0px;
-	padding-top: 15px;
+	padding-top: 8px;
 }
 
 .navbar-nav>li>a:hover {
@@ -131,6 +131,9 @@ col-md-6 img{
 }
 .navbar{
 	margin-bottom: 0px;
+}
+hr{
+	margin-top: 10px;
 }
 .navbar-background{
 	background-image: url(../images/dot-1.png);
@@ -159,8 +162,12 @@ col-md-6 img{
 	margin-right: 38px;
 }
 .navbar-nav{
-	margin-top: 18px;
-	margin-bottom: 9px;
+    margin-top: 6px;
+    margin-bottom: 0px;
+}
+.logout_button{
+	padding: 0px !important;
+    margin-left: 5px;
 }
 .company-logo{
 	position: absolute;
