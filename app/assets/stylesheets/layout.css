@@ -711,7 +711,7 @@ p{
 	background-repeat: no-repeat;
 	padding-top: 30px;
 	font-family: 'Roboto Slab Regular';
-	font-size: 30px;
+	font-size: 36px;
 	color: #f26522;
 	display: table;
     width: 100%;
@@ -721,7 +721,7 @@ p{
 }
 .yummy-recipes-subtitle{
 	font-family: 'Tahoma';
-	font-size: 14px;
+	font-size: 21px;
 	color: #878787;
 	margin-top: 5px;
 	text-align: center;
