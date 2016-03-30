@@ -1315,6 +1315,12 @@ button{
 	font-size: 30px;
     margin-bottom: 14px;
 }
+.store_sub_header_title{
+	font-family: 'Roboto Slab Regular';
+	/*font-family: 'Tahoma';*/
+	font-size: 48px;
+    margin-bottom: 14px;
+}
 .sub_header_detail{
 	font-family: 'Tahoma';
 	font-size: 18px;
@@ -1340,8 +1346,8 @@ button{
 	/*padding-top: 5px;*/
 }
 .sub_top_menu{
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 .green_sub_border{
 	height: 10px;
@@ -2618,7 +2624,7 @@ div.description_content{
 		bottom: -9px;
 }
 .video_whiteBox{
-	background-image: url(../images/food-healthy-red-summer.jpg);
+	background-image: url(../images/dark-red.jpg);
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
