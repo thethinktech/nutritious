@@ -1412,6 +1412,8 @@ button{
 }
 .meet-our-info-images{
 	background-image: url(../images/bethany_image.jpg);
+	background-repeat: no-repeat;
+	background-size: 280px 367px;
 	/*background: #cccccc;*/
 	border-right: 5px solid #7da500;
 }
