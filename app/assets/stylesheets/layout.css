@@ -1315,6 +1315,11 @@ button{
 	font-size: 30px;
     margin-bottom: 14px;
 }
+.sub_header_title_about{
+	font-family: 'Roboto Slab Regular';
+	font-size: 42px;
+    margin-bottom: 14px;
+}
 .store_sub_header_title{
 	font-family: 'Roboto Slab Regular';
 	/*font-family: 'Tahoma';*/
