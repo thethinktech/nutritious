@@ -1319,12 +1319,20 @@ button{
 	font-family: 'Roboto Slab Regular';
 	font-size: 42px;
     margin-bottom: 14px;
+    line-height: 70px;
+}
+.sub_header_title_contact{
+	font-family: 'Roboto Slab Regular';
+	font-size: 46px;
+    margin-bottom: 14px;
+    line-height: 85px;
 }
 .store_sub_header_title{
 	font-family: 'Roboto Slab Regular';
 	/*font-family: 'Tahoma';*/
 	font-size: 48px;
     margin-bottom: 14px;
+    line-height: 85px;
 }
 .sub_header_detail{
 	font-family: 'Tahoma';
