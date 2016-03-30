@@ -1384,6 +1384,9 @@ button{
 	max-width: 680px;
     margin: auto;
 }
+.subhead_our_mission_detail p{
+	font-size: 18px;
+}
 .meet_our_holistic_border{
 	background-image: url(../images/change-the-way-border.png);
 	background-position: left top;
@@ -1408,7 +1411,8 @@ button{
 	margin-top: 40px;
 }
 .meet-our-info-images{
-	background: #cccccc;
+	background-image: url(../images/bethany_image.jpg);
+	/*background: #cccccc;*/
 	border-right: 5px solid #7da500;
 }
 .meet-our-info-detail{
@@ -2625,8 +2629,9 @@ div.description_content{
 }
 .video_whiteBox{
 	background-image: url(../images/dark-red.jpg);
-	padding-top: 80px;
+	padding-top: 35px;
 	padding-bottom: 80px;
+	background-attachment: fixed;
 }
 .our-packages_video{
 	max-width: 500px;
