@@ -2696,6 +2696,21 @@ div.description_content{
     padding-bottom: 20px;
     line-height: 30px;
 }
+.subour_mission_title_third {
+    background-repeat: no-repeat;
+    padding-top: 25px;
+    font-family: 'Roboto Slab Regular';
+    font-size: 30px;
+    color: #f26521;
+    text-align: center;
+    display: table;
+    width: 100%;
+    background-image: url(../images/grey_border.png);
+    background-position: bottom center;
+    padding-bottom: 20px;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
 /***************************** End item list *****************************/
 
 @media(max-width:1200px){
