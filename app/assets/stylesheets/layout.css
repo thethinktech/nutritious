@@ -1387,6 +1387,7 @@ button{
 }
 .subhead_our_mission_detail p{
 	font-size: 18px;
+	line-height: 24px;
 }
 .meet_our_holistic_border{
 	background-image: url(../images/change-the-way-border.png);
@@ -1405,8 +1406,8 @@ button{
 	background: #fff;
 }
 .meet-our-holistic-padding{
-	padding-top: 80px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	/*padding-bottom: 50px;*/
 }
 .meet-our-info{
 	margin-top: 40px;
