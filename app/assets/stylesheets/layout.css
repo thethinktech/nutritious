@@ -1375,6 +1375,7 @@ button{
 	margin-top: 20px;
 	margin-bottom: 60px;
 	color: #858585;
+	line-height: 30px;
 }
 .subhead_our_mission_detail{
 	font-family: 'Tahoma';
@@ -2679,6 +2680,7 @@ div.description_content{
     background-image: url(../images/grey_border.png);
     background-position: bottom center;
     padding-bottom: 20px;
+    line-height: 30px;
 }
 /***************************** End item list *****************************/
 
