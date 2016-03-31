@@ -810,6 +810,31 @@ p{
 
  }
  @media(max-width:786px){
+ .contact-footer-images-list > div{
+	width:100%;
+	/*float: left*/
+}
+.social-centerBox > div{
+	margin-top: 10px;
+}
+.what_packages_item {
+    margin-bottom: 50px;
+    display: table;
+    width: 100%;
+}
+.what_our_packages_list_img {
+    width: 94px;
+    float: none;
+    margin: auto;
+}
+.what_our_packages_list_img:first-child{
+  margin-top:20px
+}
+.what_our_packages_list_detail {
+    width: 100%;
+    float: none;
+    text-align: center;
+}
   .yummy-grid{
    width:100%;
   }
@@ -2801,6 +2826,9 @@ div.description_content{
 		margin-bottom: 10px;
 
 	}
+/*	.social-centerBox > div{
+	margin-top: 10px;
+}*/
 	.login_success{
 	    position: fixed;
 	    z-index: 999;
@@ -2844,9 +2872,12 @@ div.description_content{
 	}
 	
 	.social-centerBox > div{
-		border: 0px
+		border: 0px;
+		margin-top: 20px;
 	}
-	
+	.fogot_pass{
+		margin-top: 20px;
+	}
 	.white-top-email{
 		text-align: center
 	}
@@ -2865,6 +2896,9 @@ div.description_content{
 	}
 }
 @media(min-width:768px){
+		.fogot_pass {
+		margin-top: 20px;
+	}
 	.navbar-collapse {
 		padding-top: 0px !important;
 		padding-right: 38px !important;
@@ -3013,6 +3047,7 @@ div.description_content{
 }
 @media(max-width:767px) {
     .item_add_button {
+    	margin: auto;
         margin-bottom: 10px;
     }
 
@@ -3116,6 +3151,9 @@ div.description_content{
  .company-logo a img{
   width: 80%;
  }
+ .social-centerBox > div{
+	margin-top: 10px;
+}
 }
 .shopping_card{
      width: 151px;
