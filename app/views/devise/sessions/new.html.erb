@@ -7,7 +7,8 @@
       <div class="col-xs-12">
 
         <div class="form-wrap">
-          <h2 align="center">Log in</h2>
+          <h2 align="center">Please Login To Continue <br/>
+          To The Shopping Cart</h2>
           <br>
           <% if notice %>
               <p class="alert alert-success"><%= notice %></p>
@@ -36,8 +37,8 @@
                 <!--<input type="checkbox" style="margin-left:0px; position: static;">-->
                 <!-- <span class="label">Remember me</span></div> -->
             <!-- </div> -->
-             <div class="col-sm-6">
-              <%= f.submit "LOG IN", :class=>"btn-lg btn-block loginbutton" %>
+             <div class="col-xs-6" style = "padding-left: 0px;">
+              <%= f.submit "LOGIN", :class=>"btn-lg btn-block loginbutton" %>
               </div>
               <!--<input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">-->
           <% end %>

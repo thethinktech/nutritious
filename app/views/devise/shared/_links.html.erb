@@ -2,26 +2,30 @@
 <!--<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Forgot your password?</a>-->
 <!--<a href="javascript:;" class="forget" data-toggle="modal" data-target=".forget-modal">Didn't receive confirmation instructions?</a>-->
 <%- if controller_name != 'sessions' %>
-             <div class="col-sm-6">
-             <a href="http://nutritiousapp.herokuapp.com/users/sign_in">
-             <input type="submit" name="commit" value="Log in" class="btn-lg btn-block loginbutton">
+             <div class="col-xs-6" style = "padding-right: 0px;">
+             <a class="si_up" href="http://nutritiousapp.herokuapp.com/users/sign_in">
+             <input type="submit" name="commit" value="LOGIN" class="btn-lg btn-block loginbutton">
              </a>
   <%#= link_to "Log in", new_session_path(resource_name), :class=>"btn-lg btn-block loginbutton" %>
   </div>
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-<div class="col-sm-6">
-             <a href="http://nutritiousapp.herokuapp.com/users/sign_up">
+<div class="col-xs-6" style = "padding-right: 0px;">
+             <a class="si_up" href="http://nutritiousapp.herokuapp.com/users/sign_up" >
 
-<input type="submit" name="commit" value="SIGN UP" class="btn-lg btn-block signupbutton">
+<input type="submit" name="commit" value="SIGNUP" class="btn-lg btn-block signupbutton">
 </a>
   <%#= link_to "Sign up", new_registration_path(resource_name), :class=>"btn-lg btn-block signupbutton" %>
   </div>
 <% end -%>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+<div class="col-sm-12" style="
+    margin-top: 20px;
+">
   <%= link_to "Forgot Password? Click Here", new_password_path(resource_name), :class=>"forget" %><br />
+  </div>
 <% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

@@ -253,6 +253,9 @@ width: 100%;
     text-transform: uppercase;
     font-size: 14px;
 }
+.si_up:hover {
+	text-decoration: none;
+}
 #login .form-wrap {
     width: 30%;
     margin: 0 auto;
@@ -783,7 +786,7 @@ p{
    width:50%;
   }
 .shopping_card {
-    width: 153px;
+    width: 153px !important;
     height: 40px;
     border: 0px;
     padding-left: 24px;
@@ -796,6 +799,8 @@ p{
     margin: auto;
 }
 #login .form-wrap{width:70%;}
+.loginbutton,.signupbutton{margin-bottom: 10px;}
+
 
 
  }
