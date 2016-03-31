@@ -31,13 +31,14 @@
             </div>
             <div class="checkbox">
               <div>
-                <%= f.check_box :remember_me, :style=>"margin-left:0px; position: static;" %>
+                <%#= f.check_box :remember_me, :style=>"margin-left:0px; position: static;" %>
 
                 <!--<input type="checkbox" style="margin-left:0px; position: static;">-->
-                <span class="label">Remember me</span></div>
+                <!-- <span class="label">Remember me</span></div> -->
             </div>
-              <%= f.submit "Log in", :class=>"btn btn-custom btn-lg btn-block" %>
-
+             <div class="col-sm-6" style="padding: 0px;">
+              <%= f.submit "Log in", :class=>"btn-lg btn-block loginbutton" %>
+              </div>
               <!--<input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">-->
           <% end %>
 

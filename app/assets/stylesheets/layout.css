@@ -221,8 +221,33 @@ hr{
 	margin-top: 30px;
 }
 #login {
+	background-image: url(../images/dot-1.png);
     padding-top: 50px
 }
+.login_input{
+width: 100%;
+    border: 0px;
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-family: 'Tahoma';
+    font-size: 13px;
+    -webkit-box-shadow: 5px 4px 8px -1px #cfcfcf;
+    -moz-box-shadow: 5px 4px 8px -1px #cfcfcf;
+    box-shadow: 5px 4px 8px -1px #cfcfcf;
+}
+.loginbutton{
+    background: #f26522;
+    border: 0px;
+    border-radius: 0px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.signupbutton{
+    background: #7da500;
+    }
 #login .form-wrap {
     width: 30%;
     margin: 0 auto;
