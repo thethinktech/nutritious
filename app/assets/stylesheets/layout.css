@@ -3039,6 +3039,9 @@ div.description_content{
 	.our-packages, .watch-videoButton, .subbotton{
 		width: 100%;
 	}
+	.subabout_header_images{
+		background-size: cover !important;
+	}
     .quest {
         font-size: 20px;
         margin-top: 25px;
