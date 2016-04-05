@@ -3002,6 +3002,9 @@ div.description_content{
 	}
 }
 @media(max-width:640px){
+	.subabout_header_images{
+		background-size: cover !important;
+	}
 	.header{
 		/*background-size: 100% 100%;*/
 	}
