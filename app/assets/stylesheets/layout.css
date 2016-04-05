@@ -3003,7 +3003,7 @@ div.description_content{
 }
 @media(max-width:640px){
 	.header{
-		background-size: 100% 100%;
+		/*background-size: 100% 100%;*/
 	}
 	.header-content{
 	 	width: 80%;
