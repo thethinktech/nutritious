@@ -378,7 +378,7 @@ width: 100%;
 	z-index:999;
 }
 .store-info{
-	background: url(../images/green-back.png) fixed;
+	background: #7DA500;
 	padding-top: 50px;
 	position: relative;
 	min-height: 360px;
@@ -891,7 +891,7 @@ p{
 	margin-bottom: 50px;
 }
 .all-rating{
-	background: url(../images/green-back.png)  fixed;
+	background: #7DA500;
 	padding-bottom: 70px;
 	padding-top: 6px;
 	position: relative;
