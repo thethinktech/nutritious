@@ -192,7 +192,7 @@ hr{
 }
 .header-content{
 	width: 450px;
-	background: rgba(0, 0, 0, 0.29);
+	background: rgba(0, 0, 0, 0.31);
 	margin-top: 80px;
 	margin-bottom: 70px;
 	padding: 50px;
@@ -713,8 +713,8 @@ p{
 	background-position: 0px -15px;
 	padding: 3px 0px 5px 37px;
 	color: #878787;
-	font-size: 18px;
-	line-height: 23px;
+	font-size: 16px;
+	line-height: 33px;
 
 }
 .modal-backdrop{
@@ -1488,7 +1488,7 @@ button{
     margin: auto;
 }
 .subhead_our_mission_detail p{
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 24px;
 }
 .meet_our_holistic_border{
