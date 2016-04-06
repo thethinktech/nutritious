@@ -3832,7 +3832,7 @@
     <ul class="nav navbar-nav top-menu-list">
      <li><%= link_to 'HOME', root_path, :style => "font-family:Monotype Corsiva !important;" %></li>
      <li><%= link_to 'ABOUT', about_path, :style => "font-family:Monotype Corsiva !important;" %></li>
-     <li><%= link_to 'PACKAGES', packages_path, :style => "font-family:Monotype Corsiva !important;" %></li>
+     <li><%= link_to 'PACKAGES', packages_path, :"data-no-turbolink" => true, :style => "font-family:Monotype Corsiva !important;" %></li>
      <li><%= link_to 'STORE', store_path, :"data-no-turbolink" => true, :style => "font-family:Monotype Corsiva !important;" %></li>
      <li><%= link_to 'BLOG', " http://blog.nutritiousdelicious.ca", :style => "font-family:Monotype Corsiva !important;", :target => :blank %></li>
      <li><%= link_to 'CONTACT', new_contact_path, :style => "font-family:Monotype Corsiva !important;" %></li>
