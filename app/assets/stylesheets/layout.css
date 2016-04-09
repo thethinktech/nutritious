@@ -673,8 +673,8 @@ p{
 	font-family: 'Tahoma';
 	color: #878787;
 	margin-bottom: 30px;
-	font-size: 18px !important; 
-	line-height: 24px !important;
+	font-size: 16px !important; 
+	line-height: 28px !important;
 }
 .free-quote{
 	background: #f26522;
@@ -1517,7 +1517,7 @@ button{
 .meet-our-info-images{
 	background-image: url(../images/bethany_image.jpg);
 	background-repeat: no-repeat;
-	background-size: 280px 367px;
+	background-size: 280px 385px;
 	/*background: #cccccc;*/
 	border-right: 5px solid #7da500;
 }
@@ -1527,10 +1527,11 @@ button{
 }
 .meet-our-holistic-title{
 	font-family: 'Tahoma';
+	font-size: 16px;
 }
 .meet-our-holistic-subtitle{
 	font-family: 'Tahoma';
-	font-size: 13px;
+	font-size: 16px;
 	margin-top: 5px;
 }
 .meet-our-white-detail{
@@ -1538,6 +1539,12 @@ button{
 	font-size: 13px;
 	margin-top: 40px;
 	color: #858585;
+}
+.meet-our-white-detail p{
+	font-family: 'Tahoma';
+	font-size: 16px;
+	/*margin-top: 40px;
+	color: #858585;*/
 }
 .green_white_border {
     height: 10px;
@@ -2042,6 +2049,9 @@ div.description_content{
             border-bottom: 1px dashed #c6c6c6;
             height: 200px;
             overflow: auto;
+            padding-top: 10px;
+         	padding-bottom: 10px;
+
         }
         .item_title{
             font-family: 'Tahoma';
@@ -2353,6 +2363,7 @@ div.description_content{
 		font-family: 'Tahoma';
 		font-size: 22px;
 		margin-bottom: 5px;
+		line-height: 28px;
 	}
 	.item_detail_subtitle{
 		font-family: 'Tahoma';
@@ -2707,7 +2718,7 @@ div.description_content{
     color: #f26522;
 }
 .subabout_header_images {
-    background: url(../images/AboutUS.jpg);
+    background: url(../images/horizontal_wood.jpg);
     background-size: 100% 100%;
     height: auto;
     background-attachment: fixed;
