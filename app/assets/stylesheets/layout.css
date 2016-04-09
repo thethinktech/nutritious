@@ -1537,12 +1537,13 @@ button{
 .meet-our-white-detail{
 	font-family: 'Tahoma';
 	font-size: 13px;
-	margin-top: 40px;
+	margin-top: 18px;
 	color: #858585;
 }
 .meet-our-white-detail p{
 	font-family: 'Tahoma';
 	font-size: 16px;
+	line-height: 17px;
 	/*margin-top: 40px;
 	color: #858585;*/
 }
