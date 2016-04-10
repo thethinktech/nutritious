@@ -173,9 +173,9 @@
                 <div class="col-md-4 col-sm-6">
                   <div class="col-sm-12 item_box">
                     <div class="col-sm-12 item_image"><%#= link_to image_tag(product.image_url, style: 'width: 43%;margin-left: 50px;'), item_lookup_path(:s_i => @category.search_index, :key => @category.keyword, :asin => product.id), style: 'background-color:none' %>
-                      <%= link_to image_tag(product.image_url, style: 'overflow: hidden; max-width: 100%; max-height:100%; display: block; margin-left: auto; margin-right: auto;'), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword), style: 'background-color:none' %>
+                      <%= link_to image_tag(product.image_url, style: 'overflow: hidden; max-width: 100%; max-height:100%; display: block; margin-left: auto; margin-right: auto;'), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword, :name => @category.name), style: 'background-color:none' %>
                     </div>
-                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name.truncate(100), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword) %></div>
+                    <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name.truncate(100), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword, :name => @category.name) %></div>
                     <div class="col-sm-12 item_subtitle">Demo</div>
                     <div class="col-sm-12 paddingNone add_card_and_price">
                       <% if user_signed_in? %>
@@ -209,6 +209,7 @@
                   <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
               <% end %>
                   <% count = count + 1 %>
+              <% break if count == 11 %>    
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
         </ul>
