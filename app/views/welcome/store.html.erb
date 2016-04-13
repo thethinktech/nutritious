@@ -212,8 +212,9 @@
                     <%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %>
                   </li>
               <% end %>
-                  <% count = count + 1 %>
-              <%# break if count == 11 %>
+              
+              <% count = count + 1 %>
+              <% break if count == 11 %>
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
         </ul>
