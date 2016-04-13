@@ -164,8 +164,8 @@ class WelcomeController < ApplicationController
 
     @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
 
-    @page = 1
-    @page = params[:page] if params[:page]
+
+    @page = params[:page] || 1
     requestd = Vacuum.new
 
     requestd.configure(

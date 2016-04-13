@@ -203,13 +203,17 @@
           <% count = 1 %>
           <% @total_pages.to_i.times do %>
               <% if count == @page %>
-                  <li class="active" style="color: green;"><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
+                  <li class="active" style="color: green;">
+                    <%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %>
+                  </li>
 
               <% else %>
-                  <li><%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %></li>
+                  <li>
+                    <%= link_to count, store_path(:s_i => @category.search_index, :key => @category.keyword, :page => count) %>
+                  </li>
               <% end %>
                   <% count = count + 1 %>
-              <% break if count == 11 %>    
+              <%# break if count == 11 %>
           <% end %>
           <!--<li><a href=""><img src="images/paging-arrow.png" alt=""></a></li>-->
         </ul>
