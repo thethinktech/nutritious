@@ -28,21 +28,21 @@
 	font-family: 'Tahoma';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Tahoma'), url('../fonts/Tahoma.ttf') format('ttf');
+	src: local('Tahoma'), url('/assets/Tahoma.ttf') format('ttf');
 }
 
 @font-face {
 	font-family: 'Tahoma';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Tahoma'), url('../fonts/MTCORSVA.ttf') format('ttf');
+	src: local('Tahoma'), url('/assets/MTCORSVA.ttf') format('ttf');
 }
 
 @font-face {
 	font-family: 'Tahoma';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Tahoma'), url('../fonts/MTCORSVA.woff') format('woff');
+	src: local('Tahoma'), url('/assets/MTCORSVA.woff') format('woff');
 }
 
 
