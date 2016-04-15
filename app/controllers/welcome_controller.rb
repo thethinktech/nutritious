@@ -190,7 +190,7 @@ class WelcomeController < ApplicationController
 
     # binding.pry
     @products = []
-    Rails.logger.info "Total pages............#{@total_pages}"
+    Rails.logger.info "Total pages............#{@total_pages}........product.....#{hashed_products}"
     begin
       hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
         product = OpenStruct.new
