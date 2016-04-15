@@ -7,11 +7,10 @@
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
   <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.css' rel='stylesheet' type='text/css'>-->
-  <link rel="stylesheet" href="assets/stylesheets/animation.css">
-  <script src="assets/javascripts/wow.min.js"></script>
-  <script src="assets/stylesheets/animation.css"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="assets/javascripts/numscroller-1.0.js"></script>
+  <%= stylesheet_link_tag 'animation' %>
+  <%= javascript_include_tag 'wow.min' %>
+  <%= javascript_include_tag 'jquery-1.11.2.min' %>
+  <%= javascript_include_tag 'numscroller-1.0' %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true, 'data-scrolling-animations' => true %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
