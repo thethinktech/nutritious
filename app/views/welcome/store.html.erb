@@ -307,11 +307,13 @@
     $(document).ready(function () {
 
         $(window).load(function() {
+          console.log("height adjustment..");
             equalheight('.item_title');
         });
 
 
         $(window).resize(function(){
+          console.log("height resize..");
             equalheight('.item_title');
         });
 
