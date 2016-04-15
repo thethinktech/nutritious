@@ -177,7 +177,7 @@ class WelcomeController < ApplicationController
     response = requestd.item_search(
         query: {
             'SearchIndex' => @category.search_index,
-            'Keywords' => @category.keyword,
+            'Title' => @category.keyword,
             'ItemPage' => @page,
             'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
         }
