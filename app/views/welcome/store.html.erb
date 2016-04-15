@@ -304,18 +304,19 @@
         });
     };
 
-    $(window).load(function() {
-      console.log("height adjustment..");
-        equalheight('.item_title');
-    });
-
-
-    $(window).resize(function(){
-      console.log("height resize..");
-        equalheight('.item_title');
-    });
-
     $(document).ready(function () {
+
+        $(window).load(function() {
+          console.log("height adjustment..");
+            equalheight('.item_title');
+        });
+
+
+        $(window).resize(function(){
+          console.log("height resize..");
+            equalheight('.item_title');
+        });
+
         $(".redirect_user").click(function () {
             // alert("You need to sign in before you can add to your cart");
             window.location.replace("http://nutritiousapp.herokuapp.com/users/sign_in");
@@ -342,6 +343,8 @@
 
 
     });
+    // to make it work with turbo-links
+    $(document).on('page:load', equalheight('.item_title'));
 </script>
 
 <!--<script src="/assets/jquery-ui.css"></script>-->
