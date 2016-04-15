@@ -190,9 +190,9 @@ class WelcomeController < ApplicationController
 
     # binding.pry
     @products = []
-
-    hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
-      begin
+    Rails.logger.info "Total pages............#{@total_pages}"
+    begin
+      hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
         product = OpenStruct.new
         product.name = item['ItemAttributes']['Title']
         # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
@@ -210,9 +210,9 @@ class WelcomeController < ApplicationController
         product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId'] if item['Offers']['Offer']
         # binding.pry
         @products << product
-      rescue Exception => e
-        Rails.logger.info "Something went wrong............#{e.to_s}"
       end
+    rescue Exception => e
+      Rails.logger.info "Something went wrong............#{e.to_s}"
     end
 
 
