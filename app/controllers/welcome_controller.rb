@@ -191,7 +191,8 @@ class WelcomeController < ApplicationController
     # )
     response = requestd.item_lookup(
       query: {
-        'ItemId' => item_ids
+        'ItemId' => item_ids,
+        'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
       }
     )
 
@@ -200,8 +201,6 @@ class WelcomeController < ApplicationController
 
 
     # @total_pages = hashed_products['ItemLookupResponse']['Items']['TotalPages']
-
-    @total_pages = 1
     # binding.pry
     @products = []
     Rails.logger.info "Total pages............#{@total_pages}........product.....#{hashed_products}"
