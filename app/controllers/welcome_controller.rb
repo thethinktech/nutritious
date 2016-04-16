@@ -199,8 +199,9 @@ class WelcomeController < ApplicationController
     hashed_products = response.to_h
 
 
-    @total_pages = hashed_products['ItemLookupResponse']['Items']['TotalPages']
+    # @total_pages = hashed_products['ItemLookupResponse']['Items']['TotalPages']
 
+    @total_pages = 1
     # binding.pry
     @products = []
     Rails.logger.info "Total pages............#{@total_pages}........product.....#{hashed_products}"
