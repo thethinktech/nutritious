@@ -205,7 +205,7 @@ class WelcomeController < ApplicationController
     @products = []
     Rails.logger.info "Total pages............#{@total_pages}........product.....#{hashed_products}"
     begin
-      hashed_products['ItemSearchResponse']['Items']['Item'].each do |item|
+      hashed_products['ItemLookupResponse']['Items']['Item'].each do |item|
         product = OpenStruct.new
         product.name = item['ItemAttributes']['Title']
         # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
