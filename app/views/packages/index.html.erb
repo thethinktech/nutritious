@@ -153,9 +153,7 @@
             <img src="images/custom_built_recipes.png" class="img-responsive" alt=""></div>
           <div class="what_our_packages_list_detail">
             <div class="what_our_packages_name_title">Custom Built Recipes</div>
-            <div class="what_our_packages_name_detail">This is where nutritious meets delicious. We’ve been working hard
-              to analyze the food you’ve been eating and to creating meal plans. Now all this information is going to be
-              used to build you personalized recipes that will serve you for years to come!
+            <div class="what_our_packages_name_detail">This is where Nutritious meets Delicious. We’ve been working hard to analyze the food you eat and to create custom meal plans. Next, we take all the information and build personalized recipes that will serve you for years to come.
             </div>
           </div>
         </div>
@@ -184,9 +182,7 @@
           </div>
           <div class="what_our_packages_list_detail">
             <div class="what_our_packages_name_title">Shopping List</div>
-            <div class="what_our_packages_name_detail">We take the guesswork and all the work out of it. We set you up
-              with complete shopping lists so all you have to do is read the directions, buy ingredients, cook the meal
-              and then eat a tasty and healthy meal.
+            <div class="what_our_packages_name_detail">Initial consultation and assessment to review history forms and goals 3 week custom meal plans (plus binder of nutrition information materials, shopping lists, client summary report of lifestyle choices, recommendations, handouts, recipes) 3 Skype or personal phone calls each week with Bethany to keep you accountable, answer questions and make any necessary changes.
             </div>
           </div>
         </div>
@@ -231,11 +227,12 @@
               <% unless package.title == "Package 3" %>
                   <%= package.start_date %>
               <% else %>
-                  <%= "(coming soon!)" %>
+                  <%=  "(coming soon!)" %>
               <% end %>
             </div>
+            <% duration = (package.title != "Package 1" ? "6 months" : "3 weeks" %>
             <div class="packages_price"><span class="packages_price_border"><%= package.cost %>
-              <span class="packages_price_by_month">/ month</span></span></div>
+              <span class="packages_price_by_month">/ <%= duration%></span></span></div>
             <ul class="all_packages_list">
               <li><%= package.description %></li>
             </ul>
