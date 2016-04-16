@@ -203,10 +203,10 @@ class WelcomeController < ApplicationController
     # @total_pages = hashed_products['ItemLookupResponse']['Items']['TotalPages']
     # binding.pry
     @products = []
-    Rails.logger.info "Total pages............#{@total_pages}........product.....#{hashed_products}"
     begin
       hashed_products['ItemLookupResponse']['Items']['Item'].each do |item|
         product = OpenStruct.new
+        Rails.logger.info "item parsing.............................#{item.inspect}"
         product.name = item['ItemAttributes']['Title']
         # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
         if item['Offers']['Offer']
