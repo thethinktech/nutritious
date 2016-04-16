@@ -176,7 +176,7 @@
                       <%= link_to image_tag(product.image_url, style: 'overflow: hidden; max-width: 100%; max-height:100%; display: block; margin-left: auto; margin-right: auto;'), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword, :name => @category.name), style: 'background-color:none' %>
                     </div>
                     <div class="col-sm-12 item_title" id='pt-name1'><%= link_to product.name.truncate(100), item_lookup_path(:id => product.id, :s_i => @category.search_index, :key => @category.keyword, :name => @category.name) %></div>
-                    <div class="col-sm-12 item_subtitle">Demo</div>
+                    <!-- <div class="col-sm-12 item_subtitle">Demo</div> -->
                     <div class="col-sm-12 paddingNone add_card_and_price">
                       <% if user_signed_in? %>
                           <div class="col-sm-6 item_add_button paddingNone create_cart" data="<%= product.offer_listing_id %>">Add to Cart</div>

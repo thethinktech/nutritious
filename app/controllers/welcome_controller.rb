@@ -209,10 +209,14 @@ class WelcomeController < ApplicationController
         Rails.logger.info "item parsing.............................#{item.inspect}"
         product.name = item['ItemAttributes']['Title']
         # product.price = item['ItemAttributes']['ListPrice']['FormattedPrice'] if item['ItemAttributes']['ListPrice']
-        if item['Offers']['Offer']
-          product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
-        else
-          product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
+        begin
+          if item['Offers']['Offer']
+            product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+          else
+            product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
+          end
+        rescue
+          product.price = nil
         end
         product.url = item['DetailPageURL']
         product.feature = item['ItemAttributes']['Feature']
