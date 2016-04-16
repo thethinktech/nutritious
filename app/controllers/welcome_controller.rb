@@ -169,7 +169,7 @@ class WelcomeController < ApplicationController
       item_ids = AwsProductLookup.all.map(&:product_id).join(",")
     end
 
-
+    Rails.logger.info "items ids............................#{item_ids}"
     @page = params[:page] || 1
     requestd = Vacuum.new
 
