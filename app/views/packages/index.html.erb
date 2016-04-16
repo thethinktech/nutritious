@@ -230,7 +230,7 @@
                   <%=  "(coming soon!)" %>
               <% end %>
             </div>
-            <% duration = (package.title != "Package 1" ? "6 months" : "3 weeks" %>
+            <% duration = ((package.title != "Package 1") ? "6 months" : "3 weeks") %>
             <div class="packages_price"><span class="packages_price_border"><%= package.cost %>
               <span class="packages_price_by_month">/ <%= duration%></span></span></div>
             <ul class="all_packages_list">
