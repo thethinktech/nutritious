@@ -16,6 +16,23 @@
         color: #FFF;
         text-decoration: none;
     }
+    .button{
+      border: 1px solid;
+      border-bottom: 4px solid;
+      border-color: #fd6b1e;
+      border-radius: 0px;
+      background: transparent;
+      color: #000000;
+      font-size: 13px;
+      line-height: 1;
+      padding: .6em 1em .4em;
+      float: right;
+    }
+    a.button, a.button:hover{
+      color: #4d4d4d !important;
+      outline: medium none !important;
+      text-decoration: none !important;
+    }
 </style>
 <br><br>
 <%#= flash[:notice] %>
@@ -857,8 +874,6 @@ improve their overall level of nutrition through dietary coaching and education.
   </div>
 </div>
 <div class="store-info-border"></div>
-
-
 <div class="blog-post-section">
   <div class="container">
     <div class="blogpost-title">Blog Posts</div>
@@ -871,7 +886,7 @@ improve their overall level of nutrition through dietary coaching and education.
       <div class="carousel-inner">
         <div class="active item blog_posts">
         <div class="col-md-12 paddingNone">
-          <div class="col-md-4 blogpost-image paddingNone"><%= image_tag('/assets/blog-1.jpg', :style => "width=100%", alt: "")%></div>
+          <div class="col-md-4 blogpost-image paddingNone"><img src="../images/blog-4.jpg" width="100%" alt=""></div>
           <div class="col-md-8 blogpost-content">
             <div class="blogpost-content-title">Restaurant and Socializing Tips and Tricks</div>
             <ul class="blogpost-content-list">
@@ -879,12 +894,16 @@ improve their overall level of nutrition through dietary coaching and education.
                 <li>8 March 2016</li>
             </ul>
             <div class="blogpost-content-detail">1) Preplan going out to eat by looking ahead at online menus or nutritional info, you might be surprised how many calones or grams of fat are in your typical meal. <br>
-2) Instead of potato, rice, pasta or bread why not ask for extra steamed vegetables or a nice house salad with balsamic and vinegar dressing</div>
+2) Instead of potato, rice, pasta or bread why not ask for extra steamed vegetables or a nice house salad with balsamic and vinegar dressing
+              <div class="entry-content">
+                <a class="button" href="http://blog.nutritiousdelicious.ca/category1/restaurant-and-socializing-tips-and-tricks-2/" target="_blank">Read more</a>
+              </div>
+            </div>
           </div>
         </div>
         <br class="clear"><br>
         <div class="col-md-12 paddingNone">
-          <div class="col-md-4 blogpost-image paddingNone"><%= image_tag('/assets/blog-2.jpg', :style => "width=100%", alt: "")%></div>
+          <div class="col-md-4 blogpost-image paddingNone"><img src="../images/blog-3.jpg" width="100%" alt=""></div>
           <div class="col-md-8 blogpost-content">
             <div class="blogpost-content-title">How to Food Combine</div>
             <ul class="blogpost-content-list">
@@ -892,12 +911,16 @@ improve their overall level of nutrition through dietary coaching and education.
                 <li>8 March 2016</li>
             </ul>
             <div class="blogpost-content-detail">Food combination is a great way to help manage your weight, as food is broken down properly to maximize your digestive capacity. Your body is able to use the correct amount of digestive juices helping you to absorb and eliminate</div>
+            <div class="entry-content">
+              <a class="button" href="http://blog.nutritiousdelicious.ca/category2/how-to-food-combine/" target="_blank">Read more</a>
+            </div>
+
           </div>
         </div>
 </div>
         <div class="item blog_posts">
           <div class="col-md-12 paddingNone">
-            <div class="col-md-4 blogpost-image paddingNone"><%= image_tag('/assets/blog-3.jpg', :style => "width=100%", alt: "")%></div>
+            <div class="col-md-4 blogpost-image paddingNone"><img src="images/blog-2.jpg" width="100%" alt=""></div>
             <div class="col-md-8 blogpost-content">
               <div class="blogpost-content-title">Good Wholesome Foods vs Toxic Foods</div>
               <ul class="blogpost-content-list">
@@ -905,11 +928,14 @@ improve their overall level of nutrition through dietary coaching and education.
                 <li>8 March 2016</li>
               </ul>
               <div class="blogpost-content-detail">So how do we know what is actually good for our bodies and what is toxic I can give you the insight into what each of these categories wil provide either bad symptoms or good energized health. If you would</div>
+              <div class="entry-content">
+                <a class="button" href="http://blog.nutritiousdelicious.ca/category2/good-wholesome-foods-vs-toxic-foods/" target="_blank">Read more</a>
+              </div>
             </div>
 </div>
           <br class="clear"><br>
           <div class="col-md-12 paddingNone">
-            <div class="col-md-4 blogpost-image paddingNone"><%= image_tag('/assets/blog-4.jpg', :style => "width=100%", alt: "")%></div>
+            <div class="col-md-4 blogpost-image paddingNone"><img src="images/blog-1.jpg" width="100%" alt=""></div>
             <div class="col-md-8 blogpost-content">
               <div class="blogpost-content-title">Why Diets Can Make Keeping Weight Off Worse</div>
               <ul class="blogpost-content-list">
@@ -917,6 +943,9 @@ improve their overall level of nutrition through dietary coaching and education.
                 <li>8 March 2016</li>
               </ul>
               <div class="blogpost-content-detail">I myself have realized over the years working in a healthcare industry based on a society wanting a quick fad diet fix, how it can fail you and make matters worse. Let me ask you this, have you tried numerous</div>
+              <div class="entry-content">
+                <a class="button" href="http://blog.nutritiousdelicious.ca/category1/why-diets-can-make-keeping-weight-off-worse/" target="_blank">Read more</a>
+              </div>
             </div>
 </div>
         </div>
@@ -929,7 +958,6 @@ improve their overall level of nutrition through dietary coaching and education.
     </div>
   </div>
 </div>
-
 <div class="client-box">
   <div class="container">
     <div class="client-whiteBox wow fadeInDown">
@@ -969,6 +997,7 @@ improve their overall level of nutrition through dietary coaching and education.
     </div>
   </div>
 </div>
+
 
 <!--<script src="assets/javascripts/wow.min.js"></script>-->
 <!--<script src="assets/stylesheets/animation.js"></script>-->
