@@ -166,7 +166,7 @@ class WelcomeController < ApplicationController
       item_ids = @category.aws_product_lookups.map(&:product_id).join(",")
     else
       @category = Category.first
-      item_ids = AwsProductLookups.all.map(&:product_id).join(",")
+      item_ids = AwsProductLookup.all.map(&:product_id).join(",")
     end
 
 
