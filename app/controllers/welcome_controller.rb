@@ -158,7 +158,7 @@ class WelcomeController < ApplicationController
     #@instagram = Instagram.user_recent_media("2860181756" , {:count => 9})
     # @tweet_news = $client.get_all_tweets("NutritiousDe")
 
-    @categories = Category.all
+    @categories = Category.all.order(:id)
 
     @category = Category.first
 
