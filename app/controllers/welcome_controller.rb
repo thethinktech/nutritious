@@ -179,7 +179,8 @@ class WelcomeController < ApplicationController
             'SearchIndex' => @category.search_index,
             'Title' => @category.keyword,
             'ItemPage' => @page,
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers",
+            'Brand' => @category.brand
         }
     )
 
