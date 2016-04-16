@@ -160,9 +160,14 @@ class WelcomeController < ApplicationController
 
     @categories = Category.all.order(:id)
 
-    @category = Category.first
 
-    @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first if params[:s_i]
+    if params[:s_i]
+      @category = Category.where(:search_index => params[:s_i], :keyword => params[:key]).first
+      item_ids = @category.aws_product_lookups.map(&:product_id).join(",")
+    else
+      @category = Category.first
+      item_ids = AwsProductLookups.all.map(&:product_id).join(",")
+    end
 
 
     @page = params[:page] || 1
@@ -174,20 +179,27 @@ class WelcomeController < ApplicationController
         associate_tag: ENV['ASSOCIATE_TAG']
     )
 
-    response = requestd.item_search(
-        query: {
-            'SearchIndex' => @category.search_index,
-            'Title' => @category.keyword,
-            'ItemPage' => @page,
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers",
-            'Brand' => @category.brand
-        }
+
+    # response = requestd.item_search(
+    #     query: {
+    #         'SearchIndex' => @category.search_index,
+    #         'Title' => @category.keyword,
+    #         'ItemPage' => @page,
+    #         'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers",
+    #         'Brand' => @category.brand
+    #     }
+    # )
+    request.item_lookup(
+      query: {
+        'ItemId' => item_ids
+      }
     )
+
 
     hashed_products = response.to_h
 
 
-    @total_pages = hashed_products['ItemSearchResponse']['Items']['TotalPages']
+    @total_pages = hashed_products['ItemLookupResponse']['Items']['TotalPages']
 
     # binding.pry
     @products = []
