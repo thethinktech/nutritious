@@ -189,7 +189,7 @@ class WelcomeController < ApplicationController
     #         'Brand' => @category.brand
     #     }
     # )
-    request.item_lookup(
+    response = requestd.item_lookup(
       query: {
         'ItemId' => item_ids
       }
