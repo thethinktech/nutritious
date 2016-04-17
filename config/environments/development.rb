@@ -49,6 +49,10 @@ Rails.application.configure do
       authentication:       'plain',
       enable_starttls_auto: true
   }
+  
+  ENV['AWS_ACCESS_KEY_ID'] = 'AKIAJ4L6XUPM2XRWCZMA'
+  ENV['AWS_SECRET_ACCESS_KEY'] = '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'
+  ENV['ASSOCIATE_TAG'] = 'nutrdeli0f-20'
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
