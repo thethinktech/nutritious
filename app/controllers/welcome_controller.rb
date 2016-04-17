@@ -216,6 +216,7 @@ class WelcomeController < ApplicationController
             product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
           end
         rescue
+          next
           product.price = nil
         end
         product.url = item['DetailPageURL']
