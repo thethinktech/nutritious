@@ -192,7 +192,8 @@ class WelcomeController < ApplicationController
     response = requestd.item_lookup(
       query: {
         'ItemId' => item_ids,
-        'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
+        'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers",
+        'Availability' => 'Available'
       }
     )
 
