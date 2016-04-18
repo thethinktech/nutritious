@@ -131,7 +131,7 @@ class WelcomeController < ApplicationController
         query: {
             'ItemId' => params[:id],
             # 'RelationshipType' => 'NewerVersion',
-            'ResponseGroup' => "ItemAttributes,Images,Reviews,RelatedItems,OfferListings"
+            'ResponseGroup' => "ItemAttributes,Images,Reviews,ItemIds,OfferListings,Offers"
         }
     )
 
