@@ -146,7 +146,7 @@ class WelcomeController < ApplicationController
     @product.image_url = item['LargeImage']['URL'] if item['LargeImage']
     @product.link = item['ItemLinks']['ItemLink'][5]['URL']
     @product.review = item['CustomerReviews']['IFrameURL']
-    @product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId']
+    @product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId'] if item['Offers']['Offer']
     # binding.pry
 
   end
