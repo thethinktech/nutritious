@@ -130,7 +130,7 @@ class WelcomeController < ApplicationController
     response = requestd.item_lookup(
         query: {
             'ItemId' => params[:id],
-            'RelationshipType' => 'NewerVersion',
+            # 'RelationshipType' => 'NewerVersion',
             'ResponseGroup' => "ItemAttributes,Images,Reviews,RelatedItems,OfferListings"
         }
     )
