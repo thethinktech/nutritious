@@ -136,20 +136,31 @@ class WelcomeController < ApplicationController
     )
 
     hashed_products = response.to_h
-
+    item = hashed_products['ItemLookupResponse']['Items']['Item']
     @product = OpenStruct.new
-    @product.name = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['Title']
-    @product.price = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['ListPrice']['FormattedPrice'] if hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['ListPrice']
-    # @product.price = hashed_products['ItemLookupResponse']['Items']['Item']['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
-
-    @product.url = hashed_products['ItemLookupResponse']['Items']['Item']['DetailPageURL']
-    @product.feature = hashed_products['ItemLookupResponse']['Items']['Item']['ItemAttributes']['Feature']
-    @product.image_url = hashed_products['ItemLookupResponse']['Items']['Item']['LargeImage']['URL'] if hashed_products['ItemLookupResponse']['Items']['Item']['LargeImage']
-    @product.link = hashed_products['ItemLookupResponse']['Items']['Item']['ItemLinks']['ItemLink'][5]['URL']
-    @product.review = hashed_products['ItemLookupResponse']['Items']['Item']['CustomerReviews']['IFrameURL']
-    @product.offer_listing_id = hashed_products['ItemLookupResponse']['Items']['Item']['Offers']['Offer']['OfferListing']['OfferListingId']
+    @product.name = item['ItemAttributes']['Title']
+    
+    set_product_price(item)
+    @product.url = item['DetailPageURL']
+    @product.feature = item['ItemAttributes']['Feature']
+    @product.image_url = item['LargeImage']['URL'] if item['LargeImage']
+    @product.link = item['ItemLinks']['ItemLink'][5]['URL']
+    @product.review = item['CustomerReviews']['IFrameURL']
+    @product.offer_listing_id = item['Offers']['Offer']['OfferListing']['OfferListingId']
     # binding.pry
 
+  end
+
+  def set_product_price(item)
+    begin
+      if item['Offers']['Offer']
+        @product.price = item['Offers']['Offer']['OfferListing']['Price']['FormattedPrice']
+      else
+        @product.price = item['ItemAttributes']['ListPrice']['FormattedPrice']
+      end
+    rescue
+      Rails.logger.info "no price from aws."
+    end
   end
 
   def store
